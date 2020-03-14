@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html>
+<head hexo-theme='https://volantis.js.org/#blog'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- 页面元数据 -->
+  
+    <title>折腾一下Kratos主题 - Feng&#39;blog</title>
+  
+    <meta name="keywords" content="typecho">
+  
+  
+    <meta name="description" content="前几日逛Typecho论坛，看到有朋友移植了原WP主题Kratos，看看挺喜欢的（其实是有点想念WP时用过的9IPHP主题了，能力有限移植不了），那就耍耍呗，换掉Hran的Mirages主题（不知道Hran童鞋会不会有意见呀），下载并上传，接着设置主题然后又…………（每次换主题都做着这些重复的事），大致还是OK的...">
+  
+
+  <!-- feed -->
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css">
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
+
+  
+
+  
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
+  
+
+  <!-- import link -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/style.css">
+
+  
+
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+
+  
+  
+</head>
+
+<body>
+  
+  <div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
+</div>
+<header class="l_header shadow blur">
+
+  <div class='wrapper'>
+    <div class='nav-sub container--flex'>
+      <a class="logo flat-box"></a>
+      <ul class='switcher h-list'>
+        <li><a class="s-comment flat-btn fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a class="s-toc flat-btn fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main container container--flex">
+      
+        
+        <a class="logo flat-box" target="_self" href='/'>
+          
+          
+          
+          
+            FENG <b><sup style='color:#3AA757'>blog</sup></b>
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='h-list'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  
+                    <i class='fas fa-rss fa-fw'></i>
+                  
+                  首页
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  
+                    <i class='fas fa-archive fa-fw'></i>
+                  
+                  归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/links/
+                  
+                  
+                  
+                    id="links"
+                  >
+                  
+                    <i class='fas fa-link fa-fw'></i>
+                  
+                  友链
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/ly/
+                  
+                  
+                  
+                    id="ly"
+                  >
+                  
+                    <i class='fas fa-info-circle fa-fw'></i>
+                  
+                  留言
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  
+                    <i class='fas fa-info-circle fa-fw'></i>
+                  
+                  关于
+                </a>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      
+        <div class="m_search">
+          <form name="searchform" class="form u-search-form">
+            <i class="icon fas fa-search fa-fw"></i>
+            <input type="text" class="input u-search-input" placeholder="搜索" />
+          </form>
+        </div>
+      
+
+			<ul class='switcher h-list'>
+				
+					<li><a class="s-search flat-btn fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li><a class="s-menu flat-btn fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+<ul class="menu-phone navigation white-box">
+  
+  
+    <li>
+      <a class="flat-box" href=/
+        
+        
+        
+          id="home"
+        >
+        
+          <i class='fas fa-rss fa-fw'></i>
+        
+        首页
+      </a>
+    </li>
+  
+    <li>
+      <a class="flat-box" href=/archives/
+        
+        
+        
+          id="archives"
+        >
+        
+          <i class='fas fa-archive fa-fw'></i>
+        
+        归档
+      </a>
+    </li>
+  
+    <li>
+      <a class="flat-box" href=/links/
+        
+        
+        
+          id="links"
+        >
+        
+          <i class='fas fa-link fa-fw'></i>
+        
+        友链
+      </a>
+    </li>
+  
+    <li>
+      <a class="flat-box" href=/ly/
+        
+        
+        
+          id="ly"
+        >
+        
+          <i class='fas fa-info-circle fa-fw'></i>
+        
+        留言
+      </a>
+    </li>
+  
+    <li>
+      <a class="flat-box" href=/about/
+        
+        
+        
+          id="about"
+        >
+        
+          <i class='fas fa-info-circle fa-fw'></i>
+        
+        关于
+      </a>
+    </li>
+  
+</ul>
+<script>setLoadingBarProgress(40);</script>
+
+
+
+  <div class="l_body nocover">
+    <div class='body-wrapper'>
+      
+
+<div class='l_main'>
+  
+
+  
+    <article id="post" class="post white-box shadow article-type-post" itemscope itemprop="blogPost">
+      
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  
+    <h1 class="title">
+      <a href="/post/2432.html">
+        折腾一下Kratos主题
+      </a>
+    </h1>
+  
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+<div class='new-meta-item author'>
+  <a href="https://uu126.cn" rel="nofollow">
+    <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png">
+    <p>Feng</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class='new-meta-item category'>
+    <a href='/categories/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/' rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>网站建设</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-edit" aria-hidden="true"></i>
+    <p>发布于：Mar 17, 2017</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+          
+          <p>前几日逛Typecho论坛，看到有朋友移植了原WP主题Kratos，看看挺喜欢的（其实是有点想念WP时用过的9IPHP主题了，能力有限移植不了），那就耍耍呗，换掉Hran的Mirages主题（不知道Hran童鞋会不会有意见呀），下载并上传，接着设置主题然后又…………（每次换主题都做着这些重复的事），大致还是OK的，就是有一些地方需要修改一下，先亮一下修改后的：</p>
+<a id="more"></a>
+
+<p><img src="https://cdn.uu126.cn/usr/uploads/2017/03/960484595.jpg" alt="my_uu126_01.jpg"></p>
+<p>封面上修改的不多，主要的不是在内容页上，增加了文章二维码，打赏，另外对代码高亮进行了美化，对文章页广告代码小修改，自认为比原先的要好看。<br>####打赏<br>网上找的我也只是略略修改一下，新建一个ds.js文件，内容如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">(function($)&#123;</span><br><span class="line">	<span class="keyword">var</span> id = Date.now();</span><br><span class="line">	<span class="keyword">if</span>($(<span class="string">"#STYLE_"</span>+id).size()&lt;<span class="number">1</span>)&#123;</span><br><span class="line">		document.writeln(<span class="string">"&lt;style id='STYLE_"</span>+id+<span class="string">"'&gt;@CHARSET \"UTF-8\";*&#123;-webkit-tap-highlight-color:rgba(255,0,0,0)&#125;.box-size&#123;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box&#125;.ds-hide&#123;display:none&#125;.ds-reward-stl&#123;font-family:\"microsoft yahei\";text-align:center;background:#f1f1f1;padding:10px 0;color:#666;margin:20px auto;width:90%&#125;#dsRewardBtn &#123;position: absolute;background: #d32;left:45%;width: 60px;height: 60px;font-size: 16px;font-weight: 600;line-height: 43px;display: block;border: 4px solid #fff;border-radius: 40px;color: #FFF;&#125;#dsRewardBtn span&#123;display:inline-block;width:50px;height:50px;border-radius:100%;line-height:58px;color:#fff;font:400 25px/50px 'microsoft yahei';background:#FEC22C&#125;#dsRewardBtn:hover&#123;cursor:pointer&#125;.ds-dialog&#123;z-index:9999;width:100%;height:100%;position:fixed;top:0;left:0;border:1px solid #d9d9d9&#125;.ds-dialog .ds-close-dialog&#123;position:absolute;top:15px;right:20px;font:400 24px/24px Arial;width:20px;height:20px;text-align:center;padding:0;cursor:pointer;background:transparent;border:0;-webkit-appearance:none;font-weight:700;line-height:20px;opacity:.6;filter:alpha(opacity=20)&#125;.ds-dialog .ds-close-dialog:hover&#123;color:#000;text-decoration:none;cursor:pointer;opacity:.6;filter:alpha(opacity=40)&#125;.ds-dialog-bg&#123;position:absolute;opacity:.6;filter:alpha(opacity=30);background:#000;z-index:9999;left:0;top:0;width:100%;height:100%&#125;.ds-dialog-content&#123;font-family:'microsoft yahei';font-size:14px;background-color:#FFF;position:fixed;padding:0 20px;z-index:10000;overflow:hidden;border-radius:6px;-webkit-box-shadow:0 3px 7px rgba(0,0,0,.3);-moz-box-shadow:0 3px 7px rgba(0,0,0,.3);box-shadow:0 3px 7px rgba(0,0,0,.3);-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box&#125;.ds-dialog-pc&#123;width:390px;height:380px;top:50%;left:50%;margin:-190px 0 0 -195px&#125;.ds-dialog-wx&#123;width:90%;height:280px;top:50%;margin-top:-140px;margin-left:5%&#125;.ds-dialog-content h5&#123;text-align:left;font-size:15px;font-weight:700;margin:15px 0;color:#555&#125;.ds-payment-way&#123;text-align:left&#125;.ds-payment-way label&#123;cursor:pointer;font-weight:400;display:inline-block;font-size:14px;margin:0 15px 0 0;padding:0&#125;.ds-payment-way input[type=radio]&#123;vertical-align:middle;margin:-2px 5px 0 0&#125;.ds-payment-img&#123;margin:15px 0;text-align:center&#125;p.ds-pay-info&#123;font-size:15px;margin:0 0 10px&#125;.ds-pay-money&#123;font-size:14px;margin-top:10px&#125;.ds-pay-money p&#123;margin:0&#125;.ds-pay-money .ds-pay-money-sum&#123;margin-bottom:4px&#125;.ds-payment-img img&#123;margin:0 auto;width:185px;&#125;.ds-payment-img #qrCode_1&#123;display:none&#125;.ds-payment-img .qrcode-border&#123;margin:0 auto&#125;.ds-payment-img .qrcode-tip&#123;width:48.13px;position:relative;margin:0 auto;font-size:12px;font-weight:700;background:#fff;height:15px;line-height:15px;margin-top:-12px&#125;#qrCode_0 .qrcode-tip&#123;color:#3caf36&#125;#qrCode_3 .qrcode-tip&#123;color:#e10602&#125;.ds-payment-img #qrCode_3&#123;display:none&#125;.ds-payment-img #qrCode_2&#123;display:none&#125;#qrCode_2 .qrcode-tip&#123;color:#eb5f01&#125;#qrCode_1 .qrcode-tip&#123;color:#6699cc&#125;.wx_qrcode_container&#123;text-align:center&#125;.wx_qrcode_container h2&#123;font-size:17px&#125;.wx_qrcode_container p&#123;font-size:14px&#125;.ds-reward-stl&#123;text-align:left;background:#fff;padding:0;color:#666;margin:0;width:0&#125;#dsRewardBtn span&#123;position:absolute;left:115px;top:-7px;background:#7ab951;width:50px;height:50px;font-size:16px;font-weight:600;line-height:43px;border:4px solid #fff;border-radius:40px&#125;.share-s a&#123;margin-top:-25px&#125; .ds-payment-img .qrcode-border&#123;border-radius: 29.97px; width: 236.89px; height: 236.89px; padding: 18.05px; margin-top: 25.53px; &#125; &lt;/style&gt;"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function">function <span class="title">write</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">var</span> content = <span class="string">"&lt;div class=\"ds-dialog\" id='PAY_"</span>+id+<span class="string">"'&gt;"</span></span><br><span class="line">		+<span class="string">"   &lt;div class=\"ds-dialog-bg\" onclick=\"PaymentUtils.hide();\"&gt;&lt;/div&gt;"</span></span><br><span class="line">		+<span class="string">"   &lt;div class=\"ds-dialog-content ds-dialog-pc \"&gt;"</span></span><br><span class="line">		+<span class="string">"    &lt;i class=\"ds-close-dialog\"&gt;&amp;times;&lt;/i&gt;"</span></span><br><span class="line">		+<span class="string">"    &lt;h5&gt;选择打赏方式：&lt;/h5&gt;"</span></span><br><span class="line">		+<span class="string">"    &lt;div class=\"ds-payment-way\"&gt;"</span></span><br><span class="line">		+<span class="string">"     &lt;label for=\"wechat\"&gt;&lt;input type=\"radio\" id=\"wechat\" class=\"reward-radio\" value=\"0\" checked=\"checked\" name=\"reward-way\" /&gt;微信红包&lt;/label&gt;"</span></span><br><span class="line">		+<span class="string">"     &lt;label for=\"alipay\"&gt;&lt;input type=\"radio\" id=\"alipay\" class=\"reward-radio\" value=\"2\" name=\"reward-way\" /&gt;支付宝&lt;/label&gt;"</span></span><br><span class="line">		+ <span class="string">"    &lt;/div&gt;"</span></span><br><span class="line">		+ <span class="string">"    &lt;div class=\"ds-payment-img\"&gt;"</span></span><br><span class="line">		+ <span class="string">"     &lt;div class=\"qrcode-img qrCode_0\" id=\"qrCode_0\"&gt;"</span></span><br><span class="line">		+ <span class="string">"      &lt;div class=\"qrcode-border box-size\" style=\"border: 9.02px solid rgb(60, 175, 54\"&gt;"</span></span><br><span class="line">		+ <span class="string">"       &lt;img  class=\"qrcode-img qrCode_0\" id=\"qrCode_0\" src=\"//cdn.cdn.uu126.cn/weixin.png\" /&gt;"</span></span><br><span class="line">		+ <span class="string">"      &lt;/div&gt;"</span></span><br><span class="line">		+ <span class="string">"      &lt;p class=\"qrcode-tip\"&gt;打赏&lt;/p&gt;"</span></span><br><span class="line">		+ <span class="string">"     &lt;/div&gt;"</span></span><br><span class="line"> </span><br><span class="line">       </span><br><span class="line">		+ <span class="string">"     &lt;div class=\"qrcode-img qrCode_2\" id=\"qrCode_2\"&gt;"</span></span><br><span class="line">		+ <span class="string">"      &lt;div class=\"qrcode-border box-size\" style=\"border: 9.02px solid rgb(235, 95, 1\"&gt;"</span></span><br><span class="line">		+ <span class="string">"       &lt;img  class=\"qrcode-img qrCode_2\" id=\"qrCode_2\" src=\"//cdn.cdn.uu126.cn/zhifubao.png\" /&gt;"</span> </span><br><span class="line">		+ <span class="string">"      &lt;/div&gt;"</span></span><br><span class="line">		+ <span class="string">"      &lt;p class=\"qrcode-tip\"&gt;打赏&lt;/p&gt;"</span></span><br><span class="line">		+ <span class="string">"     &lt;/div&gt;"</span></span><br><span class="line">		</span><br><span class="line">		+ <span class="string">"    &lt;/div&gt;"</span></span><br><span class="line">		+ <span class="string">"   &lt;/div&gt;"</span></span><br><span class="line">		+ <span class="string">"  &lt;/div&gt; "</span>;</span><br><span class="line">		$(<span class="string">"body"</span>).append(content);</span><br><span class="line">	&#125;</span><br><span class="line">$(function()&#123;</span><br><span class="line">	write();</span><br><span class="line">	<span class="keyword">var</span> $pay = $(<span class="string">"#PAY_"</span>+id).hide();</span><br><span class="line">	$pay.find(<span class="string">".ds-payment-way"</span>).bind(<span class="string">"click"</span>,function()&#123;</span><br><span class="line">                $pay.find(<span class="string">".qrcode-img"</span>).hide();</span><br><span class="line">		$pay.find(<span class="string">".qrCode_"</span>+$pay.find(<span class="string">"input[name=reward-way]:checked"</span>).val()).show();</span><br><span class="line">	  &#125;);</span><br><span class="line">	 $pay.find(<span class="string">".ds-close-dialog"</span>).bind(<span class="string">"click"</span>,function()&#123;</span><br><span class="line">		  $pay.hide();</span><br><span class="line">	 &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="keyword">var</span> PaymentUtils = window[<span class="string">'PaymentUtils'</span>]=&#123;&#125;;</span><br><span class="line">  PaymentUtils.show=function()&#123;</span><br><span class="line">	  $(<span class="string">"#PAY_"</span>+id).show();</span><br><span class="line">  &#125;</span><br><span class="line">  PaymentUtils.hide=function()&#123;</span><br><span class="line">	  $(<span class="string">"#PAY_"</span>+id).hide();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)(jQuery);</span><br></pre></td></tr></table></figure>
+<p>记得修改代码中的二维码图片地址（不改嘛，你晓在会有什么后果的），然后在<code>post.php</code>中找到合适的位置加入：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;button id=<span class="string">"dsRewardBtn"</span> onclick=<span class="string">"PaymentUtils.show();"</span>&gt;赏&lt;/button&gt;</span><br></pre></td></tr></table></figure>
+<p>####文章二维码</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img id=<span class="string">"erwei_qr"</span> src=<span class="string">"https://api.imjad.cn/qrcode?text=&lt;?php $this-&gt;permalink(); ?&gt;&amp;logo=https%3A%2F%2Fapi.imjad.cn%2Fqrcode%2Flogo.png&amp;size=145&amp;level=M&amp;bgcolor=%23ffffff&amp;fgcolor=%23000000"</span> alt=<span class="string">"文章二维码"</span>/&gt; &lt;p&gt;扫描二维码，在手机上阅读！&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<p>将以上代码放到文章页末尾处即可<br>####代码高亮<br>这个用的是Prism提供的，可以直接去：<a href="http://prismjs.com/download.html" target="_blank" rel="noopener">http://prismjs.com/download.html</a> 下载，挑选好需要的代码格式，如PHP等，另好还可以选好自己喜欢的样式，选好后下载prism.js和prism.css两个文件并上传，接着在<code>Header.php</code>或<code>footer.php</code>中增加如下代码：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=<span class="string">'stylesheet'</span> id=<span class="string">'kratos-diy-style-css'</span>  href=<span class="string">'&lt;?php $this-&gt;options-&gt;themeUrl('</span>css/prism.css<span class="string">'); ?&gt;'</span> type=<span class="string">'text/css'</span> media=<span class="string">'all'</span> /&gt;</span><br><span class="line">&lt;script type=<span class="string">'text/javascript'</span> src=<span class="string">'&lt;?php $this-&gt;options-&gt;themeUrl('</span>js/prism.js<span class="string">'); ?&gt;'</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>还有些修改如友链等其它的，整理好再来啰嗦吧，先看会电影了%%&gt;&gt;&gt;&gt;&gt;&gt;</p>
+
+          
+            <br>
+            
+  
+    
+    
+
+<section class="widget copyright  desktop mobile">
+  <div class='content'>
+    
+      <blockquote>
+        
+          
+            <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+          
+        
+          
+            <p>本文永久链接是：<a href=https://uu126.cn/post/2432.html>https://uu126.cn/post/2432.html</a></p>
+          
+        
+      </blockquote>
+    
+  </div>
+</section>
+
+  
+
+  
+    
+    
+
+<section class="widget qrcode  desktop mobile">
+  
+
+  <div class='content article-entry'>
+    
+      
+        <fancybox><img src='http://www.uu126.cn/images/wechatpay.png'
+        
+          height='64px'
+        ></fancybox>
+      
+    
+      
+        <fancybox><img src='http://www.uu126.cn/images/alipay.png'
+        
+          height='64px'
+        ></fancybox>
+      
+    
+  </div>
+</section>
+
+  
+
+
+          
+        </div>
+        
+          
+
+
+  <section class='meta' id="footer-meta">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2018-01-23T20:53:57+08:00">
+  <a class='notlink'>
+    <i class="fas fa-save" aria-hidden="true"></i>
+    <p>更新于：Jan 23, 2018</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/typecho/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i><p>typecho</p></a></div>
+
+
+        
+      
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://uu126.cn/post/2432.html&title=折腾一下Kratos主题 - Feng'blog&summary=前几日逛Typecho论坛，看到有朋友移植了原WP主题Kratos，看看挺喜欢的（其实是有点想念WP时用过的9IPHP主题了，能力有限移植不了），那就耍耍呗，换掉Hran的Mirages主题（不知道Hran童鞋会不会有意见呀），下载并上传，接着设置主题然后又…………（每次换主题都做着这些重复的事），大致还是OK的，就是有一些地方需要修改一下，先亮一下修改后的："
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer"
+          
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://uu126.cn/post/2432.html&title=折腾一下Kratos主题 - Feng'blog&summary=前几日逛Typecho论坛，看到有朋友移植了原WP主题Kratos，看看挺喜欢的（其实是有点想念WP时用过的9IPHP主题了，能力有限移植不了），那就耍耍呗，换掉Hran的Mirages主题（不知道Hran童鞋会不会有意见呀），下载并上传，接着设置主题然后又…………（每次换主题都做着这些重复的事），大致还是OK的，就是有一些地方需要修改一下，先亮一下修改后的："
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://service.weibo.com/share/share.php?url=https://uu126.cn/post/2432.html&title=折腾一下Kratos主题 - Feng'blog&summary=前几日逛Typecho论坛，看到有朋友移植了原WP主题Kratos，看看挺喜欢的（其实是有点想念WP时用过的9IPHP主题了，能力有限移植不了），那就耍耍呗，换掉Hran的Mirages主题（不知道Hran童鞋会不会有意见呀），下载并上传，接着设置主题然后又…………（每次换主题都做着这些重复的事），大致还是OK的，就是有一些地方需要修改一下，先亮一下修改后的："
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/weibo.png">
+          
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </section>
+
+
+        
+        
+          <div class="prev-next">
+            
+              <a class='prev' href='/post/2437.html'>
+                <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>多说评论导出到Typecho</p>
+                <p class='content'>相信大家都看到多说的公告了，震惊呀！真有点不敢相信会来的这么快（虽然也知道早晚的事，没有一个稳定的经济来源，哪里支撑的了呀，这么多的骚年们的折腾呀），就如评论里说的，很多人才刚折腾好，结果就……...</p>
+              </a>
+            
+            
+              <a class='next' href='/post/2430.html'>
+                <p class='title'>黑莓充不了电或开不了机的解决方法<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+                <p class='content'>也不知道是咋的了，过了个年，两部备用机竟无缘无故的出现了同样的问题：充不了电，也开不了机（这跟我年后综合症也有一点关系），虽然引起的原因是自己好长时间没充电引起的，但至少也给点反应呗。先把黑莓救...</p>
+              </a>
+            
+          </div>
+        
+      </section>
+    </article>
+  
+
+  
+    <!-- 显示推荐文章和评论 -->
+
+
+
+  <article class="post white-box comments shadow">
+    <section class="article typo">
+      <p ct><i class='fas fa-comments'></i> 评论</p>
+      
+      
+      
+      
+      
+        <section id="comments">
+          <div id="valine_container" class="valine_thread">
+            <i class="fas fa-spinner fa-spin fa-fw"></i>
+          </div>
+        </section>
+      
+    </section>
+  </article>
+
+
+  
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+
+  <script>
+    window.subData = {
+      title: '折腾一下Kratos主题',
+      tools: true
+    }
+  </script>
+
+
+</div>
+<aside class='l_side'>
+  
+  
+
+  
+    
+    
+
+
+
+  
+
+
+</aside>
+
+
+  
+  <footer class="clearfix ">
+    <br><br>
+    
+      
+        
+      
+    
+      
+        <br>
+        <div class="social-wrapper">
+          
+            
+              <a href="/atom.xml"
+                class="social fas fa-rss flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="mailto:jslfp@foxmail.com"
+                class="social fas fa-envelope flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="https://github.com/sxgxhk"
+                class="social fab fa-github flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="https://music.163.com/#/user/home?id=63035382"
+                class="social fas fa-headphones-alt flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+        </div>
+     
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        <div class='copyright'>
+        <p><a href="https://uu126.cn">Copyright © 2017-2020 Feng</a></p>
+<!--腾讯云--->Hosted by <a href="https://pages.coding.me" target="_blank" rel="noopener" style="font-weight: bold">Coding Pages</a> + 
+<a href="https://cloud.tencent.com/redirect.php?redirect=1005&cps_key=4e78216aea817227ff0c96d93a00fd4b" target="_blank" rel="nofollow"><!--<img src="https://uu126.cn/wp-content/uploads/2016/10/hwclouds-logo.png" style="margin-bottom:-3px">-->腾讯云 + </a><a href="https://console.upyun.com/register/?invite=S1JeTquHL" target="_blank" rel="nofollow"><span class="with-love"><img src="https://cdn.lancn.cn/images/upyun.png" style="width:40px;" alt="又拍云存储"></span></a>
+<br>
+<!--备案---> <a target="_blank"  href="http://www.beian.miit.gov.cn">浙ICP备11026647号-3</a><span class="post-meta-divider"> | </span><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33088102001325"><span class="with-love"><img src="https://cdn.uu126.cn/icon-police.png" style="width:14px;"></span> 浙公网安备33088102001325号</a>
+        </div>
+      
+    
+  </footer>
+
+<script>setLoadingBarProgress(80);</script>
+
+
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+  </div>
+  
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4/dist/jquery.min.js"></script>
+
+
+  <script>
+    
+    var SEARCH_SERVICE = "hexo" || "hexo";
+    var ROOT = "/" || "/";
+    if (!ROOT.endsWith('/')) ROOT += '/';
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+
+  <script type="text/javascript">
+    $(function() {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+
+
+
+  
+  
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script>
+
+    <script type="text/javascript">
+      $(function(){
+        var imgs=["https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/BBC19066-E176-47C2-9D22-48C81EE5DF6B.jpeg"];
+        if ('true' == 'true') {
+          function shuffle(arr){
+            /*From countercurrent-time*/
+            var n = arr.length;
+            while(n--) {
+              var index = Math.floor(Math.random() * n);
+              var temp = arr[index];
+              arr[index] = arr[n];
+              arr[n] = temp;
+            }
+          }
+          shuffle(imgs);
+        }
+        if ('.cover') {
+          $('.cover').backstretch(
+            imgs,
+          {
+            duration: "20000",
+            fade: "1500"
+          });
+        } else {
+          $.backstretch(
+            imgs,
+          {
+            duration: "20000",
+            fade: "1500"
+          });
+        }
+      });
+    </script>
+  
+
+
+
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js" async></script>
+
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js" async></script>
+
+  
+
+
+
+
+
+
+
+
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2.0/js/valine.js"></script>
+
+  
+  <script>
+  var GUEST_INFO = ['nick','mail','link'];
+  var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var notify = 'true' == true;
+  var verify = 'true' == true;
+  var valine = new Valine();
+  valine.init({
+    el: '#valine_container',
+    notify: notify,
+    verify: verify,
+    guest_info: guest_info,
+    
+    appId: "5sMkTX4FLjetFnfbOhaDTCDJ-9Nh9j0Va",
+    appKey: "25KXCqIqAN142RQn4fBrsI87",
+    placeholder: "快来评论吧~",
+    pageSize:'10',
+    avatar:'mp',
+    lang:'zh-cn',
+    visitor: 'false',
+    highlight:'true'
+  })
+  </script>
+
+
+
+  
+<script src="/js/app.js"></script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2.1/js/search.js"></script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2/js/comment_typing.js"></script>
+
+
+
+<!-- 复制 -->
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copyed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('fa-copy');
+        $icon.addClass('fa-clipboard-check');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPYED';
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('fa-copy');
+        $icon.addClass('fa-exclamation-triangle');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+
+
+
+
+<!-- fancybox -->
+
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  let LAZY_LOAD_IMAGE = "";
+  $(".article-entry").find("fancybox").find("img").each(function () {
+      var element = document.createElement("a");
+      $(element).attr("data-fancybox", "gallery");
+      $(element).attr("href", $(this).attr("src"));
+      /* 图片采用懒加载处理时,
+       * 一般图片标签内会有个属性名来存放图片的真实地址，比如 data-original,
+       * 那么此处将原本的属性名src替换为对应属性名data-original,
+       * 修改如下
+       */
+       if (LAZY_LOAD_IMAGE) {
+         $(element).attr("href", $(this).attr("data-original"));
+       }
+      $(this).wrap(element);
+  });
+</script>
+
+
+
+
+
+
+  <script>setLoadingBarProgress(100);</script>
+</body>
+</html>

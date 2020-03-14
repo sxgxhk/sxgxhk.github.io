@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html>
+<head hexo-theme='https://volantis.js.org/#blog'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- 页面元数据 -->
+  
+    <title>Debian 8.X搭建Lnmp+ Ghost 1.x 教程 - Feng&#39;blog</title>
+  
+    <meta name="keywords" content="Ghost">
+  
+  
+    <meta name="description" content="其实类似的教程挺多的，尤其是Ghost 1.X版本之前的，真的不要太多，写这个教程也只是自己参照官网教程和烧饼博客之后，对自己的搭建经历作一个小小的回顾。因为本人还要折腾点别的小玩意，所以不仅要将Ghost博客搭建起来，还要将PHP环境等也一同搭建，便于日后的各种折腾。好了，废话不多说，开始啰嗦之旅吧。">
+  
+
+  <!-- feed -->
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css">
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
+
+  
+
+  
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
+  
+
+  <!-- import link -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/style.css">
+
+  
+
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+
+  
+  
+</head>
+
+<body>
+  
+  <div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
+</div>
+<header class="l_header shadow blur">
+
+  <div class='wrapper'>
+    <div class='nav-sub container--flex'>
+      <a class="logo flat-box"></a>
+      <ul class='switcher h-list'>
+        <li><a class="s-comment flat-btn fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a class="s-toc flat-btn fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main container container--flex">
+      
+        
+        <a class="logo flat-box" target="_self" href='/'>
+          
+          
+          
+          
+            FENG <b><sup style='color:#3AA757'>blog</sup></b>
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='h-list'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  
+                    <i class='fas fa-rss fa-fw'></i>
+                  
+                  首页
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  
+                    <i class='fas fa-archive fa-fw'></i>
+                  
+                  归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/links/
+                  
+                  
+                  
+                    id="links"
+                  >
+                  
+                    <i class='fas fa-link fa-fw'></i>
+                  
+                  友链
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/ly/
+                  
+                  
+                  
+                    id="ly"
+                  >
+                  
+                    <i class='fas fa-info-circle fa-fw'></i>
+                  
+                  留言
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  
+                    <i class='fas fa-info-circle fa-fw'></i>
+                  
+                  关于
+                </a>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      
+        <div class="m_search">
+          <form name="searchform" class="form u-search-form">
+            <i class="icon fas fa-search fa-fw"></i>
+            <input type="text" class="input u-search-input" placeholder="搜索" />
+          </form>
+        </div>
+      
+
+			<ul class='switcher h-list'>
+				
+					<li><a class="s-search flat-btn fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li><a class="s-menu flat-btn fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+<ul class="menu-phone navigation white-box">
+  
+  
+    <li>
+      <a class="flat-box" href=/
+        
+        
+        
+          id="home"
+        >
+        
+          <i class='fas fa-rss fa-fw'></i>
+        
+        首页
+      </a>
+    </li>
+  
+    <li>
+      <a class="flat-box" href=/archives/
+        
+        
+        
+          id="archives"
+        >
+        
+          <i class='fas fa-archive fa-fw'></i>
+        
+        归档
+      </a>
+    </li>
+  
+    <li>
+      <a class="flat-box" href=/links/
+        
+        
+        
+          id="links"
+        >
+        
+          <i class='fas fa-link fa-fw'></i>
+        
+        友链
+      </a>
+    </li>
+  
+    <li>
+      <a class="flat-box" href=/ly/
+        
+        
+        
+          id="ly"
+        >
+        
+          <i class='fas fa-info-circle fa-fw'></i>
+        
+        留言
+      </a>
+    </li>
+  
+    <li>
+      <a class="flat-box" href=/about/
+        
+        
+        
+          id="about"
+        >
+        
+          <i class='fas fa-info-circle fa-fw'></i>
+        
+        关于
+      </a>
+    </li>
+  
+</ul>
+<script>setLoadingBarProgress(40);</script>
+
+
+
+  <div class="l_body nocover">
+    <div class='body-wrapper'>
+      
+
+<div class='l_main'>
+  
+
+  
+    <article id="post" class="post white-box shadow article-type-post" itemscope itemprop="blogPost">
+      
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  
+    <h1 class="title">
+      <a href="/post/2490.html">
+        Debian 8.X搭建Lnmp+ Ghost 1.x 教程
+      </a>
+    </h1>
+  
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+<div class='new-meta-item author'>
+  <a href="https://uu126.cn" rel="nofollow">
+    <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png">
+    <p>Feng</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class='new-meta-item category'>
+    <a href='/categories/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/' rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>网站建设</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-edit" aria-hidden="true"></i>
+    <p>发布于：Sep 28, 2017</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+          
+          <p>其实类似的教程挺多的，尤其是Ghost 1.X版本之前的，真的不要太多，写这个教程也只是自己参照官网教程和烧饼博客之后，对自己的搭建经历作一个小小的回顾。因为本人还要折腾点别的小玩意，所以不仅要将Ghost博客搭建起来，还要将PHP环境等也一同搭建，便于日后的各种折腾。好了，废话不多说，开始啰嗦之旅吧。</p>
+<a id="more"></a>
+
+<ul>
+<li>首先搭建Lnmp，可用的环境包有很多，比如军哥的Lnmp，还有最近比较火的OneinStack等等，个人比较喜欢OneinStack，觉得功能上比前者要丰富。具体的搭建步骤，请参考<a href="https://oneinstack.com/install/" target="_blank" rel="noopener">官网</a>，一路配置下来估计也要半个小时左右，成功率100%（反正我折腾了这么多次，从来没有失败过），搭建好之后，建议先做个快照！<br>2017-8-19补充：还是把Oneinstack的搭建步骤照抄一下吧，给看的亲们省点时间233<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">yum -y install wget screen curl python #for CentOS&#x2F;Redhat</span><br><span class="line"># apt-get -y install wget screen curl python #for Debian&#x2F;Ubuntu</span><br><span class="line">wget http:&#x2F;&#x2F;aliyun-oss.linuxeye.com&#x2F;oneinstack-full.tar.gz #阿里云经典网络下载</span><br><span class="line">wget http:&#x2F;&#x2F;mirrors.linuxeye.com&#x2F;oneinstack-full.tar.gz #包含源码，国内外均可下载</span><br><span class="line">wget http:&#x2F;&#x2F;mirrors.linuxeye.com&#x2F;oneinstack.tar.gz #不包含源码，建议仅国外主机下载</span><br><span class="line">tar xzf oneinstack-full.tar.gz</span><br><span class="line">cd oneinstack #如果需要修改目录(安装、数据存储、Nginx日志)，请修改options.conf文件</span><br><span class="line">screen -S oneinstack #如果网路出现中断，可以执行命令&#96;screen -R oneinstack&#96;重新连接安装窗口</span><br><span class="line">.&#x2F;install.sh #注：请勿sh install.sh或者bash install.sh这样执行</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p><img src="https://cdn.uu126.cn/201708/install_oneinstack.png" alt="install_oneinstack"></p>
+<ul>
+<li>开始搭建Ghost（过程可参照官网或烧饼博客）<ol>
+<li>更新系统并安装必要软件<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">apt-get update </span><br><span class="line">apt-get upgrade</span><br><span class="line">apt-get -t stretch-backports update </span><br><span class="line">apt-get -t stretch-backports upgrade</span><br></pre></td></tr></table></figure></li>
+<li>安装 Node.js 6.x LTS<br>方法一：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -sL https:&#x2F;&#x2F;deb.nodesource.com&#x2F;setup_6.x | bash -  </span><br><span class="line">apt-get install nodejs</span><br></pre></td></tr></table></figure>
+方法二：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">国外下载地址：</span><br><span class="line">wget https:&#x2F;&#x2F;nodejs.org&#x2F;download&#x2F;release&#x2F;v6.9.5&#x2F;node-v6.9.5.tar.gz</span><br><span class="line">国内下载地址：</span><br><span class="line">wget https:&#x2F;&#x2F;npm.taobao.org&#x2F;mirrors&#x2F;node&#x2F;v6.9.5&#x2F;node-v6.9.5.tar.gz</span><br><span class="line">tar zxvf node-v6.9.5.tar.gz</span><br><span class="line">cd node-v6.9.5</span><br><span class="line">.&#x2F;configure </span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+</li>
+</ul>
+<blockquote>
+<p>2017-10-22补充，最新版的Ghost已经不支持Node V6.5版本了，所以嘛……得更新233</p>
+</blockquote>
+<p>推荐使用方法二，成功率高，如果使用方法一没有成功的话，还可以再使用方法二，成功与否，可以使用<br><code>node -v</code>，如果能显示版本就说明Node.js搭建成功了<br>4. 配置Nginx（因为前面已搭建好Lnmp，所以这里直接配置站点文件即可）<br>  先配置站点文件<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;conf&#x2F;vhost&#x2F;ghost.conf</span><br></pre></td></tr></table></figure><br>  然后写入以下内容：<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">  server &#123;  </span><br><span class="line">  listen 80;</span><br><span class="line">  listen 443;</span><br><span class="line">  server_name 1984n.win;  #记得改成自己的域名</span><br><span class="line">  ssl on;</span><br><span class="line">  ssl_certificate &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;conf&#x2F;1984.crt; #SSL证书路径</span><br><span class="line">  ssl_certificate_key &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;conf&#x2F;1984.key;  #SSL证书路径</span><br><span class="line"></span><br><span class="line">    location &#x2F; &#123;</span><br><span class="line">        proxy_set_header   X-Real-IP $remote_addr;</span><br><span class="line">        proxy_set_header   Host      $http_host;</span><br><span class="line">        proxy_pass         http:&#x2F;&#x2F;127.0.0.1:2368;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>  保存好之后，记得重启一下Nginx。<br>5. 添加 ghost 运行用户（按照官方的说明，需要另建一个账户，名称随便，这里以<code>ghost</code>作为用户名来介绍。首先使用<code>adduser</code>而不是<code>useradd</code>命令添加用户，后者只能添加一个简单的无密码无执行权限的用户，前者是后者的加强版命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adduser ghost</span><br></pre></td></tr></table></figure>
+<p>然后系统会提示你输入两次密码，其他的一律回车即可。接着给予<code>ghost</code>用户<code>sudo</code>权限，这样这货就可以执行好多操作了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">usermod -aG sudo ghost</span><br></pre></td></tr></table></figure>
+<ol start="6">
+<li>安装 Ghost-CLI 和 Ghost 1.x<br>Ghost 从 1.0 开始，已经不需要其他第三方的软件来保持后台运行、更新、安装等操作，因为他们出了个命令行软件<code>Ghost-CLI</code>有了这货，我们再也不需要安装<code>pm2</code>来保持后台运行，也不需要用<code>ghost-upgrade</code>来升级，因为他基本已经全部带了以前的功能。<br>首先我们需要切换到<code>ghost</code>这个用户<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">su - ghost</span><br></pre></td></tr></table></figure>
+输入密码回车,然后直接用 npm 安装<code>Ghost-CLI</code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm i -g ghost-cli</span><br></pre></td></tr></table></figure>
+假设你的博客要放在<code>/var/www/ghost</code>目录，那么我们就创建一个并赋予权限<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir &#x2F;var&#x2F;www&#x2F;ghost</span><br><span class="line">sudo chown ghost:ghost &#x2F;var&#x2F;www&#x2F;ghost</span><br></pre></td></tr></table></figure>
+进入这个目录就可以开始安装 Ghost 了<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;var&#x2F;www&#x2F;ghost</span><br><span class="line">ghost install</span><br></pre></td></tr></table></figure>
+按照提示输入即可，如果要使用<code>sqlite3</code>数据库的，可以将<code>ghost install</code>改为：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ghost install local --db&#x3D;sqlite3</span><br></pre></td></tr></table></figure>
+然后修改<code>/var/www/ghost/config.development.json</code>文件，修改自己的域名即可，保存好之后，再使用命令：<code>ghost stop &amp;&amp; ghost estart</code>命令强行关闭再启动（注意不是重启），看是否正确，正确的输出信息是类似这样的:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ghost@sb-blog:&#x2F;var&#x2F;www&#x2F;ghost$ ghost start</span><br><span class="line">✔ Validating config</span><br><span class="line">✔ Starting Ghost</span><br><span class="line">You can access your blog at https:&#x2F;&#x2F;1984n.win&#x2F;</span><br><span class="line"></span><br><span class="line">Ghost uses direct mail by default</span><br><span class="line">To set up an alternative email method read our docs at https:&#x2F;&#x2F;docs.ghost.org&#x2F;docs&#x2F;mail-config</span><br></pre></td></tr></table></figure>
+没问题以后，就可以把这个文件改成正式环境的文件了:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv config.development.json config.production.json</span><br></pre></td></tr></table></figure>
+然后再使用命令：<code>ghost stop &amp;&amp; ghost estart</code>命令强行关闭再启动。</li>
+</ol>
+<h4 id="注意"><a href="#注意" class="headerlink" title="注意:"></a>注意:</h4><p>另外千万不要在 root 用户下执行 ghost 相关命令，否则 <code>/var/www/ghost/.ghostpid</code>这个文件的权限就变成<code>root</code>用户的了，导致后续会遇到<code>Message: &#39;EACCES: permission denied, open &#39;/var/www/ghost/.ghostpid&#39;&#39;</code></p>
+<p>一切正常的话，就可以开始折腾Ghost了。</p>
+<p>本文中搭建Ghost的部分步骤来自烧饼博客：<a href="https://sb.sb/debian-ubuntu-install-upgrade-ghost/" target="_blank" rel="noopener">https://sb.sb/debian-ubuntu-install-upgrade-ghost/</a> ，还有Ghost官网教程：<a href="https://docs.ghost.org/docs/install" target="_blank" rel="noopener">https://docs.ghost.org/docs/install</a> ，写完看电影咯。</p>
+<p>2017-8-19补充：话说现在新版的Ghost编辑器还是蛮好用的，连小工具都有了，这在以前的0.7.4版本可是没有的，这也极大方便像我这种非代码控，点点即可上传图片、链接等等。</p>
+<p><img src="https://cdn.uu126.cn/201708/ghost_blog02.jpg" alt="ghost_blog02"></p>
+
+          
+            <br>
+            
+  
+    
+    
+
+<section class="widget copyright  desktop mobile">
+  <div class='content'>
+    
+      <blockquote>
+        
+          
+            <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+          
+        
+          
+            <p>本文永久链接是：<a href=https://uu126.cn/post/2490.html>https://uu126.cn/post/2490.html</a></p>
+          
+        
+      </blockquote>
+    
+  </div>
+</section>
+
+  
+
+  
+    
+    
+
+<section class="widget qrcode  desktop mobile">
+  
+
+  <div class='content article-entry'>
+    
+      
+        <fancybox><img src='http://www.uu126.cn/images/wechatpay.png'
+        
+          height='64px'
+        ></fancybox>
+      
+    
+      
+        <fancybox><img src='http://www.uu126.cn/images/alipay.png'
+        
+          height='64px'
+        ></fancybox>
+      
+    
+  </div>
+</section>
+
+  
+
+
+          
+        </div>
+        
+          
+
+
+  <section class='meta' id="footer-meta">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2018-01-23T21:15:24+08:00">
+  <a class='notlink'>
+    <i class="fas fa-save" aria-hidden="true"></i>
+    <p>更新于：Jan 23, 2018</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Ghost/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i><p>Ghost</p></a></div>
+
+
+        
+      
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://uu126.cn/post/2490.html&title=Debian 8.X搭建Lnmp+ Ghost 1.x 教程 - Feng'blog&summary=其实类似的教程挺多的，尤其是Ghost 1.X版本之前的，真的不要太多，写这个教程也只是自己参照官网教程和烧饼博客之后，对自己的搭建经历作一个小小的回顾。因为本人还要折腾点别的小玩意，所以不仅要将Ghost博客搭建起来，还要将PHP环境等也一同搭建，便于日后的各种折腾。好了，废话不多说，开始啰嗦之旅吧。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer"
+          
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://uu126.cn/post/2490.html&title=Debian 8.X搭建Lnmp+ Ghost 1.x 教程 - Feng'blog&summary=其实类似的教程挺多的，尤其是Ghost 1.X版本之前的，真的不要太多，写这个教程也只是自己参照官网教程和烧饼博客之后，对自己的搭建经历作一个小小的回顾。因为本人还要折腾点别的小玩意，所以不仅要将Ghost博客搭建起来，还要将PHP环境等也一同搭建，便于日后的各种折腾。好了，废话不多说，开始啰嗦之旅吧。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://service.weibo.com/share/share.php?url=https://uu126.cn/post/2490.html&title=Debian 8.X搭建Lnmp+ Ghost 1.x 教程 - Feng'blog&summary=其实类似的教程挺多的，尤其是Ghost 1.X版本之前的，真的不要太多，写这个教程也只是自己参照官网教程和烧饼博客之后，对自己的搭建经历作一个小小的回顾。因为本人还要折腾点别的小玩意，所以不仅要将Ghost博客搭建起来，还要将PHP环境等也一同搭建，便于日后的各种折腾。好了，废话不多说，开始啰嗦之旅吧。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/weibo.png">
+          
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </section>
+
+
+        
+        
+          <div class="prev-next">
+            
+              <a class='prev' href='/post/2492.html'>
+                <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>Vultr已正式支持支付宝咯</p>
+                <p class='content'>相信很多在用Vultr家VPS的站长们，都知道早在月初官方就有意支持支付宝了，只不过那时想用需要发工单才可以（苦逼……），估计官方也意识到了我们国人的重要性，加上老马家的支付宝的名声……（这纯粹...</p>
+              </a>
+            
+            
+              <a class='next' href='/post/2488.html'>
+                <p class='title'>信用卡黑话<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+                <p class='content'>“天王盖地虎！”“宝塔镇河妖！”黑话：一种特殊的语言讯号，江湖中人彼此联系的一种特殊手段。在信用卡圈子，也有自己的专有黑话，比如，薅羊毛、火鸡……，有些我也是刚听说过，捞过来瞧瞧吧
+
+
+信用卡黑...</p>
+              </a>
+            
+          </div>
+        
+      </section>
+    </article>
+  
+
+  
+    <!-- 显示推荐文章和评论 -->
+
+
+
+  <article class="post white-box comments shadow">
+    <section class="article typo">
+      <p ct><i class='fas fa-comments'></i> 评论</p>
+      
+      
+      
+      
+      
+        <section id="comments">
+          <div id="valine_container" class="valine_thread">
+            <i class="fas fa-spinner fa-spin fa-fw"></i>
+          </div>
+        </section>
+      
+    </section>
+  </article>
+
+
+  
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+
+  <script>
+    window.subData = {
+      title: 'Debian 8.X搭建Lnmp+ Ghost 1.x 教程',
+      tools: true
+    }
+  </script>
+
+
+</div>
+<aside class='l_side'>
+  
+  
+
+  
+    
+    
+
+
+  <section class="widget toc-wrapper shadow desktop mobile">
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#注意"><span class="toc-text">注意:</span></a></li></ol>
+    </div>
+  </section>
+
+
+  
+
+
+</aside>
+
+
+  
+  <footer class="clearfix ">
+    <br><br>
+    
+      
+        
+      
+    
+      
+        <br>
+        <div class="social-wrapper">
+          
+            
+              <a href="/atom.xml"
+                class="social fas fa-rss flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="mailto:jslfp@foxmail.com"
+                class="social fas fa-envelope flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="https://github.com/sxgxhk"
+                class="social fab fa-github flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="https://music.163.com/#/user/home?id=63035382"
+                class="social fas fa-headphones-alt flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+        </div>
+     
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        <div class='copyright'>
+        <p><a href="https://uu126.cn">Copyright © 2017-2020 Feng</a></p>
+<!--腾讯云--->Hosted by <a href="https://pages.coding.me" target="_blank" rel="noopener" style="font-weight: bold">Coding Pages</a> + 
+<a href="https://cloud.tencent.com/redirect.php?redirect=1005&cps_key=4e78216aea817227ff0c96d93a00fd4b" target="_blank" rel="nofollow"><!--<img src="https://uu126.cn/wp-content/uploads/2016/10/hwclouds-logo.png" style="margin-bottom:-3px">-->腾讯云 + </a><a href="https://console.upyun.com/register/?invite=S1JeTquHL" target="_blank" rel="nofollow"><span class="with-love"><img src="https://cdn.lancn.cn/images/upyun.png" style="width:40px;" alt="又拍云存储"></span></a>
+<br>
+<!--备案---> <a target="_blank"  href="http://www.beian.miit.gov.cn">浙ICP备11026647号-3</a><span class="post-meta-divider"> | </span><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33088102001325"><span class="with-love"><img src="https://cdn.uu126.cn/icon-police.png" style="width:14px;"></span> 浙公网安备33088102001325号</a>
+        </div>
+      
+    
+  </footer>
+
+<script>setLoadingBarProgress(80);</script>
+
+
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+  </div>
+  
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4/dist/jquery.min.js"></script>
+
+
+  <script>
+    
+    var SEARCH_SERVICE = "hexo" || "hexo";
+    var ROOT = "/" || "/";
+    if (!ROOT.endsWith('/')) ROOT += '/';
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+
+  <script type="text/javascript">
+    $(function() {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+
+
+
+  
+  
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script>
+
+    <script type="text/javascript">
+      $(function(){
+        var imgs=["https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/BBC19066-E176-47C2-9D22-48C81EE5DF6B.jpeg"];
+        if ('true' == 'true') {
+          function shuffle(arr){
+            /*From countercurrent-time*/
+            var n = arr.length;
+            while(n--) {
+              var index = Math.floor(Math.random() * n);
+              var temp = arr[index];
+              arr[index] = arr[n];
+              arr[n] = temp;
+            }
+          }
+          shuffle(imgs);
+        }
+        if ('.cover') {
+          $('.cover').backstretch(
+            imgs,
+          {
+            duration: "20000",
+            fade: "1500"
+          });
+        } else {
+          $.backstretch(
+            imgs,
+          {
+            duration: "20000",
+            fade: "1500"
+          });
+        }
+      });
+    </script>
+  
+
+
+
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js" async></script>
+
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js" async></script>
+
+  
+
+
+
+
+
+
+
+
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2.0/js/valine.js"></script>
+
+  
+  <script>
+  var GUEST_INFO = ['nick','mail','link'];
+  var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var notify = 'true' == true;
+  var verify = 'true' == true;
+  var valine = new Valine();
+  valine.init({
+    el: '#valine_container',
+    notify: notify,
+    verify: verify,
+    guest_info: guest_info,
+    
+    appId: "5sMkTX4FLjetFnfbOhaDTCDJ-9Nh9j0Va",
+    appKey: "25KXCqIqAN142RQn4fBrsI87",
+    placeholder: "快来评论吧~",
+    pageSize:'10',
+    avatar:'mp',
+    lang:'zh-cn',
+    visitor: 'false',
+    highlight:'true'
+  })
+  </script>
+
+
+
+  
+<script src="/js/app.js"></script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2.1/js/search.js"></script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2/js/comment_typing.js"></script>
+
+
+
+<!-- 复制 -->
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copyed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('fa-copy');
+        $icon.addClass('fa-clipboard-check');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPYED';
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('fa-copy');
+        $icon.addClass('fa-exclamation-triangle');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+
+
+
+
+<!-- fancybox -->
+
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  let LAZY_LOAD_IMAGE = "";
+  $(".article-entry").find("fancybox").find("img").each(function () {
+      var element = document.createElement("a");
+      $(element).attr("data-fancybox", "gallery");
+      $(element).attr("href", $(this).attr("src"));
+      /* 图片采用懒加载处理时,
+       * 一般图片标签内会有个属性名来存放图片的真实地址，比如 data-original,
+       * 那么此处将原本的属性名src替换为对应属性名data-original,
+       * 修改如下
+       */
+       if (LAZY_LOAD_IMAGE) {
+         $(element).attr("href", $(this).attr("data-original"));
+       }
+      $(this).wrap(element);
+  });
+</script>
+
+
+
+
+
+
+  <script>setLoadingBarProgress(100);</script>
+</body>
+</html>

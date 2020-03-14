@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html>
+<head hexo-theme='https://volantis.js.org/#blog'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- 页面元数据 -->
+  
+    <title>主机搬迁记之入驻华为云 - Feng&#39;blog</title>
+  
+    <meta name="keywords" content="华为云">
+  
+  
+    <meta name="description" content="至上次入驻阿里云以来，已经蛮长时间了，说老实话，阿里云还是相当稳定的，至少我在用期间从来没有出现问题过，主机开个几百天（时间长了自己手庠要去重启一下）肯定是没问题的，之所以这次要搬出出来，原因只有一个：阿里的服务已不如从前（可能是业务大了，人多了吧），至今还记得那时 有问题提交工单，哪怕是23点，也会马上回复，甚...">
+  
+
+  <!-- feed -->
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css">
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
+
+  
+
+  
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
+  
+
+  <!-- import link -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/style.css">
+
+  
+
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+
+  
+  
+</head>
+
+<body>
+  
+  <div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
+</div>
+<header class="l_header shadow blur">
+
+  <div class='wrapper'>
+    <div class='nav-sub container--flex'>
+      <a class="logo flat-box"></a>
+      <ul class='switcher h-list'>
+        <li><a class="s-comment flat-btn fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a class="s-toc flat-btn fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main container container--flex">
+      
+        
+        <a class="logo flat-box" target="_self" href='/'>
+          
+          
+          
+          
+            FENG <b><sup style='color:#3AA757'>blog</sup></b>
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='h-list'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  
+                    <i class='fas fa-rss fa-fw'></i>
+                  
+                  首页
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  
+                    <i class='fas fa-archive fa-fw'></i>
+                  
+                  归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/links/
+                  
+                  
+                  
+                    id="links"
+                  >
+                  
+                    <i class='fas fa-link fa-fw'></i>
+                  
+                  友链
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/ly/
+                  
+                  
+                  
+                    id="ly"
+                  >
+                  
+                    <i class='fas fa-info-circle fa-fw'></i>
+                  
+                  留言
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  
+                    <i class='fas fa-info-circle fa-fw'></i>
+                  
+                  关于
+                </a>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      
+        <div class="m_search">
+          <form name="searchform" class="form u-search-form">
+            <i class="icon fas fa-search fa-fw"></i>
+            <input type="text" class="input u-search-input" placeholder="搜索" />
+          </form>
+        </div>
+      
+
+			<ul class='switcher h-list'>
+				
+					<li><a class="s-search flat-btn fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li><a class="s-menu flat-btn fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+<ul class="menu-phone navigation white-box">
+  
+  
+    <li>
+      <a class="flat-box" href=/
+        
+        
+        
+          id="home"
+        >
+        
+          <i class='fas fa-rss fa-fw'></i>
+        
+        首页
+      </a>
+    </li>
+  
+    <li>
+      <a class="flat-box" href=/archives/
+        
+        
+        
+          id="archives"
+        >
+        
+          <i class='fas fa-archive fa-fw'></i>
+        
+        归档
+      </a>
+    </li>
+  
+    <li>
+      <a class="flat-box" href=/links/
+        
+        
+        
+          id="links"
+        >
+        
+          <i class='fas fa-link fa-fw'></i>
+        
+        友链
+      </a>
+    </li>
+  
+    <li>
+      <a class="flat-box" href=/ly/
+        
+        
+        
+          id="ly"
+        >
+        
+          <i class='fas fa-info-circle fa-fw'></i>
+        
+        留言
+      </a>
+    </li>
+  
+    <li>
+      <a class="flat-box" href=/about/
+        
+        
+        
+          id="about"
+        >
+        
+          <i class='fas fa-info-circle fa-fw'></i>
+        
+        关于
+      </a>
+    </li>
+  
+</ul>
+<script>setLoadingBarProgress(40);</script>
+
+
+
+  <div class="l_body nocover">
+    <div class='body-wrapper'>
+      
+
+<div class='l_main'>
+  
+
+  
+    <article id="post" class="post white-box shadow article-type-post" itemscope itemprop="blogPost">
+      
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  
+    <h1 class="title">
+      <a href="/post/2247.html">
+        主机搬迁记之入驻华为云
+      </a>
+    </h1>
+  
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+<div class='new-meta-item author'>
+  <a href="https://uu126.cn" rel="nofollow">
+    <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png">
+    <p>Feng</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class='new-meta-item category'>
+    <a href='/categories/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/' rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>网站建设</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-edit" aria-hidden="true"></i>
+    <p>发布于：Oct 22, 2016</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+          
+          <p>至上次入驻阿里云以来，已经蛮长时间了，说老实话，阿里云还是相当稳定的，至少我在用期间从来没有出现问题过，主机开个几百天（时间长了自己手庠要去重启一下）肯定是没问题的，之所以这次要搬出出来，原因只有一个：阿里的服务已不如从前（可能是业务大了，人多了吧），至今还记得那时 有问题提交工单，哪怕是23点，也会马上回复，甚至直接电话回复，可如今发个工单，至少也要一两个小时才能响应，复杂一点的我碰到过60个小时也没处理好；其次现在阿里定价也是一年变一年，活动跟老客户基本绝缘，论坛上也越来越多的不满……。很多人也是碍于备案流程繁杂、琐碎而继续留着（本来我也想继续留着的，可后来碰到的事情让我不再有这种想法，唉！走吧）。</p>
+<p>对于华为云服务器，之前也有关注过，虽然做云服务器的时间并不是很长，但凭借着一直以来的硬件实力，相信也不会差到哪里去，而且适逢最近刚在搞活动，力度还是蛮大的，直接有充1000送1000，而且还有很多特价的云服务器配置，如图：</p>
+<a id="more"></a>
+
+
+<p><img src="https://cdn.uu126.cn/wp-content/uploads/2016/10/hwclouds0.png" alt="请输入图片描述"><br>1核1G1M40G的主机，一年只要518元，还是蛮有竞争力的，而且还有充1000送1000的活动，送的代金券有效期一个月，估计双十一时可能还有活动。<br><img src="https://cdn.uu126.cn/wp-content/uploads/2016/10/hwclouds03.png" alt="请输入图片描述"></p>
+<p>先注册个账号了解一下，还没充钱第二天客服就打电话来了（非常神速！），非常细心的讲解现在加入华为云有哪些活动可以参加等，思考再三决定下刀，因为华为云服务器目前还不支持购买后直接续费，所以导致我不能买特价518的机子（主要是我想充分使用那充值送来的代金券），经过反复的“研究”，决定直接在后台购买1核1G40G的主机，858元/年，买三年可以打8.5折（这个折扣竟然客服MM也不知道，哈哈），总价2190元，除去1000，等于我只付了1190就有了一台3年的主机，要知道这样的配置不管是阿里云还是腾讯云可是买不来的呢。开始部署服务器了，依旧是采用了OneinStack的套件（功能比较强大、更新也快），配置好后直接把原来在阿里云上的主机文件复制到站点目录，同时利用Phpmyadmin导入原站点SQL备份（具体操作方式可参考：<a href="https://cdn.uu126.cn/post/2006.html" target="_blank" rel="noopener">https://uu126.cn/post/2006.html</a>），接着配置好Https，一切完工后重启一下Nginx（习惯了），发现问题来了，竟然Https打不开了（由于之前没有测试过，太相信自己那点技术了），Ping也不通，苦恼了好一会，才想起来之前在其它博客上看到华为云上一些端口要开启防火墙规则才可以使用，赶紧去弄。华为云的防火墙规则在私有云上（如果一下子找不到私有云在哪，可按下图操作）<br><img src="https://cdn.uu126.cn/wp-content/uploads/2016/10/hwclouds01.png" alt="请输入图片描述"></p>
+<p>进入以后，点击安全组，然后点击default，这时可以看到很多端口，华为是默认开启的，比如22、3389、80等，但你Https的443端口是没有开启的，点击添加规则，选择入向，然后在端口里输入443，再点击确定即可，同样如果需要添加其它端口的可以按此添加。<br><img src="https://cdn.uu126.cn/wp-content/uploads/2016/10/hwclouds02.png" alt="请输入图片描述"></p>
+<p>至此，华为云搬迁完工，过程还算顺利，碰到的问题也是对华为云的操作不是很清楚，加上华为云本身要求相对的严格（就拿防火墙的安全组设置 ，一般云服务器商是没有的！），目前访问速度也还好，具体的得用段时间再测试一下。个人觉得华为云后台目前还是有一些缺陷的，比如云服务器购买后不能直接续费，而是要等到快到期时才可以；另外工单提交只能一次性，不能交互式反馈，而且还不能删除工单；后台的项目过于繁杂，密密麻麻人有点眼晕的感觉，操作上能够更简便点就好了；云服务器一旦选择了系统版本后，不能随意更换（反正我是没找着），只能重装系统；暂时这点吧，其它的有待我去发掘，哈哈。</p>
+<p>总结：目前来讲华为云还是相当有价格优势，姑且不说双十一的时候，至少目前阿里去、腾讯云还是没有这么大力度的，所以如果近期有跟我一样的朋友，可以来华为云看看，我不是说客，我只是真实反映事实（我就算是说客，华为云也不会给我小费的，呵呵），折腾的人生！</p>
+
+          
+            <br>
+            
+  
+    
+    
+
+<section class="widget copyright  desktop mobile">
+  <div class='content'>
+    
+      <blockquote>
+        
+          
+            <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+          
+        
+          
+            <p>本文永久链接是：<a href=https://uu126.cn/post/2247.html>https://uu126.cn/post/2247.html</a></p>
+          
+        
+      </blockquote>
+    
+  </div>
+</section>
+
+  
+
+  
+    
+    
+
+<section class="widget qrcode  desktop mobile">
+  
+
+  <div class='content article-entry'>
+    
+      
+        <fancybox><img src='http://www.uu126.cn/images/wechatpay.png'
+        
+          height='64px'
+        ></fancybox>
+      
+    
+      
+        <fancybox><img src='http://www.uu126.cn/images/alipay.png'
+        
+          height='64px'
+        ></fancybox>
+      
+    
+  </div>
+</section>
+
+  
+
+
+          
+        </div>
+        
+          
+
+
+  <section class='meta' id="footer-meta">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2017-02-01T16:30:14+08:00">
+  <a class='notlink'>
+    <i class="fas fa-save" aria-hidden="true"></i>
+    <p>更新于：Feb 1, 2017</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%8D%8E%E4%B8%BA%E4%BA%91/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i><p>华为云</p></a></div>
+
+
+        
+      
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://uu126.cn/post/2247.html&title=主机搬迁记之入驻华为云 - Feng'blog&summary=至上次入驻阿里云以来，已经蛮长时间了，说老实话，阿里云还是相当稳定的，至少我在用期间从来没有出现问题过，主机开个几百天（时间长了自己手庠要去重启一下）肯定是没问题的，之所以这次要搬出出来，原因只有一个：阿里的服务已不如从前（可能是业务大了，人多了吧），至今还记得那时 有问题提交工单，哪怕是23点，也会马上回复，甚至直接电话回复，可如今发个工单，至少也要一两个小时才能响应，复杂一点的我碰到过60个小时也没处理好；其次现在阿里定价也是一年变一年，活动跟老客户基本绝缘，论坛上也越来越多的不满……。很多人也是碍于备案流程繁杂、琐碎而继续留着（本来我也想继续留着的，可后来碰到的事情让我不再有这种想法，唉！走吧）。
+对于华为云服务器，之前也有关注过，虽然做云服务器的时间并不是很长，但凭借着一直以来的硬件实力，相信也不会差到哪里去，而且适逢最近刚在搞活动，力度还是蛮大的，直接有充1000送1000，而且还有很多特价的云服务器配置，如图："
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer"
+          
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://uu126.cn/post/2247.html&title=主机搬迁记之入驻华为云 - Feng'blog&summary=至上次入驻阿里云以来，已经蛮长时间了，说老实话，阿里云还是相当稳定的，至少我在用期间从来没有出现问题过，主机开个几百天（时间长了自己手庠要去重启一下）肯定是没问题的，之所以这次要搬出出来，原因只有一个：阿里的服务已不如从前（可能是业务大了，人多了吧），至今还记得那时 有问题提交工单，哪怕是23点，也会马上回复，甚至直接电话回复，可如今发个工单，至少也要一两个小时才能响应，复杂一点的我碰到过60个小时也没处理好；其次现在阿里定价也是一年变一年，活动跟老客户基本绝缘，论坛上也越来越多的不满……。很多人也是碍于备案流程繁杂、琐碎而继续留着（本来我也想继续留着的，可后来碰到的事情让我不再有这种想法，唉！走吧）。
+对于华为云服务器，之前也有关注过，虽然做云服务器的时间并不是很长，但凭借着一直以来的硬件实力，相信也不会差到哪里去，而且适逢最近刚在搞活动，力度还是蛮大的，直接有充1000送1000，而且还有很多特价的云服务器配置，如图："
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://service.weibo.com/share/share.php?url=https://uu126.cn/post/2247.html&title=主机搬迁记之入驻华为云 - Feng'blog&summary=至上次入驻阿里云以来，已经蛮长时间了，说老实话，阿里云还是相当稳定的，至少我在用期间从来没有出现问题过，主机开个几百天（时间长了自己手庠要去重启一下）肯定是没问题的，之所以这次要搬出出来，原因只有一个：阿里的服务已不如从前（可能是业务大了，人多了吧），至今还记得那时 有问题提交工单，哪怕是23点，也会马上回复，甚至直接电话回复，可如今发个工单，至少也要一两个小时才能响应，复杂一点的我碰到过60个小时也没处理好；其次现在阿里定价也是一年变一年，活动跟老客户基本绝缘，论坛上也越来越多的不满……。很多人也是碍于备案流程繁杂、琐碎而继续留着（本来我也想继续留着的，可后来碰到的事情让我不再有这种想法，唉！走吧）。
+对于华为云服务器，之前也有关注过，虽然做云服务器的时间并不是很长，但凭借着一直以来的硬件实力，相信也不会差到哪里去，而且适逢最近刚在搞活动，力度还是蛮大的，直接有充1000送1000，而且还有很多特价的云服务器配置，如图："
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/weibo.png">
+          
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </section>
+
+
+        
+        
+          <div class="prev-next">
+            
+              <a class='prev' href='/post/2255.html'>
+                <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>2016双十一抢红包玩法技巧及天猫双11攻略 - 试试运气</p>
+                <p class='content'>一年一度的双十一购物活动即将开始，无论商家之间、平台之间竞争多么激烈，作为我们聪明的网友面前已经越发坦然。早些年我们初次接触这些活动的时候，肯定会以为各种大活动期间会有各种便宜、促销、免费，但是...</p>
+              </a>
+            
+            
+              <a class='next' href='/post/2227.html'>
+                <p class='title'>OneinStack架设的Nginx配置SSL（https)<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+                <p class='content'>我自从建立博客以来，这主题也换了好多（反正我是记不得了），一直想追求一个简洁又不失必要功能的主题（没啥的银子去找二师兄帮忙），这不这两天找到一个单栏主题，稍加工了一下（能力有限，还得慢慢的来），...</p>
+              </a>
+            
+          </div>
+        
+      </section>
+    </article>
+  
+
+  
+    <!-- 显示推荐文章和评论 -->
+
+
+
+  <article class="post white-box comments shadow">
+    <section class="article typo">
+      <p ct><i class='fas fa-comments'></i> 评论</p>
+      
+      
+      
+      
+      
+        <section id="comments">
+          <div id="valine_container" class="valine_thread">
+            <i class="fas fa-spinner fa-spin fa-fw"></i>
+          </div>
+        </section>
+      
+    </section>
+  </article>
+
+
+  
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+
+  <script>
+    window.subData = {
+      title: '主机搬迁记之入驻华为云',
+      tools: true
+    }
+  </script>
+
+
+</div>
+<aside class='l_side'>
+  
+  
+
+  
+    
+    
+
+
+
+  
+
+
+</aside>
+
+
+  
+  <footer class="clearfix ">
+    <br><br>
+    
+      
+        
+      
+    
+      
+        <br>
+        <div class="social-wrapper">
+          
+            
+              <a href="/atom.xml"
+                class="social fas fa-rss flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="mailto:jslfp@foxmail.com"
+                class="social fas fa-envelope flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="https://github.com/sxgxhk"
+                class="social fab fa-github flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="https://music.163.com/#/user/home?id=63035382"
+                class="social fas fa-headphones-alt flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+        </div>
+     
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        <div class='copyright'>
+        <p><a href="https://uu126.cn">Copyright © 2017-2020 Feng</a></p>
+<!--腾讯云--->Hosted by <a href="https://pages.coding.me" target="_blank" rel="noopener" style="font-weight: bold">Coding Pages</a> + 
+<a href="https://cloud.tencent.com/redirect.php?redirect=1005&cps_key=4e78216aea817227ff0c96d93a00fd4b" target="_blank" rel="nofollow"><!--<img src="https://uu126.cn/wp-content/uploads/2016/10/hwclouds-logo.png" style="margin-bottom:-3px">-->腾讯云 + </a><a href="https://console.upyun.com/register/?invite=S1JeTquHL" target="_blank" rel="nofollow"><span class="with-love"><img src="https://cdn.lancn.cn/images/upyun.png" style="width:40px;" alt="又拍云存储"></span></a>
+<br>
+<!--备案---> <a target="_blank"  href="http://www.beian.miit.gov.cn">浙ICP备11026647号-3</a><span class="post-meta-divider"> | </span><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33088102001325"><span class="with-love"><img src="https://cdn.uu126.cn/icon-police.png" style="width:14px;"></span> 浙公网安备33088102001325号</a>
+        </div>
+      
+    
+  </footer>
+
+<script>setLoadingBarProgress(80);</script>
+
+
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+  </div>
+  
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4/dist/jquery.min.js"></script>
+
+
+  <script>
+    
+    var SEARCH_SERVICE = "hexo" || "hexo";
+    var ROOT = "/" || "/";
+    if (!ROOT.endsWith('/')) ROOT += '/';
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+
+  <script type="text/javascript">
+    $(function() {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+
+
+
+  
+  
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script>
+
+    <script type="text/javascript">
+      $(function(){
+        var imgs=["https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/BBC19066-E176-47C2-9D22-48C81EE5DF6B.jpeg"];
+        if ('true' == 'true') {
+          function shuffle(arr){
+            /*From countercurrent-time*/
+            var n = arr.length;
+            while(n--) {
+              var index = Math.floor(Math.random() * n);
+              var temp = arr[index];
+              arr[index] = arr[n];
+              arr[n] = temp;
+            }
+          }
+          shuffle(imgs);
+        }
+        if ('.cover') {
+          $('.cover').backstretch(
+            imgs,
+          {
+            duration: "20000",
+            fade: "1500"
+          });
+        } else {
+          $.backstretch(
+            imgs,
+          {
+            duration: "20000",
+            fade: "1500"
+          });
+        }
+      });
+    </script>
+  
+
+
+
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js" async></script>
+
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js" async></script>
+
+  
+
+
+
+
+
+
+
+
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2.0/js/valine.js"></script>
+
+  
+  <script>
+  var GUEST_INFO = ['nick','mail','link'];
+  var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var notify = 'true' == true;
+  var verify = 'true' == true;
+  var valine = new Valine();
+  valine.init({
+    el: '#valine_container',
+    notify: notify,
+    verify: verify,
+    guest_info: guest_info,
+    
+    appId: "5sMkTX4FLjetFnfbOhaDTCDJ-9Nh9j0Va",
+    appKey: "25KXCqIqAN142RQn4fBrsI87",
+    placeholder: "快来评论吧~",
+    pageSize:'10',
+    avatar:'mp',
+    lang:'zh-cn',
+    visitor: 'false',
+    highlight:'true'
+  })
+  </script>
+
+
+
+  
+<script src="/js/app.js"></script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2.1/js/search.js"></script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2/js/comment_typing.js"></script>
+
+
+
+<!-- 复制 -->
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copyed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('fa-copy');
+        $icon.addClass('fa-clipboard-check');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPYED';
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('fa-copy');
+        $icon.addClass('fa-exclamation-triangle');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+
+
+
+
+<!-- fancybox -->
+
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  let LAZY_LOAD_IMAGE = "";
+  $(".article-entry").find("fancybox").find("img").each(function () {
+      var element = document.createElement("a");
+      $(element).attr("data-fancybox", "gallery");
+      $(element).attr("href", $(this).attr("src"));
+      /* 图片采用懒加载处理时,
+       * 一般图片标签内会有个属性名来存放图片的真实地址，比如 data-original,
+       * 那么此处将原本的属性名src替换为对应属性名data-original,
+       * 修改如下
+       */
+       if (LAZY_LOAD_IMAGE) {
+         $(element).attr("href", $(this).attr("data-original"));
+       }
+      $(this).wrap(element);
+  });
+</script>
+
+
+
+
+
+
+  <script>setLoadingBarProgress(100);</script>
+</body>
+</html>

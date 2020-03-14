@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html>
+<head hexo-theme='https://volantis.js.org/#blog'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- 页面元数据 -->
+  
+    <title>Ghost实现归档 标签云 搜索 - Feng&#39;blog</title>
+  
+    <meta name="keywords" content="Ghost">
+  
+  
+    <meta name="description" content="前面说过，Ghost本身并不自带类似文章归档、标签云，搜索等（后台不知道会不会改进），虽然官方没有给出，但这也不能阻止民间高手们，通过API就能实现上述这些功能。">
+  
+
+  <!-- feed -->
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css">
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
+
+  
+
+  
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
+  
+
+  <!-- import link -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/style.css">
+
+  
+
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+
+  
+  
+</head>
+
+<body>
+  
+  <div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
+</div>
+<header class="l_header shadow blur">
+
+  <div class='wrapper'>
+    <div class='nav-sub container--flex'>
+      <a class="logo flat-box"></a>
+      <ul class='switcher h-list'>
+        <li><a class="s-comment flat-btn fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a class="s-toc flat-btn fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main container container--flex">
+      
+        
+        <a class="logo flat-box" target="_self" href='/'>
+          
+          
+          
+          
+            FENG <b><sup style='color:#3AA757'>blog</sup></b>
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='h-list'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  
+                    <i class='fas fa-rss fa-fw'></i>
+                  
+                  首页
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  
+                    <i class='fas fa-archive fa-fw'></i>
+                  
+                  归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/links/
+                  
+                  
+                  
+                    id="links"
+                  >
+                  
+                    <i class='fas fa-link fa-fw'></i>
+                  
+                  友链
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/ly/
+                  
+                  
+                  
+                    id="ly"
+                  >
+                  
+                    <i class='fas fa-info-circle fa-fw'></i>
+                  
+                  留言
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  
+                    <i class='fas fa-info-circle fa-fw'></i>
+                  
+                  关于
+                </a>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      
+        <div class="m_search">
+          <form name="searchform" class="form u-search-form">
+            <i class="icon fas fa-search fa-fw"></i>
+            <input type="text" class="input u-search-input" placeholder="搜索" />
+          </form>
+        </div>
+      
+
+			<ul class='switcher h-list'>
+				
+					<li><a class="s-search flat-btn fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li><a class="s-menu flat-btn fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+<ul class="menu-phone navigation white-box">
+  
+  
+    <li>
+      <a class="flat-box" href=/
+        
+        
+        
+          id="home"
+        >
+        
+          <i class='fas fa-rss fa-fw'></i>
+        
+        首页
+      </a>
+    </li>
+  
+    <li>
+      <a class="flat-box" href=/archives/
+        
+        
+        
+          id="archives"
+        >
+        
+          <i class='fas fa-archive fa-fw'></i>
+        
+        归档
+      </a>
+    </li>
+  
+    <li>
+      <a class="flat-box" href=/links/
+        
+        
+        
+          id="links"
+        >
+        
+          <i class='fas fa-link fa-fw'></i>
+        
+        友链
+      </a>
+    </li>
+  
+    <li>
+      <a class="flat-box" href=/ly/
+        
+        
+        
+          id="ly"
+        >
+        
+          <i class='fas fa-info-circle fa-fw'></i>
+        
+        留言
+      </a>
+    </li>
+  
+    <li>
+      <a class="flat-box" href=/about/
+        
+        
+        
+          id="about"
+        >
+        
+          <i class='fas fa-info-circle fa-fw'></i>
+        
+        关于
+      </a>
+    </li>
+  
+</ul>
+<script>setLoadingBarProgress(40);</script>
+
+
+
+  <div class="l_body nocover">
+    <div class='body-wrapper'>
+      
+
+<div class='l_main'>
+  
+
+  
+    <article id="post" class="post white-box shadow article-type-post" itemscope itemprop="blogPost">
+      
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  
+    <h1 class="title">
+      <a href="/post/2487.html">
+        Ghost实现归档 标签云 搜索
+      </a>
+    </h1>
+  
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+<div class='new-meta-item author'>
+  <a href="https://uu126.cn" rel="nofollow">
+    <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png">
+    <p>Feng</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class='new-meta-item category'>
+    <a href='/categories/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/' rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>网站建设</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-edit" aria-hidden="true"></i>
+    <p>发布于：Jul 25, 2017</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+          
+          <p>前面说过，Ghost本身并不自带类似文章归档、标签云，搜索等（后台不知道会不会改进），虽然官方没有给出，但这也不能阻止民间高手们，通过API就能实现上述这些功能。</p>
+<a id="more"></a>
+
+<h4 id="归档"><a href="#归档" class="headerlink" title="归档"></a>归档</h4><ul>
+<li><p>首先得在后台的<code>实验功能</code>中启用<code>API</code>，如图:<br><img src="https://cdn.uu126.cn/image/a/63/912947500d1432b9e4c07155674de.jpg" alt=""></p>
+</li>
+<li><p>新建自定义页面：</p>
+</li>
+</ul>
+<p> 1.创建一个静态页面：在ghost后台新建页面，发布为 独立页面 ，标题为Archives，网址可以设置为<code>域名/archives-post</code></p>
+<p> 2.接着创建一个自定义页面模板：该模板是第一步创建的静态页面的模板，创建一个page-url.hbs模板，如果第一步设置的页面网址为<code>域名/archives-post</code>，那么模板即为<code>page-archives-post.hbs</code>。将该模板上传至主题根目录下即可，此时访问域名/archives-post，即会调用自定义的page-archives-post.hbs这个模板。</p>
+<ul>
+<li>在page-archives.hbs中调用Ghost API即可：<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">!&lt; <span class="keyword">default</span>&amp;</span><br><span class="line"></span><br><span class="line">&lt;main class="content" role="main"&gt;  </span><br><span class="line">&lt;article class="archives"&gt;&lt;/article&gt;  </span><br><span class="line">&lt;/main&gt;</span><br><span class="line"></span><br><span class="line">&lt;script src=<span class="string">"//cdn.bootcss.com/jquery/3.1.0/jquery.min.js"</span>&gt;&lt;/script&gt;  </span><br><span class="line">&lt;script src=<span class="string">"//cdn.bootcss.com/moment.js/2.14.1/moment.min.js"</span>&gt;&lt;/script&gt;  </span><br><span class="line">&lt;script type = <span class="string">"text/javascript"</span>&gt;  </span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 调用ghost API，完成文章归档功能</span></span><br><span class="line"><span class="comment"> * 所需组件：jQuery、moment.js</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@ldsun</span>.com</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">jQuery(document).ready(<span class="function"><span class="keyword">function</span><span class="params">()</span> &amp;#123</span>;  </span><br><span class="line">    <span class="comment">//获取所有文章数据，按照发表时间排列</span></span><br><span class="line">    $.get(ghost.url.api(<span class="string">'posts'</span>, &amp;<span class="comment">#123;</span></span><br><span class="line">        limit: <span class="string">'all'</span>,</span><br><span class="line">        order: <span class="string">"published_at desc"</span></span><br><span class="line">    &amp;<span class="comment">#125;)).done(function(data) &amp;#123;</span></span><br><span class="line">        <span class="keyword">var</span> posts = data.posts;</span><br><span class="line">        <span class="keyword">var</span> count = posts.length;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; count; i++) &amp;<span class="comment">#123;</span></span><br><span class="line">            <span class="comment">//调用comentjs对时间戳进行操作</span></span><br><span class="line">            <span class="comment">//由于ghost默认是CST时区，所以日期会有出入，这里消除时区差,如果不需要，把下面第二行后面8小时改为-00:00!!!</span></span><br><span class="line">            <span class="keyword">var</span> time = moment(posts[i].published_at).utcOffset(<span class="string">"-08:00"</span>);</span><br><span class="line">            <span class="keyword">var</span> year = time.get(<span class="string">'y'</span>);</span><br><span class="line">            <span class="keyword">var</span> month = time.get(<span class="string">'M'</span>)+<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">var</span> date = time.get(<span class="string">'D'</span>);</span><br><span class="line">            <span class="keyword">if</span>( date&lt;<span class="number">10</span> ) date = <span class="string">"0"</span>+date;</span><br><span class="line">            <span class="keyword">var</span> title = posts[i].title;</span><br><span class="line">            <span class="keyword">var</span> url = <span class="string">"@blog.url&amp;"</span>+posts[i].url;</span><br><span class="line">            <span class="comment">//首篇文章与其余文章分步操作</span></span><br><span class="line">            <span class="keyword">if</span> (i &gt; <span class="number">0</span>) &amp;<span class="comment">#123;</span></span><br><span class="line">                <span class="keyword">var</span> pre_month = moment(posts[i - <span class="number">1</span>].published_at).utcOffset(<span class="string">"-08:00"</span>).get(<span class="string">'month'</span>)+<span class="number">1</span>;</span><br><span class="line">                <span class="comment">//如果当前文章的发表月份与前篇文章发表月份相同，则在该月份ul下插入该文章，这里消除时区差,如果不需要，把下面第二行后面8小时改为-00:00!!!</span></span><br><span class="line">                <span class="keyword">if</span> (month == pre_month) &amp;<span class="comment">#123;</span></span><br><span class="line">                    <span class="keyword">var</span> html = <span class="string">"&lt;li&gt;&lt;time&gt;"</span>+date+<span class="string">"日&lt;/time&gt;&lt;a href='"</span>+url+<span class="string">"'&gt;"</span>+title+<span class="string">"&lt;/a&gt;&lt;/li&gt;"</span>;</span><br><span class="line">                    $(html).appendTo(<span class="string">".archives .list-"</span>+year+<span class="string">"-"</span>+month);</span><br><span class="line">                &amp;<span class="comment">#125;</span></span><br><span class="line">                <span class="comment">//当月份不同时，插入新的月份</span></span><br><span class="line">                <span class="keyword">else</span>&amp;<span class="comment">#123;</span></span><br><span class="line">                    <span class="keyword">var</span> html = <span class="string">"&lt;div class='item'&gt;&lt;h3&gt;&lt;i class='fa fa-calendar fa-fw' aria-hidden='true'&gt;&lt;/i&gt; "</span>+year+<span class="string">"-"</span>+month+<span class="string">"&lt;/h3&gt;&lt;ul class='archives-list list-"</span>+year+<span class="string">"-"</span>+month+<span class="string">"'&gt;&lt;li&gt;&lt;time&gt;"</span>+date+<span class="string">"日&lt;/time&gt;&lt;a href='"</span>+url+<span class="string">"'&gt;"</span>+title+<span class="string">"&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;"</span>;</span><br><span class="line">                    $(html).appendTo(<span class="string">'.archives'</span>);</span><br><span class="line">                &amp;<span class="comment">#125;</span></span><br><span class="line">            &amp;<span class="comment">#125;else&amp;#123;</span></span><br><span class="line">                <span class="keyword">var</span> html = <span class="string">"&lt;div class='item'&gt;&lt;h3&gt;&lt;i class='fa fa-calendar fa-fw' aria-hidden='true'&gt;&lt;/i&gt; "</span>+year+<span class="string">"-"</span>+month+<span class="string">"&lt;/h3&gt;&lt;ul class='archives-list list-"</span>+year+<span class="string">"-"</span>+month+<span class="string">"'&gt;&lt;li&gt;&lt;time&gt;"</span>+date+<span class="string">"日&lt;/time&gt;&lt;a href='"</span>+url+<span class="string">"'&gt;"</span>+title+<span class="string">"&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;"</span>;</span><br><span class="line">                $(html).appendTo(<span class="string">'.archives'</span>);</span><br><span class="line">            &amp;<span class="comment">#125;</span></span><br><span class="line">        &amp;<span class="comment">#125;</span></span><br><span class="line">    &amp;<span class="comment">#125;).fail(function(err) &amp;#123;</span></span><br><span class="line">        console.log(err);</span><br><span class="line">    &amp;<span class="comment">#125;);</span></span><br><span class="line">&amp;<span class="comment">#125;); </span></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+相应的CSS代码如下：<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.archives</span> <span class="selector-class">.item</span> &amp;<span class="selector-id">#123</span>;</span><br><span class="line"></span><br><span class="line">&amp;<span class="selector-id">#125</span>;</span><br><span class="line"><span class="selector-class">.archives</span> <span class="selector-tag">h3</span> &amp;<span class="selector-id">#123</span>;</span><br><span class="line">    <span class="selector-tag">font-size</span>: 17<span class="selector-tag">px</span>;</span><br><span class="line">    <span class="selector-tag">font-weight</span>: <span class="selector-tag">bold</span>;</span><br><span class="line">    <span class="selector-tag">margin</span>: 0 0 15<span class="selector-tag">px</span> 0;</span><br><span class="line">&amp;<span class="selector-id">#125</span>;</span><br><span class="line"><span class="selector-class">.archives-list</span> &amp;<span class="selector-id">#123</span>;</span><br><span class="line">    <span class="selector-tag">list-style</span>: <span class="selector-tag">none</span>;</span><br><span class="line">    <span class="selector-tag">font-size</span>: 16<span class="selector-tag">px</span>;</span><br><span class="line">    <span class="selector-tag">line-height</span>: 20<span class="selector-tag">px</span>;</span><br><span class="line">    <span class="selector-tag">padding-left</span>: 25<span class="selector-tag">px</span>;</span><br><span class="line">&amp;<span class="selector-id">#125</span>;</span><br><span class="line"><span class="selector-class">.archives-list</span> <span class="selector-tag">li</span> &amp;<span class="selector-id">#123</span>;</span><br><span class="line">    <span class="selector-tag">padding</span>: 3<span class="selector-tag">px</span> 0;</span><br><span class="line">    <span class="selector-tag">overflow</span>: <span class="selector-tag">hidden</span>;</span><br><span class="line">&amp;<span class="selector-id">#125</span>;</span><br><span class="line"><span class="selector-class">.archives-list</span> <span class="selector-tag">time</span> &amp;<span class="selector-id">#123</span>;</span><br><span class="line">    <span class="selector-tag">margin-right</span>: 5<span class="selector-tag">px</span>;</span><br><span class="line">    <span class="selector-tag">color</span>: <span class="selector-id">#999</span>;</span><br><span class="line">    <span class="selector-tag">display</span>: <span class="selector-tag">inline-block</span>;</span><br><span class="line">    <span class="selector-tag">width</span>: 35<span class="selector-tag">px</span>;</span><br><span class="line">    <span class="selector-tag">font-family</span>: <span class="selector-tag">monospace</span>;</span><br><span class="line">&amp;<span class="selector-id">#125</span>;</span><br><span class="line"><span class="selector-class">.archives-list</span> <span class="selector-tag">a</span> &amp;<span class="selector-id">#123</span>;</span><br><span class="line">    <span class="selector-tag">text-decoration</span>: <span class="selector-tag">none</span>;</span><br><span class="line">&amp;<span class="selector-id">#125</span>;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="标签云"><a href="#标签云" class="headerlink" title="标签云"></a>标签云</h4><ul>
+<li>介绍一下<code>tag_cloud</code></li>
+</ul>
+<p>这是中文版中增加的一个 handlebars 助手（helper），根据标签所关联的文章数量进行逆排序，也就是关联文章多的先输出；支持一个 limit 参数，用于限定输出的标签数量：all 表示输出所有标签；数字（例如 10）指定输出个数。调用方式如下：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//输出所有标签</span></span><br><span class="line">tag_cloud limit=<span class="string">"all"</span>&amp;</span><br><span class="line"></span><br><span class="line">或者</span><br><span class="line"></span><br><span class="line"><span class="comment">//输出前20个标签（标签按照对应的文章数量逆排序）</span></span><br><span class="line">tag_cloud limit=<span class="number">20</span>&amp;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>使用方法</li>
+</ul>
+<p>在需要输出“标签云”的地方调用<code>tag_cloud</code>助手即可。我们以 casper 默认主题为例。打开<code>index.hbs</code>文件，在<code>&lt;/header&gt;</code>标签后面添加<code>tag_cloud limit=10&amp;</code>，保存此文件、重启 Ghost、打开首页，看看是否输出了一堆标签。我是直接放在归档里的，具体放哪又或是新增页面就看各自喜好了，相应的css代码如下：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.tag-cloud</span> &amp;<span class="selector-id">#123</span>;</span><br><span class="line">    <span class="selector-tag">padding-left</span>: 25<span class="selector-tag">px</span>;</span><br><span class="line">&amp;<span class="selector-id">#125</span>;</span><br><span class="line"><span class="selector-class">.tag-cloud</span> &amp;<span class="selector-id">#123</span>;</span><br><span class="line">    <span class="selector-tag">padding-left</span>: 1<span class="selector-class">.725rem</span>;</span><br><span class="line">&amp;<span class="selector-id">#125</span>;</span><br><span class="line"><span class="selector-class">.tag-cloud</span> <span class="selector-tag">a</span><span class="selector-pseudo">:hover</span> &amp;<span class="selector-id">#123</span>;</span><br><span class="line">    <span class="selector-tag">background</span>: <span class="selector-id">#eee</span>;</span><br><span class="line">    <span class="selector-tag">color</span>: <span class="selector-id">#4A4A4A</span>;</span><br><span class="line">&amp;<span class="selector-id">#125</span>;</span><br><span class="line"><span class="selector-class">.tag-cloud</span> <span class="selector-tag">a</span> &amp;<span class="selector-id">#123</span>;</span><br><span class="line">    <span class="selector-tag">position</span>: <span class="selector-tag">relative</span>;</span><br><span class="line">    <span class="selector-tag">display</span>: <span class="selector-tag">inline-block</span>;</span><br><span class="line">    <span class="selector-tag">padding</span>: <span class="selector-class">.725rem</span>;</span><br><span class="line">    <span class="selector-tag">font-style</span>: <span class="selector-tag">normal</span>;</span><br><span class="line">    <span class="selector-tag">line-height</span>: 1<span class="selector-class">.125rem</span>;</span><br><span class="line">    <span class="selector-tag">border-radius</span>: <span class="selector-class">.3rem</span>;</span><br><span class="line">    <span class="selector-tag">text-decoration</span>: <span class="selector-tag">none</span>;</span><br><span class="line">    <span class="selector-tag">font-size</span>: 16<span class="selector-tag">px</span>;</span><br><span class="line">    <span class="selector-tag">margin-bottom</span>: 3<span class="selector-tag">px</span>;</span><br><span class="line">&amp;<span class="selector-id">#125</span>;</span><br></pre></td></tr></table></figure>
+
+<h4 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h4><p>使用<code>jQuery.gsearch.js</code>插件实现Ghost博客的搜索，gsearch是一款为Ghost量身打造的搜索插件，使Ghost轻松具有搜索功能。效果类似于SwifType，通过Ghost的RSS实现搜索功能，您可以点击右上角搜索图标体验效果。</p>
+<ul>
+<li><p><a href="https://github.com/itobee/gsearch/archive/master.zip" target="_blank" rel="noopener">下载</a>最新版的gsearch，将<code>dist</code>文件夹下的<code>libs</code>和<code>partials</code>文件夹复制到当前主题的根目录下（如果遇到同名文件夹，覆盖即可），并在当前主题的<code>default.hbs</code>文件中添加如下代码：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"zh-cn"</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span>  </span><br><span class="line">   ……</span><br><span class="line">   <span class="comment">&lt;!-- CSS --&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">href</span>=<span class="string">"/libs/remodal/remodal.min.css"</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">href</span>=<span class="string">"/libs/gsearch/css/jquery.gsearch.min.css"</span>&gt;</span></span><br><span class="line">   ……</span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span>  </span><br><span class="line">   ……</span><br><span class="line"></span><br><span class="line">   <span class="comment">&lt;!-- gsearch模板 --&gt;</span></span><br><span class="line">   &gt; "gsearch"&amp;</span><br><span class="line"></span><br><span class="line">   <span class="comment">&lt;!-- JS --&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"//cdn.staticfile.org/jquery/1.12.4/jquery.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span> <span class="comment">&lt;!-- 如果主题中未引入jQuery，请引入jQuery --&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"/libs/remodal/remodal.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"/libs/gsearch/js/jquery.gsearch.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>接下来，我们再通过如下代码调用插件即可使用：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;  </span><br><span class="line">$(document).one(<span class="string">'opening'</span>, <span class="string">'.remodal'</span>, function () &amp;<span class="comment">#123;</span></span><br><span class="line">    $(<span class="string">'#search'</span>).gsearch();</span><br><span class="line">&amp;<span class="comment">#125;);</span></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>这段代码我是直接丢在后台的<code>插入代码</code>里<br>注：以上示例使用了<code>remodal</code>弹层插件显示搜索信息，可以用其他插件代替，但是需要注意一点：请勿对同一元素重复调用插件。示例中使用jQuery的<code>.one()</code>方法来委托事件。<br>关于搜索功能等信息，可详见原作者<a href="http://www.tobee.me/gsearch/" target="_blank" rel="noopener">博客</a></p>
+</li>
+</ul>
+<p>实现了这三个功能，暂时可以让我消停一下了，要知道菜鸟要实现这些功能可也是花了好久功夫的，这个过程还是挺享受的，这不现地又得找点可以折腾的东西来……</p>
+
+          
+            <br>
+            
+  
+    
+    
+
+<section class="widget copyright  desktop mobile">
+  <div class='content'>
+    
+      <blockquote>
+        
+          
+            <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+          
+        
+          
+            <p>本文永久链接是：<a href=https://uu126.cn/post/2487.html>https://uu126.cn/post/2487.html</a></p>
+          
+        
+      </blockquote>
+    
+  </div>
+</section>
+
+  
+
+  
+    
+    
+
+<section class="widget qrcode  desktop mobile">
+  
+
+  <div class='content article-entry'>
+    
+      
+        <fancybox><img src='http://www.uu126.cn/images/wechatpay.png'
+        
+          height='64px'
+        ></fancybox>
+      
+    
+      
+        <fancybox><img src='http://www.uu126.cn/images/alipay.png'
+        
+          height='64px'
+        ></fancybox>
+      
+    
+  </div>
+</section>
+
+  
+
+
+          
+        </div>
+        
+          
+
+
+  <section class='meta' id="footer-meta">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2018-01-23T22:09:18+08:00">
+  <a class='notlink'>
+    <i class="fas fa-save" aria-hidden="true"></i>
+    <p>更新于：Jan 23, 2018</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Ghost/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i><p>Ghost</p></a></div>
+
+
+        
+      
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://uu126.cn/post/2487.html&title=Ghost实现归档 标签云 搜索 - Feng'blog&summary=前面说过，Ghost本身并不自带类似文章归档、标签云，搜索等（后台不知道会不会改进），虽然官方没有给出，但这也不能阻止民间高手们，通过API就能实现上述这些功能。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer"
+          
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://uu126.cn/post/2487.html&title=Ghost实现归档 标签云 搜索 - Feng'blog&summary=前面说过，Ghost本身并不自带类似文章归档、标签云，搜索等（后台不知道会不会改进），虽然官方没有给出，但这也不能阻止民间高手们，通过API就能实现上述这些功能。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://service.weibo.com/share/share.php?url=https://uu126.cn/post/2487.html&title=Ghost实现归档 标签云 搜索 - Feng'blog&summary=前面说过，Ghost本身并不自带类似文章归档、标签云，搜索等（后台不知道会不会改进），虽然官方没有给出，但这也不能阻止民间高手们，通过API就能实现上述这些功能。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/weibo.png">
+          
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </section>
+
+
+        
+        
+          <div class="prev-next">
+            
+              <a class='prev' href='/post/2488.html'>
+                <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>信用卡黑话</p>
+                <p class='content'>“天王盖地虎！”“宝塔镇河妖！”黑话：一种特殊的语言讯号，江湖中人彼此联系的一种特殊手段。在信用卡圈子，也有自己的专有黑话，比如，薅羊毛、火鸡……，有些我也是刚听说过，捞过来瞧瞧吧
+
+
+信用卡黑...</p>
+              </a>
+            
+            
+              <a class='next' href='/post/2486.html'>
+                <p class='title'>似乎又开始折腾了<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+                <p class='content'>本来消停了一段时间（有点打脸的感觉），用着Typecho写写小博客还挺happy的，本以为就这么“安定”下去了，哪知搬回到阿里云后，事就多了，先是文章、后台打不开（首页可以打开），后来修改php...</p>
+              </a>
+            
+          </div>
+        
+      </section>
+    </article>
+  
+
+  
+    <!-- 显示推荐文章和评论 -->
+
+
+
+  <article class="post white-box comments shadow">
+    <section class="article typo">
+      <p ct><i class='fas fa-comments'></i> 评论</p>
+      
+      
+      
+      
+      
+        <section id="comments">
+          <div id="valine_container" class="valine_thread">
+            <i class="fas fa-spinner fa-spin fa-fw"></i>
+          </div>
+        </section>
+      
+    </section>
+  </article>
+
+
+  
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+
+  <script>
+    window.subData = {
+      title: 'Ghost实现归档 标签云 搜索',
+      tools: true
+    }
+  </script>
+
+
+</div>
+<aside class='l_side'>
+  
+  
+
+  
+    
+    
+
+
+  <section class="widget toc-wrapper shadow desktop mobile">
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#归档"><span class="toc-text">归档</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#标签云"><span class="toc-text">标签云</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#搜索"><span class="toc-text">搜索</span></a></li></ol>
+    </div>
+  </section>
+
+
+  
+
+
+</aside>
+
+
+  
+  <footer class="clearfix ">
+    <br><br>
+    
+      
+        
+      
+    
+      
+        <br>
+        <div class="social-wrapper">
+          
+            
+              <a href="/atom.xml"
+                class="social fas fa-rss flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="mailto:jslfp@foxmail.com"
+                class="social fas fa-envelope flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="https://github.com/sxgxhk"
+                class="social fab fa-github flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="https://music.163.com/#/user/home?id=63035382"
+                class="social fas fa-headphones-alt flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+        </div>
+     
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        <div class='copyright'>
+        <p><a href="https://uu126.cn">Copyright © 2017-2020 Feng</a></p>
+<!--腾讯云--->Hosted by <a href="https://pages.coding.me" target="_blank" rel="noopener" style="font-weight: bold">Coding Pages</a> + 
+<a href="https://cloud.tencent.com/redirect.php?redirect=1005&cps_key=4e78216aea817227ff0c96d93a00fd4b" target="_blank" rel="nofollow"><!--<img src="https://uu126.cn/wp-content/uploads/2016/10/hwclouds-logo.png" style="margin-bottom:-3px">-->腾讯云 + </a><a href="https://console.upyun.com/register/?invite=S1JeTquHL" target="_blank" rel="nofollow"><span class="with-love"><img src="https://cdn.lancn.cn/images/upyun.png" style="width:40px;" alt="又拍云存储"></span></a>
+<br>
+<!--备案---> <a target="_blank"  href="http://www.beian.miit.gov.cn">浙ICP备11026647号-3</a><span class="post-meta-divider"> | </span><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33088102001325"><span class="with-love"><img src="https://cdn.uu126.cn/icon-police.png" style="width:14px;"></span> 浙公网安备33088102001325号</a>
+        </div>
+      
+    
+  </footer>
+
+<script>setLoadingBarProgress(80);</script>
+
+
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+  </div>
+  
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4/dist/jquery.min.js"></script>
+
+
+  <script>
+    
+    var SEARCH_SERVICE = "hexo" || "hexo";
+    var ROOT = "/" || "/";
+    if (!ROOT.endsWith('/')) ROOT += '/';
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+
+  <script type="text/javascript">
+    $(function() {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+
+
+
+  
+  
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script>
+
+    <script type="text/javascript">
+      $(function(){
+        var imgs=["https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/BBC19066-E176-47C2-9D22-48C81EE5DF6B.jpeg"];
+        if ('true' == 'true') {
+          function shuffle(arr){
+            /*From countercurrent-time*/
+            var n = arr.length;
+            while(n--) {
+              var index = Math.floor(Math.random() * n);
+              var temp = arr[index];
+              arr[index] = arr[n];
+              arr[n] = temp;
+            }
+          }
+          shuffle(imgs);
+        }
+        if ('.cover') {
+          $('.cover').backstretch(
+            imgs,
+          {
+            duration: "20000",
+            fade: "1500"
+          });
+        } else {
+          $.backstretch(
+            imgs,
+          {
+            duration: "20000",
+            fade: "1500"
+          });
+        }
+      });
+    </script>
+  
+
+
+
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js" async></script>
+
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js" async></script>
+
+  
+
+
+
+
+
+
+
+
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2.0/js/valine.js"></script>
+
+  
+  <script>
+  var GUEST_INFO = ['nick','mail','link'];
+  var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var notify = 'true' == true;
+  var verify = 'true' == true;
+  var valine = new Valine();
+  valine.init({
+    el: '#valine_container',
+    notify: notify,
+    verify: verify,
+    guest_info: guest_info,
+    
+    appId: "5sMkTX4FLjetFnfbOhaDTCDJ-9Nh9j0Va",
+    appKey: "25KXCqIqAN142RQn4fBrsI87",
+    placeholder: "快来评论吧~",
+    pageSize:'10',
+    avatar:'mp',
+    lang:'zh-cn',
+    visitor: 'false',
+    highlight:'true'
+  })
+  </script>
+
+
+
+  
+<script src="/js/app.js"></script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2.1/js/search.js"></script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2/js/comment_typing.js"></script>
+
+
+
+<!-- 复制 -->
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copyed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('fa-copy');
+        $icon.addClass('fa-clipboard-check');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPYED';
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('fa-copy');
+        $icon.addClass('fa-exclamation-triangle');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+
+
+
+
+<!-- fancybox -->
+
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  let LAZY_LOAD_IMAGE = "";
+  $(".article-entry").find("fancybox").find("img").each(function () {
+      var element = document.createElement("a");
+      $(element).attr("data-fancybox", "gallery");
+      $(element).attr("href", $(this).attr("src"));
+      /* 图片采用懒加载处理时,
+       * 一般图片标签内会有个属性名来存放图片的真实地址，比如 data-original,
+       * 那么此处将原本的属性名src替换为对应属性名data-original,
+       * 修改如下
+       */
+       if (LAZY_LOAD_IMAGE) {
+         $(element).attr("href", $(this).attr("data-original"));
+       }
+      $(this).wrap(element);
+  });
+</script>
+
+
+
+
+
+
+  <script>setLoadingBarProgress(100);</script>
+</body>
+</html>

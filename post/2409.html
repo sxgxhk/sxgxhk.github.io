@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html>
+<head hexo-theme='https://volantis.js.org/#blog'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- 页面元数据 -->
+  
+    <title>分享本站的音乐播放器代码版（带安装说明） - Feng&#39;blog</title>
+  
+    <meta name="keywords" content="网站">
+  
+  
+    <meta name="description" content="抽个空浏览了一下众大侠的博客，发觉我自从用上Typecho后，对Wordpress的事关注度明显下降了（对不住哈），这不昨天浏览到一同类（同Typecho博客）的音乐播放器分享，看了看觉得可以放在自己的网站上显摆一下，那就动手吧！先下载好相关的CSS和JS文件，并上传到主题目录下，顺便对这个播放器简单介绍一下：这...">
+  
+
+  <!-- feed -->
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css">
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
+
+  
+
+  
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
+  
+
+  <!-- import link -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/style.css">
+
+  
+
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+
+  
+  
+</head>
+
+<body>
+  
+  <div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
+</div>
+<header class="l_header shadow blur">
+
+  <div class='wrapper'>
+    <div class='nav-sub container--flex'>
+      <a class="logo flat-box"></a>
+      <ul class='switcher h-list'>
+        <li><a class="s-comment flat-btn fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a class="s-toc flat-btn fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main container container--flex">
+      
+        
+        <a class="logo flat-box" target="_self" href='/'>
+          
+          
+          
+          
+            FENG <b><sup style='color:#3AA757'>blog</sup></b>
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='h-list'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  
+                    <i class='fas fa-rss fa-fw'></i>
+                  
+                  首页
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  
+                    <i class='fas fa-archive fa-fw'></i>
+                  
+                  归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/links/
+                  
+                  
+                  
+                    id="links"
+                  >
+                  
+                    <i class='fas fa-link fa-fw'></i>
+                  
+                  友链
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/ly/
+                  
+                  
+                  
+                    id="ly"
+                  >
+                  
+                    <i class='fas fa-info-circle fa-fw'></i>
+                  
+                  留言
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  
+                    <i class='fas fa-info-circle fa-fw'></i>
+                  
+                  关于
+                </a>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      
+        <div class="m_search">
+          <form name="searchform" class="form u-search-form">
+            <i class="icon fas fa-search fa-fw"></i>
+            <input type="text" class="input u-search-input" placeholder="搜索" />
+          </form>
+        </div>
+      
+
+			<ul class='switcher h-list'>
+				
+					<li><a class="s-search flat-btn fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li><a class="s-menu flat-btn fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+<ul class="menu-phone navigation white-box">
+  
+  
+    <li>
+      <a class="flat-box" href=/
+        
+        
+        
+          id="home"
+        >
+        
+          <i class='fas fa-rss fa-fw'></i>
+        
+        首页
+      </a>
+    </li>
+  
+    <li>
+      <a class="flat-box" href=/archives/
+        
+        
+        
+          id="archives"
+        >
+        
+          <i class='fas fa-archive fa-fw'></i>
+        
+        归档
+      </a>
+    </li>
+  
+    <li>
+      <a class="flat-box" href=/links/
+        
+        
+        
+          id="links"
+        >
+        
+          <i class='fas fa-link fa-fw'></i>
+        
+        友链
+      </a>
+    </li>
+  
+    <li>
+      <a class="flat-box" href=/ly/
+        
+        
+        
+          id="ly"
+        >
+        
+          <i class='fas fa-info-circle fa-fw'></i>
+        
+        留言
+      </a>
+    </li>
+  
+    <li>
+      <a class="flat-box" href=/about/
+        
+        
+        
+          id="about"
+        >
+        
+          <i class='fas fa-info-circle fa-fw'></i>
+        
+        关于
+      </a>
+    </li>
+  
+</ul>
+<script>setLoadingBarProgress(40);</script>
+
+
+
+  <div class="l_body nocover">
+    <div class='body-wrapper'>
+      
+
+<div class='l_main'>
+  
+
+  
+    <article id="post" class="post white-box shadow article-type-post" itemscope itemprop="blogPost">
+      
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  
+    <h1 class="title">
+      <a href="/post/2409.html">
+        分享本站的音乐播放器代码版（带安装说明）
+      </a>
+    </h1>
+  
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+<div class='new-meta-item author'>
+  <a href="https://uu126.cn" rel="nofollow">
+    <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png">
+    <p>Feng</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class='new-meta-item category'>
+    <a href='/categories/%E6%88%91%E7%9A%84%E5%9C%B0%E7%9B%98/' rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>我的地盘</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-edit" aria-hidden="true"></i>
+    <p>发布于：Dec 30, 2016</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+          
+          <p>抽个空浏览了一下众大侠的博客，发觉我自从用上Typecho后，对Wordpress的事关注度明显下降了（对不住哈），这不昨天浏览到一同类（同Typecho博客）的音乐播放器分享，看了看觉得可以放在自己的网站上显摆一下，那就动手吧！先下载好相关的CSS和JS文件，并上传到主题目录下，顺便对这个播放器简单介绍一下：这款音乐播放器的插件版，插件版有一个好处就是带后台，有按钮控制；而无插件就是通过直接改代码的形式了，比如：自动播放、换个歌啥的，但身为强迫症严重的我，绝对不允许插件太多的存在（受之前WordPress影响）；</p>
+<a id="more"></a>
+
+
+<p>废话不多说，代码我放到资源文件里了（补上一个文件下载链接：<a href="https://pan.baidu.com/s/1skX9vCp" target="_blank" rel="noopener">https://pan.baidu.com/s/1skX9vCp</a> 密码: gfue ），下面就跟着我一二三吧：<br><img src="https://cdn.uu126.cn/usr/uploads/2016/12/3108713288.png" alt="uu126_yinyue.png"><br>1、打开主题目录下的head.php（路径相信大家能明白在哪里吧），插入以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;https:&#x2F;&#x2F;cdn.uu126.cn&#x2F;usr&#x2F;themes&#x2F;Mirages&#x2F;css&#x2F;player.css&quot;&gt;</span><br></pre></td></tr></table></figure>
+<p>这个自己看着改哈，改好后上传覆盖。<br>2、打开主题目录下的index.php，插入以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--播放器 --&gt;</span><br><span class="line">&lt;div id&#x3D;&quot;QPlayer&quot;&gt;</span><br><span class="line">  &lt;div id&#x3D;&quot;pContent&quot;&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;player&quot;&gt; &lt;span class&#x3D;&quot;cover&quot;&gt;&lt;&#x2F;span&gt;</span><br><span class="line">      &lt;div class&#x3D;&quot;ctrl&quot;&gt;</span><br><span class="line">        &lt;div class&#x3D;&quot;musicTag marquee&quot;&gt; &lt;strong&gt;Title&lt;&#x2F;strong&gt; &lt;span&gt; - &lt;&#x2F;span&gt; &lt;span class&#x3D;&quot;artist&quot;&gt;Artist&lt;&#x2F;span&gt; &lt;&#x2F;div&gt;</span><br><span class="line">        &lt;div class&#x3D;&quot;progress&quot;&gt;</span><br><span class="line">          &lt;div class&#x3D;&quot;timer left&quot;&gt;0:00&lt;&#x2F;div&gt;</span><br><span class="line">          &lt;div class&#x3D;&quot;contr&quot;&gt;</span><br><span class="line">            &lt;div class&#x3D;&quot;rewind icon&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">            &lt;div class&#x3D;&quot;playback icon&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">            &lt;div class&#x3D;&quot;fastforward icon&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">          &lt;&#x2F;div&gt;</span><br><span class="line">          &lt;div class&#x3D;&quot;right&quot;&gt;</span><br><span class="line">            &lt;div class&#x3D;&quot;liebiao icon&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">          &lt;&#x2F;div&gt;</span><br><span class="line">        &lt;&#x2F;div&gt;</span><br><span class="line">      &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;ssBtn&quot;&gt;</span><br><span class="line">      &lt;div class&#x3D;&quot;adf&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">  &lt;ol id&#x3D;&quot;playlist&quot;&gt;</span><br><span class="line">  &lt;&#x2F;ol&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br><span class="line">&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;uu126.cn&#x2F;usr&#x2F;themes&#x2F;Mirages&#x2F;js&#x2F;jquery.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;uu126.cn&#x2F;usr&#x2F;themes&#x2F;Mirages&#x2F;js&#x2F;jquery.marquee.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">	var	playlist &#x3D; [	</span><br><span class="line">&#123;title:&quot;为你我受冷风吹&quot;,artist:&quot;胡彦斌&quot;,mp3:&quot;http:&#x2F;&#x2F;p2.music.126.net&#x2F;SAtMXu_B_yhBwdh4KNIk4A&#x3D;&#x3D;&#x2F;5861496487788143.mp3&quot;,cover:&quot;http:&#x2F;&#x2F;p3.music.126.net&#x2F;cUe-0OA62K0EyXWoRMY4oA&#x3D;&#x3D;&#x2F;5902178418015672.jpg?param&#x3D;106x106&quot;,&#125;,</span><br><span class="line">&#123;title:&quot;遇见&quot;,artist:&quot;杨搏&quot;,mp3:&quot;http:&#x2F;&#x2F;p2.music.126.net&#x2F;wKgEGTTHZIIXLg9UCHxvoA&#x3D;&#x3D;&#x2F;6049512976551370.mp3&quot;,cover:&quot;http:&#x2F;&#x2F;p3.music.126.net&#x2F;V04YNVpmNU6L3vDvzpzlbg&#x3D;&#x3D;&#x2F;3284241233642899.jpg?param&#x3D;106x106&quot;,&#125;,</span><br><span class="line">&#123;title:&quot;我们好像在哪见过&quot;,artist:&quot;小柯&quot;,mp3:&quot;http:&#x2F;&#x2F;p2.music.126.net&#x2F;kTFnbtNodo4nL7WLX0tlSg&#x3D;&#x3D;&#x2F;5848302348252295.mp3&quot;,cover:&quot;http:&#x2F;&#x2F;p4.music.126.net&#x2F;83MGbAjAkLx_9Pk9gpcqsA&#x3D;&#x3D;&#x2F;1903254627802817.jpg?param&#x3D;106x106&quot;,&#125;,</span><br><span class="line">&#123;title:&quot;你要的不是我&quot;,artist:&quot;徐小薇&quot;,mp3:&quot;http:&#x2F;&#x2F;p2.music.126.net&#x2F;rRbpD6-K12YmlReMe76QMQ&#x3D;&#x3D;&#x2F;8931332952433800.mp3&quot;,cover:&quot;http:&#x2F;&#x2F;p3.music.126.net&#x2F;OcuKe1XXheDa2y_zDlVIfA&#x3D;&#x3D;&#x2F;3294136838291281.jpg?param&#x3D;106x106&quot;,&#125;,</span><br><span class="line">&#123;title:&quot;想把我唱给你听&quot;,artist:&quot;老狼&quot;,mp3:&quot;http:&#x2F;&#x2F;p2.music.126.net&#x2F;qYHze3h07IqDdV6YSy3uQA&#x3D;&#x3D;&#x2F;5992338371393361.mp3&quot;,cover:&quot;http:&#x2F;&#x2F;p4.music.126.net&#x2F;-7gL1G_kVsgIb7eAFyQdNA&#x3D;&#x3D;&#x2F;3262251001467551.jpg?param&#x3D;106x106&quot;,&#125;,</span><br><span class="line">&#123;title:&quot;丁香花&quot;,artist:&quot;周玥&quot;,mp3:&quot;http:&#x2F;&#x2F;p2.music.126.net&#x2F;RNenjbsCEeeI2bnGB4EcPg&#x3D;&#x3D;&#x2F;2903810210384172.mp3&quot;,cover:&quot;http:&#x2F;&#x2F;p4.music.126.net&#x2F;O0MbXlINzZabpOEjZA-otA&#x3D;&#x3D;&#x2F;2929098977807667.jpg?param&#x3D;106x106&quot;,&#125;,</span><br><span class="line">&#123;title:&quot;喜欢两个人&quot;,artist:&quot;彭佳慧&quot;,mp3:&quot;http:&#x2F;&#x2F;p2.music.126.net&#x2F;E5X5r0w_MgUilKBDpz9Log&#x3D;&#x3D;&#x2F;7936274930834753.mp3&quot;,cover:&quot;http:&#x2F;&#x2F;p3.music.126.net&#x2F;GpsgjHB_9XgtrBVXt8XX4w&#x3D;&#x3D;&#x2F;93458488373078.jpg?param&#x3D;106x106&quot;,&#125;,</span><br><span class="line">&#123;title:&quot;约定&quot;,artist:&quot;光良&quot;,mp3:&quot;http:&#x2F;&#x2F;p2.music.126.net&#x2F;K2GgsEh7WdPIU8QisLLH0A&#x3D;&#x3D;&#x2F;3213872487990028.mp3&quot;,cover:&quot;http:&#x2F;&#x2F;p4.music.126.net&#x2F;Zxzq0d-ZD2W0c43yczQMgw&#x3D;&#x3D;&#x2F;65970697678836.jpg?param&#x3D;106x106&quot;,&#125;,</span><br><span class="line">&#123;title:&quot;if you英文版&quot;,artist:&quot;夏娜hana&quot;,mp3:&quot;http:&#x2F;&#x2F;p2.music.126.net&#x2F;muO1bPmOIHQbaVP1qkxgEA&#x3D;&#x3D;&#x2F;3265549585968005.mp3&quot;,cover:&quot;http:&#x2F;&#x2F;p4.music.126.net&#x2F;N7ZkbcECBAj_7BHARqotHQ&#x3D;&#x3D;&#x2F;17784600579616648.jpg?param&#x3D;106x106&quot;,&#125;,</span><br><span class="line">&#123;title:&quot;男孩别哭&quot;,artist:&quot;海龟先生&quot;,mp3:&quot;http:&#x2F;&#x2F;p2.music.126.net&#x2F;JNMhi2SCp9ief3mHmKqMjA&#x3D;&#x3D;&#x2F;3294136836885992.mp3&quot;,cover:&quot;http:&#x2F;&#x2F;p4.music.126.net&#x2F;tOhom1sERa_KgoA78Pqa1Q&#x3D;&#x3D;&#x2F;2423323627633522.jpg?param&#x3D;106x106&quot;,&#125;,</span><br><span class="line">&#123;title:&quot;红山果&quot;,artist:&quot;安与骑兵&quot;,mp3:&quot;http:&#x2F;&#x2F;p2.music.126.net&#x2F;85KftQ_p5h_7ONBpsmVBpQ&#x3D;&#x3D;&#x2F;5710863394757725.mp3&quot;,cover:&quot;http:&#x2F;&#x2F;p3.music.126.net&#x2F;tBHbunQa_Ou4UK8jAversw&#x3D;&#x3D;&#x2F;71468255819741.jpg?param&#x3D;106x106&quot;,&#125;,</span><br><span class="line">&#123;title:&quot;红山果&quot;,artist:&quot;安与骑兵&quot;,mp3:&quot;http:&#x2F;&#x2F;p2.music.126.net&#x2F;zbTjTGWDnFkZ08BFMyczKA&#x3D;&#x3D;&#x2F;5907675976114699.mp3&quot;,cover:&quot;http:&#x2F;&#x2F;p4.music.126.net&#x2F;ufbEesesjI7ctcHej_RI1w&#x3D;&#x3D;&#x2F;5741649720316074.jpg?param&#x3D;106x106&quot;,&#125;,</span><br><span class="line">&#123;title:&quot;解药&quot;,artist:&quot;孙紫晴&quot;,mp3:&quot;http:&#x2F;&#x2F;p2.music.126.net&#x2F;b9VwYHFBBV2b6dhaue9hbg&#x3D;&#x3D;&#x2F;5688873162187786.mp3&quot;,cover:&quot;http:&#x2F;&#x2F;p4.music.126.net&#x2F;jmWuDwUSs409gvNDKCZCnw&#x3D;&#x3D;&#x2F;708085488322985.jpg?param&#x3D;106x106&quot;,&#125;,</span><br><span class="line">&#123;title:&quot;你的配角&quot;,artist:&quot;回音哥&quot;,mp3:&quot;http:&#x2F;&#x2F;p2.music.126.net&#x2F;-6g1zxGU2XV4-pnEq2BlXA&#x3D;&#x3D;&#x2F;2896113628262462.mp3&quot;,cover:&quot;http:&#x2F;&#x2F;p4.music.126.net&#x2F;onh_PZ5xFarv0wAyU9mWIQ&#x3D;&#x3D;&#x2F;2926899953762176.jpg?param&#x3D;106x106&quot;,&#125;,</span><br><span class="line">&#123;title:&quot;爱呀&quot;,artist:&quot;金玟岐&quot;,mp3:&quot;http:&#x2F;&#x2F;p2.music.126.net&#x2F;H3Sby1SGWifhp7qMW-dW7Q&#x3D;&#x3D;&#x2F;3413983621387083.mp3&quot;,cover:&quot;http:&#x2F;&#x2F;p3.music.126.net&#x2F;54wdQi_3rpjreY2oo2jb7w&#x3D;&#x3D;&#x2F;5998935441219557.jpg?param&#x3D;106x106&quot;,&#125;,</span><br><span class="line">&#123;title:&quot;安静｜尤克里里弹唱&quot;,artist:&quot;柠檬树组合&quot;,mp3:&quot;http:&#x2F;&#x2F;p2.music.126.net&#x2F;eEDbv4uczl2UsxmSgqMN4g&#x3D;&#x3D;&#x2F;3446968964382378.mp3&quot;,cover:&quot;http:&#x2F;&#x2F;p4.music.126.net&#x2F;iCNRpAF-tSld5XmvAt0S8g&#x3D;&#x3D;&#x2F;18227703765715979.jpg?param&#x3D;106x106&quot;,&#125;,</span><br><span class="line">&#123;title:&quot;离开的理由&quot;,artist:&quot;牛奶咖啡&quot;,mp3:&quot;http:&#x2F;&#x2F;p2.music.126.net&#x2F;9sh8IrM8O2_14Cs8p3AcEw&#x3D;&#x3D;&#x2F;7976956861040239.mp3&quot;,cover:&quot;http:&#x2F;&#x2F;p4.music.126.net&#x2F;LQ2iUKlZwqGMysGkeCR4ww&#x3D;&#x3D;&#x2F;27487790697969.jpg?param&#x3D;106x106&quot;,&#125;,</span><br><span class="line">&#123;title:&quot;听你说&quot;,artist:&quot;冯提莫&quot;,mp3:&quot;http:&#x2F;&#x2F;p2.music.126.net&#x2F;coSRt9v9SMuIkwezzD4QqQ&#x3D;&#x3D;&#x2F;3417282155936067.mp3&quot;,cover:&quot;http:&#x2F;&#x2F;p3.music.126.net&#x2F;25hlFe80WxDyQmu41JMh4Q&#x3D;&#x3D;&#x2F;109951162812868479.jpg?param&#x3D;106x106&quot;,&#125;,</span><br><span class="line">&#123;title:&quot;孤单北半球&quot;,artist:&quot;欧得洋&quot;,mp3:&quot;http:&#x2F;&#x2F;p2.music.126.net&#x2F;48AmHcM9j9xZ0aclaHx77Q&#x3D;&#x3D;&#x2F;1252343744079893.mp3&quot;,cover:&quot;http:&#x2F;&#x2F;p3.music.126.net&#x2F;OTa-ZJkkiV208--vw-hacg&#x3D;&#x3D;&#x2F;124244813939534.jpg?param&#x3D;106x106&quot;,&#125;,</span><br><span class="line">&#123;title:&quot;原谅&quot;,artist:&quot;张玉华&quot;,mp3:&quot;http:&#x2F;&#x2F;p2.music.126.net&#x2F;BNTFaNAVmryQkoyuMTvIWw&#x3D;&#x3D;&#x2F;3442570907099641.mp3&quot;,cover:&quot;http:&#x2F;&#x2F;p4.music.126.net&#x2F;KdaoMSlxYxR7Z2fIeZrFXQ&#x3D;&#x3D;&#x2F;114349209304385.jpg?param&#x3D;106x106&quot;,&#125;,</span><br><span class="line">&#123;title:&quot;七月上&quot;,artist:&quot;Jam&quot;,mp3:&quot;http:&#x2F;&#x2F;p2.music.126.net&#x2F;K1SFXCvWf8BO9VEpSvx2ew&#x3D;&#x3D;&#x2F;7967061257205150.mp3&quot;,cover:&quot;http:&#x2F;&#x2F;p3.music.126.net&#x2F;9kZl6NRj3HxmQQ8DqTjZ4Q&#x3D;&#x3D;&#x2F;17729624997966923.jpg?param&#x3D;106x106&quot;,&#125;,</span><br><span class="line">&#123;title:&quot;想你零点零一分－徐薇&quot;,artist:&quot;徐薇&quot;,mp3:&quot;http:&#x2F;&#x2F;p2.music.126.net&#x2F;_qn7SA6RJmPw05gzdppMOw&#x3D;&#x3D;&#x2F;3394192431674152.mp3&quot;,cover:&quot;http:&#x2F;&#x2F;p4.music.126.net&#x2F;nVoSV6uA0MURcTfgvnQ_zw&#x3D;&#x3D;&#x2F;18024294114341058.jpg?param&#x3D;106x106&quot;,&#125;,</span><br><span class="line">&#123;title:&quot;对不起我爱你&quot;,artist:&quot;蔡淳佳&quot;,mp3:&quot;http:&#x2F;&#x2F;p2.music.126.net&#x2F;gMUJGPHoLzPskorPU6rqtw&#x3D;&#x3D;&#x2F;1167681348705703.mp3&quot;,cover:&quot;http:&#x2F;&#x2F;p3.music.126.net&#x2F;KwmbwhwG3-bAoI-KAI0vmg&#x3D;&#x3D;&#x2F;39582418613244.jpg?param&#x3D;106x106&quot;,&#125;,</span><br><span class="line">&#123;title:&quot;一生有你&quot;,artist:&quot;周玥&quot;,mp3:&quot;http:&#x2F;&#x2F;p2.music.126.net&#x2F;jt97yCFUuh8_w2ALRSk97g&#x3D;&#x3D;&#x2F;7698780419305871.mp3&quot;,cover:&quot;http:&#x2F;&#x2F;p4.music.126.net&#x2F;O0MbXlINzZabpOEjZA-otA&#x3D;&#x3D;&#x2F;2929098977807667.jpg?param&#x3D;106x106&quot;,&#125;,</span><br><span class="line">&#123;title:&quot;撕夜&quot;,artist:&quot;阿杜&quot;,mp3:&quot;http:&#x2F;&#x2F;p2.music.126.net&#x2F;U2m6b6xYhW5HszmGIIksEg&#x3D;&#x3D;&#x2F;7994549047223488.mp3&quot;,cover:&quot;http:&#x2F;&#x2F;p4.music.126.net&#x2F;C71BhIuR2l6pg7Dhz2MFcg&#x3D;&#x3D;&#x2F;76965813944980.jpg?param&#x3D;106x106&quot;,&#125;,</span><br><span class="line">&#123;title:&quot;如果你也听说&quot;,artist:&quot;张惠妹&quot;,mp3:&quot;http:&#x2F;&#x2F;p2.music.126.net&#x2F;VJ8F5FMsBlxy2frn71Grxw&#x3D;&#x3D;&#x2F;6622358534172426.mp3&quot;,cover:&quot;http:&#x2F;&#x2F;p3.music.126.net&#x2F;X4r7ThHc-uAcxEXvZ4G0mA&#x3D;&#x3D;&#x2F;6661940952772237.jpg?param&#x3D;106x106&quot;,&#125;,</span><br><span class="line">&#123;title:&quot;第一次&quot;,artist:&quot;光良&quot;,mp3:&quot;http:&#x2F;&#x2F;p2.music.126.net&#x2F;vNt2dWuyzm_f0GMEAEVCsA&#x3D;&#x3D;&#x2F;7930777372743720.mp3&quot;,cover:&quot;http:&#x2F;&#x2F;p3.music.126.net&#x2F;IFjMWxtDuOnjdgmkUb-TjQ&#x3D;&#x3D;&#x2F;39582418611956.jpg?param&#x3D;106x106&quot;,&#125;,</span><br><span class="line">&#123;title:&quot;你妈逼你结婚了吗&quot;,artist:&quot;小缘&quot;,mp3:&quot;http:&#x2F;&#x2F;p2.music.126.net&#x2F;Kz05PKFbp6nB3NFmLLELuw&#x3D;&#x3D;&#x2F;3235862721256261.mp3&quot;,cover:&quot;http:&#x2F;&#x2F;p4.music.126.net&#x2F;2XLMVZhzVZCOunaRCOQ7Bg&#x3D;&#x3D;&#x2F;3274345629219531.jpg?param&#x3D;106x106&quot;,&#125;,</span><br><span class="line">&#123;title:&quot;写给我第一个喜欢的女孩的歌&quot;,artist:&quot;西瓜Kune&quot;,mp3:&quot;http:&#x2F;&#x2F;p2.music.126.net&#x2F;tFxdXMfc-9ySURiQ-pWY7g&#x3D;&#x3D;&#x2F;2946691230466209.mp3&quot;,cover:&quot;http:&#x2F;&#x2F;p3.music.126.net&#x2F;hdrjFYPZXd2HgL-3OMlDIw&#x3D;&#x3D;&#x2F;18290375928279193.jpg?param&#x3D;106x106&quot;,&#125;,</span><br><span class="line">&#123;title:&quot;黑猫&quot;,artist:&quot;泠鸢yousa&quot;,mp3:&quot;http:&#x2F;&#x2F;p2.music.126.net&#x2F;6t1QeZCpUzHPIbcnow9zHw&#x3D;&#x3D;&#x2F;7948369557601218.mp3&quot;,cover:&quot;http:&#x2F;&#x2F;p3.music.126.net&#x2F;GQ9JkLt6QBaAoLbJ8UOoCQ&#x3D;&#x3D;&#x2F;3406287023862462.jpg?param&#x3D;106x106&quot;,&#125;,</span><br><span class="line">&#123;title:&quot;吵架歌&quot;,artist:&quot;叶洛洛&quot;,mp3:&quot;http:&#x2F;&#x2F;p2.music.126.net&#x2F;Bw4JNsNpqmyYojrGbfmfLA&#x3D;&#x3D;&#x2F;1385384666705656.mp3&quot;,cover:&quot;http:&#x2F;&#x2F;p4.music.126.net&#x2F;ADwGmh2dm5rlnQiOfO_eQg&#x3D;&#x3D;&#x2F;17810988858699279.jpg?param&#x3D;106x106&quot;,&#125;,</span><br><span class="line">&#123;title:&quot;岁月神偷&quot;,artist:&quot;金玟岐&quot;,mp3:&quot;http:&#x2F;&#x2F;p2.music.126.net&#x2F;0443RBA9VVlBGMDTHn2mTA&#x3D;&#x3D;&#x2F;1420569036314644.mp3&quot;,cover:&quot;http:&#x2F;&#x2F;p3.music.126.net&#x2F;54wdQi_3rpjreY2oo2jb7w&#x3D;&#x3D;&#x2F;5998935441219557.jpg?param&#x3D;106x106&quot;,&#125;,</span><br><span class="line">&#123;title:&quot;大笨钟&quot;,artist:&quot;刘瑞琦&quot;,mp3:&quot;http:&#x2F;&#x2F;p2.music.126.net&#x2F;iU_6fBQIDUVjJDx0k2stNA&#x3D;&#x3D;&#x2F;7974757837784826.mp3&quot;,cover:&quot;http:&#x2F;&#x2F;p3.music.126.net&#x2F;q-xabCVVQ2A0ZEdo1TNKOg&#x3D;&#x3D;&#x2F;3283141722234741.jpg?param&#x3D;106x106&quot;,&#125;,</span><br><span class="line">&#123;title:&quot;夏天的风&quot;,artist:&quot;刘瑞琦&quot;,mp3:&quot;http:&#x2F;&#x2F;p2.music.126.net&#x2F;mJmlquq1eJhL1t3VwAZPUw&#x3D;&#x3D;&#x2F;3156697883395736.mp3&quot;,cover:&quot;http:&#x2F;&#x2F;p3.music.126.net&#x2F;_RDkx-1ALrisLhdpTAg5_Q&#x3D;&#x3D;&#x2F;2457408488136735.jpg?param&#x3D;106x106&quot;,&#125;,</span><br><span class="line">&#123;title:&quot;黑色毛衣&quot;,artist:&quot;刘瑞琦&quot;,mp3:&quot;http:&#x2F;&#x2F;p2.music.126.net&#x2F;Iq6fiMwhbP_bu668kx_bVw&#x3D;&#x3D;&#x2F;7742760882949101.mp3&quot;,cover:&quot;http:&#x2F;&#x2F;p3.music.126.net&#x2F;obZy1mbYWFJtbyr26Q6Smg&#x3D;&#x3D;&#x2F;7749357952693832.jpg?param&#x3D;106x106&quot;,&#125;,</span><br><span class="line">&#123;title:&quot;可爱女人&quot;,artist:&quot;刘瑞琦&quot;,mp3:&quot;http:&#x2F;&#x2F;p2.music.126.net&#x2F;yE_njD0DNqh0DSaP3zyJxg&#x3D;&#x3D;&#x2F;7715273092246122.mp3&quot;,cover:&quot;http:&#x2F;&#x2F;p3.music.126.net&#x2F;obZy1mbYWFJtbyr26Q6Smg&#x3D;&#x3D;&#x2F;7749357952693832.jpg?param&#x3D;106x106&quot;,&#125;,</span><br><span class="line">&#123;title:&quot;晴天&quot;,artist:&quot;刘瑞琦&quot;,mp3:&quot;http:&#x2F;&#x2F;p2.music.126.net&#x2F;oxP2XaJFDscDuGhGnO7beA&#x3D;&#x3D;&#x2F;7768049650386454.mp3&quot;,cover:&quot;http:&#x2F;&#x2F;p4.music.126.net&#x2F;obZy1mbYWFJtbyr26Q6Smg&#x3D;&#x3D;&#x2F;7749357952693832.jpg?param&#x3D;106x106&quot;,&#125;,</span><br><span class="line">&#123;title:&quot;房间&quot;,artist:&quot;刘瑞琦&quot;,mp3:&quot;http:&#x2F;&#x2F;p2.music.126.net&#x2F;XWiUfSO2te8Ud80DJW-xhA&#x3D;&#x3D;&#x2F;3253454906690339.mp3&quot;,cover:&quot;http:&#x2F;&#x2F;p4.music.126.net&#x2F;hOr_kcXuEDIsQ0JK1HOewQ&#x3D;&#x3D;&#x2F;5698768766875669.jpg?param&#x3D;106x106&quot;,&#125;,</span><br><span class="line">&#123;title:&quot;发如雪&quot;,artist:&quot;徐薇&quot;,mp3:&quot;http:&#x2F;&#x2F;p2.music.126.net&#x2F;3GID47cBAp7KXP0xic4ulA&#x3D;&#x3D;&#x2F;7960464186523477.mp3&quot;,cover:&quot;http:&#x2F;&#x2F;p3.music.126.net&#x2F;lFj9dsCs9ucmrZlUQ_NcKQ&#x3D;&#x3D;&#x2F;3273246117440964.jpg?param&#x3D;106x106&quot;,&#125;,</span><br><span class="line">&#123;title:&quot;你还要我怎样－徐薇&quot;,artist:&quot;徐薇&quot;,mp3:&quot;http:&#x2F;&#x2F;p2.music.126.net&#x2F;BX3Yve3MgZRv_N5rXMkg9g&#x3D;&#x3D;&#x2F;3420580746165870.mp3&quot;,cover:&quot;http:&#x2F;&#x2F;p3.music.126.net&#x2F;nVoSV6uA0MURcTfgvnQ_zw&#x3D;&#x3D;&#x2F;18024294114341058.jpg?param&#x3D;106x106&quot;,&#125;,</span><br><span class="line">&#123;title:&quot;夜空中最亮的星&quot;,artist:&quot;徐小薇&quot;,mp3:&quot;http:&#x2F;&#x2F;p2.music.126.net&#x2F;15SO8H57d36vDZmqG_MbLw&#x3D;&#x3D;&#x2F;5853799906501854.mp3&quot;,cover:&quot;http:&#x2F;&#x2F;p4.music.126.net&#x2F;D22IKBn-eUq-EebVSbAuJA&#x3D;&#x3D;&#x2F;5934064255276851.jpg?param&#x3D;106x106&quot;,&#125;,</span><br><span class="line">&#123;title:&quot;那么骄傲&quot;,artist:&quot;周玥&quot;,mp3:&quot;http:&#x2F;&#x2F;p2.music.126.net&#x2F;zBvbSjCuQJHWme9QjEtUzg&#x3D;&#x3D;&#x2F;2917004349902345.mp3&quot;,cover:&quot;http:&#x2F;&#x2F;p4.music.126.net&#x2F;O0MbXlINzZabpOEjZA-otA&#x3D;&#x3D;&#x2F;2929098977807667.jpg?param&#x3D;106x106&quot;,&#125;,</span><br><span class="line">&#123;title:&quot;我以为&quot;,artist:&quot;徐薇&quot;,mp3:&quot;http:&#x2F;&#x2F;p2.music.126.net&#x2F;vFABwceFwRDthO4BlEai2w&#x3D;&#x3D;&#x2F;5773535557680612.mp3&quot;,cover:&quot;http:&#x2F;&#x2F;p3.music.126.net&#x2F;d5yZbhgszplRTcnNCROW-g&#x3D;&#x3D;&#x2F;3382097768286533.jpg?param&#x3D;106x106&quot;,&#125;, </span><br><span class="line">];</span><br><span class="line">  var isRotate &#x3D; true;</span><br><span class="line">  var controls &#x3D; true;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;uu126.cn&#x2F;usr&#x2F;themes&#x2F;Mirages&#x2F;js&#x2F;player.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line"> </span><br><span class="line">function bgChange()&#123;</span><br><span class="line">	var lis&#x3D; $(&#39;.lib&#39;);</span><br><span class="line">	for(var i&#x3D;0; i&lt;lis.length; i+&#x3D;2)</span><br><span class="line">	lis[i].style.background &#x3D; &#39;rgba(246, 246, 246, 0.5)&#39;;</span><br><span class="line">&#125;</span><br><span class="line">window.onload &#x3D; bgChange;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+<p>这个代码可以放在最后调用foot.php代码的前面即可，同样保存后上传覆盖。<br>3、一切OK后，打开博客首页刷新一下，看看是不是在左下方有一个小东西了，怎么用我就不多啰嗦了，老规矩，有问题请留言。<br>最后小结一下：本音乐播放器属转载而来，我也只是跟据自己的使用过程做一个记录。这个播放器因为不是插件版的，自然就没有后台了，没有了后台，在更新音乐时只能采取代码替换方式进行，对于大部分站长来讲这都不算事，另外由于歌曲链接不是https的，所以会影响首页的小绿锁，介意的慎用哦！</p>
+
+          
+            <br>
+            
+  
+    
+    
+
+<section class="widget copyright  desktop mobile">
+  <div class='content'>
+    
+      <blockquote>
+        
+          
+            <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+          
+        
+          
+            <p>本文永久链接是：<a href=https://uu126.cn/post/2409.html>https://uu126.cn/post/2409.html</a></p>
+          
+        
+      </blockquote>
+    
+  </div>
+</section>
+
+  
+
+  
+    
+    
+
+<section class="widget qrcode  desktop mobile">
+  
+
+  <div class='content article-entry'>
+    
+      
+        <fancybox><img src='http://www.uu126.cn/images/wechatpay.png'
+        
+          height='64px'
+        ></fancybox>
+      
+    
+      
+        <fancybox><img src='http://www.uu126.cn/images/alipay.png'
+        
+          height='64px'
+        ></fancybox>
+      
+    
+  </div>
+</section>
+
+  
+
+
+          
+        </div>
+        
+          
+
+
+  <section class='meta' id="footer-meta">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2017-01-31T21:36:25+08:00">
+  <a class='notlink'>
+    <i class="fas fa-save" aria-hidden="true"></i>
+    <p>更新于：Jan 31, 2017</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E7%BD%91%E7%AB%99/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i><p>网站</p></a></div>
+
+
+        
+      
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://uu126.cn/post/2409.html&title=分享本站的音乐播放器代码版（带安装说明） - Feng'blog&summary=抽个空浏览了一下众大侠的博客，发觉我自从用上Typecho后，对Wordpress的事关注度明显下降了（对不住哈），这不昨天浏览到一同类（同Typecho博客）的音乐播放器分享，看了看觉得可以放在自己的网站上显摆一下，那就动手吧！先下载好相关的CSS和JS文件，并上传到主题目录下，顺便对这个播放器简单介绍一下：这款音乐播放器的插件版，插件版有一个好处就是带后台，有按钮控制；而无插件就是通过直接改代码的形式了，比如：自动播放、换个歌啥的，但身为强迫症严重的我，绝对不允许插件太多的存在（受之前WordPress影响）；"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer"
+          
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://uu126.cn/post/2409.html&title=分享本站的音乐播放器代码版（带安装说明） - Feng'blog&summary=抽个空浏览了一下众大侠的博客，发觉我自从用上Typecho后，对Wordpress的事关注度明显下降了（对不住哈），这不昨天浏览到一同类（同Typecho博客）的音乐播放器分享，看了看觉得可以放在自己的网站上显摆一下，那就动手吧！先下载好相关的CSS和JS文件，并上传到主题目录下，顺便对这个播放器简单介绍一下：这款音乐播放器的插件版，插件版有一个好处就是带后台，有按钮控制；而无插件就是通过直接改代码的形式了，比如：自动播放、换个歌啥的，但身为强迫症严重的我，绝对不允许插件太多的存在（受之前WordPress影响）；"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://service.weibo.com/share/share.php?url=https://uu126.cn/post/2409.html&title=分享本站的音乐播放器代码版（带安装说明） - Feng'blog&summary=抽个空浏览了一下众大侠的博客，发觉我自从用上Typecho后，对Wordpress的事关注度明显下降了（对不住哈），这不昨天浏览到一同类（同Typecho博客）的音乐播放器分享，看了看觉得可以放在自己的网站上显摆一下，那就动手吧！先下载好相关的CSS和JS文件，并上传到主题目录下，顺便对这个播放器简单介绍一下：这款音乐播放器的插件版，插件版有一个好处就是带后台，有按钮控制；而无插件就是通过直接改代码的形式了，比如：自动播放、换个歌啥的，但身为强迫症严重的我，绝对不允许插件太多的存在（受之前WordPress影响）；"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/weibo.png">
+          
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </section>
+
+
+        
+        
+          <div class="prev-next">
+            
+              <a class='prev' href='/post/2415.html'>
+                <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>博客计划由Typecho转Hexo</p>
+                <p class='content'>我的博客唠唠叨叨的也写了好几年了，文章也有三百多篇了，从一开始用Wordpress到Typecho，其中以Wordpress的使用时间最长，占了博客生命的2/3了吧，空间也是一样从最早的虚拟空间...</p>
+              </a>
+            
+            
+              <a class='next' href='/post/2411.html'>
+                <p class='title'>博客的开始————如何搭建Hexo<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+                <p class='content'>导语：
+Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。并且能一键部署到GitHub Pages...</p>
+              </a>
+            
+          </div>
+        
+      </section>
+    </article>
+  
+
+  
+    <!-- 显示推荐文章和评论 -->
+
+
+
+  <article class="post white-box comments shadow">
+    <section class="article typo">
+      <p ct><i class='fas fa-comments'></i> 评论</p>
+      
+      
+      
+      
+      
+        <section id="comments">
+          <div id="valine_container" class="valine_thread">
+            <i class="fas fa-spinner fa-spin fa-fw"></i>
+          </div>
+        </section>
+      
+    </section>
+  </article>
+
+
+  
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+
+  <script>
+    window.subData = {
+      title: '分享本站的音乐播放器代码版（带安装说明）',
+      tools: true
+    }
+  </script>
+
+
+</div>
+<aside class='l_side'>
+  
+  
+
+  
+    
+    
+
+
+
+  
+
+
+</aside>
+
+
+  
+  <footer class="clearfix ">
+    <br><br>
+    
+      
+        
+      
+    
+      
+        <br>
+        <div class="social-wrapper">
+          
+            
+              <a href="/atom.xml"
+                class="social fas fa-rss flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="mailto:jslfp@foxmail.com"
+                class="social fas fa-envelope flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="https://github.com/sxgxhk"
+                class="social fab fa-github flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="https://music.163.com/#/user/home?id=63035382"
+                class="social fas fa-headphones-alt flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+        </div>
+     
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        <div class='copyright'>
+        <p><a href="https://uu126.cn">Copyright © 2017-2020 Feng</a></p>
+<!--腾讯云--->Hosted by <a href="https://pages.coding.me" target="_blank" rel="noopener" style="font-weight: bold">Coding Pages</a> + 
+<a href="https://cloud.tencent.com/redirect.php?redirect=1005&cps_key=4e78216aea817227ff0c96d93a00fd4b" target="_blank" rel="nofollow"><!--<img src="https://uu126.cn/wp-content/uploads/2016/10/hwclouds-logo.png" style="margin-bottom:-3px">-->腾讯云 + </a><a href="https://console.upyun.com/register/?invite=S1JeTquHL" target="_blank" rel="nofollow"><span class="with-love"><img src="https://cdn.lancn.cn/images/upyun.png" style="width:40px;" alt="又拍云存储"></span></a>
+<br>
+<!--备案---> <a target="_blank"  href="http://www.beian.miit.gov.cn">浙ICP备11026647号-3</a><span class="post-meta-divider"> | </span><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33088102001325"><span class="with-love"><img src="https://cdn.uu126.cn/icon-police.png" style="width:14px;"></span> 浙公网安备33088102001325号</a>
+        </div>
+      
+    
+  </footer>
+
+<script>setLoadingBarProgress(80);</script>
+
+
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+  </div>
+  
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4/dist/jquery.min.js"></script>
+
+
+  <script>
+    
+    var SEARCH_SERVICE = "hexo" || "hexo";
+    var ROOT = "/" || "/";
+    if (!ROOT.endsWith('/')) ROOT += '/';
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+
+  <script type="text/javascript">
+    $(function() {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+
+
+
+  
+  
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script>
+
+    <script type="text/javascript">
+      $(function(){
+        var imgs=["https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/BBC19066-E176-47C2-9D22-48C81EE5DF6B.jpeg"];
+        if ('true' == 'true') {
+          function shuffle(arr){
+            /*From countercurrent-time*/
+            var n = arr.length;
+            while(n--) {
+              var index = Math.floor(Math.random() * n);
+              var temp = arr[index];
+              arr[index] = arr[n];
+              arr[n] = temp;
+            }
+          }
+          shuffle(imgs);
+        }
+        if ('.cover') {
+          $('.cover').backstretch(
+            imgs,
+          {
+            duration: "20000",
+            fade: "1500"
+          });
+        } else {
+          $.backstretch(
+            imgs,
+          {
+            duration: "20000",
+            fade: "1500"
+          });
+        }
+      });
+    </script>
+  
+
+
+
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js" async></script>
+
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js" async></script>
+
+  
+
+
+
+
+
+
+
+
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2.0/js/valine.js"></script>
+
+  
+  <script>
+  var GUEST_INFO = ['nick','mail','link'];
+  var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var notify = 'true' == true;
+  var verify = 'true' == true;
+  var valine = new Valine();
+  valine.init({
+    el: '#valine_container',
+    notify: notify,
+    verify: verify,
+    guest_info: guest_info,
+    
+    appId: "5sMkTX4FLjetFnfbOhaDTCDJ-9Nh9j0Va",
+    appKey: "25KXCqIqAN142RQn4fBrsI87",
+    placeholder: "快来评论吧~",
+    pageSize:'10',
+    avatar:'mp',
+    lang:'zh-cn',
+    visitor: 'false',
+    highlight:'true'
+  })
+  </script>
+
+
+
+  
+<script src="/js/app.js"></script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2.1/js/search.js"></script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2/js/comment_typing.js"></script>
+
+
+
+<!-- 复制 -->
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copyed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('fa-copy');
+        $icon.addClass('fa-clipboard-check');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPYED';
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('fa-copy');
+        $icon.addClass('fa-exclamation-triangle');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+
+
+
+
+<!-- fancybox -->
+
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  let LAZY_LOAD_IMAGE = "";
+  $(".article-entry").find("fancybox").find("img").each(function () {
+      var element = document.createElement("a");
+      $(element).attr("data-fancybox", "gallery");
+      $(element).attr("href", $(this).attr("src"));
+      /* 图片采用懒加载处理时,
+       * 一般图片标签内会有个属性名来存放图片的真实地址，比如 data-original,
+       * 那么此处将原本的属性名src替换为对应属性名data-original,
+       * 修改如下
+       */
+       if (LAZY_LOAD_IMAGE) {
+         $(element).attr("href", $(this).attr("data-original"));
+       }
+      $(this).wrap(element);
+  });
+</script>
+
+
+
+
+
+
+  <script>setLoadingBarProgress(100);</script>
+</body>
+</html>
