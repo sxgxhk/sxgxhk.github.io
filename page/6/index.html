@@ -320,6 +320,101 @@
       
         
   <h2 class="title">
+    <a href="/post/2407.html">
+      Typecho无法上传图片或附件的解决办法
+    </a>
+  </h2>
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+<div class='new-meta-item author'>
+  <a href="https://uu126.cn" rel="nofollow">
+    <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png">
+    <p>Feng</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class='new-meta-item category'>
+    <a href='/categories/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/' rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>网站建设</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-edit" aria-hidden="true"></i>
+    <p>发布于：Dec 22, 2016</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <p>之前说了最近比较“懒”，好久没更新博客了，昨天在更新时发现博客出了问题——不能上传图片或附件（这不炸锅了……），今天抽个空得赶紧解决呀！用Winscp对比看过了博客（本站使用的是Typecho）所有目录，感觉也没什么问题呀，随后又找度娘了解了一下，也没找到什么好的答案，都是改权限的事，什么把usr、upload等改成777（读写权限），感觉没必要呀，而且777的权限太大了，个人觉得不安全，一般目录有775的权限就可以了。想来想去，突然想起来前些天把Typecho版本升级了一下，下载了官网的最新版（目前最新版只有Beta版的，正式版还没发布），升级过之后，我倒是测试过博客可以正常访问的，加上后来自己“偷懒”了，没更新博客所以也就没发现不能上传的故障。</p>
+      
+        
+          <div class="button readmore">
+            <a href="/post/2407.html">
+              Read More <i class="fas fa-chevron-right"></i>
+            </a>
+          </div>
+        
+      
+    </div>
+  </section>
+</article>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <article class="post white-box shadow reveal ">
+  
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
     <a href="/post/2403.html">
       目前远景论坛打不开的解决办法
     </a>
@@ -1164,101 +1259,6 @@
           </div>
         
       
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow reveal ">
-  
-
-
-  <section class='meta'>
-    
-    
-    <div class="meta" id="header-meta">
-      
-        
-  <h2 class="title">
-    <a href="/post/2370.html">
-      给Typecho后台添加图片验证
-    </a>
-  </h2>
-
-
-      
-      <div class='new-meta-box'>
-        
-          
-        
-          
-            
-<div class='new-meta-item author'>
-  <a href="https://uu126.cn" rel="nofollow">
-    <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png">
-    <p>Feng</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  
-  <div class='new-meta-item category'>
-    <a href='/categories/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/' rel="nofollow">
-      <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>网站建设</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-edit" aria-hidden="true"></i>
-    <p>发布于：Nov 26, 2016</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-
-          
-        
-          
-            
-
-          
-        
-      </div>
-      
-        <hr>
-      
-    </div>
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <p>Typecho比之Wordpress的确比较轻巧，使用起来也比较容易上手，唯一的不足就是使用人群少，相对的主题、插件、教程要比Wordpress少，但却丝毫不影响我使用。使用Typecho有段时间了，平常写写小博客那是绰绰有余，就是感觉这后台登录是不是缺了点什么，虽然可以自定义后台路径，可感觉还是得纶它加点什么，哪怕只是那点小验证，那就动手吧。也说一下Typecho，ypecho有很好的路由机制，并且MVC模型模块化做的很好。系统代码在/var/中，包括了：Widget工具，Typecho模型等。开发者二次开发代码在/usr/中，主要放置Theme主题，Plugins插件等。添加验证码不能用插件形式，因此只能直接在源码中更改。在Wordpress的时候俺就用过极验证，东西不错挺好的，但免费版不支持Https，所以只能作罢（心里作用还吧，呵呵），那么就用php生成图片的验证方法。</p>
-      
-        
-          <div class="button readmore">
-            <a href="/post/2370.html">
-              Read More <i class="fas fa-chevron-right"></i>
-            </a>
-          </div>
-        
-      
-    </div>
-  </section>
-</article>
-
-          </div>
-        
-      
     
   </section>
   
@@ -1319,7 +1319,7 @@
           <li><a class="flat-box"
             title="/categories/%E6%88%91%E7%9A%84%E5%9C%B0%E7%9B%98/" href="/categories/%E6%88%91%E7%9A%84%E5%9C%B0%E7%9B%98/"
             id="categoriesE68891E79A84E59CB0E79B98"
-            ><div class='name'>我的地盘</div><div class='badge'>(35)</div></a></li>
+            ><div class='name'>我的地盘</div><div class='badge'>(36)</div></a></li>
         
           <li><a class="flat-box"
             title="/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/" href="/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/"
