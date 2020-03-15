@@ -104,6 +104,181 @@
     
     
     <entry>
+      <title>2020年的春节</title>
+      <link href="/post/spring-festival-in-2020.html"/>
+      <url>/post/spring-festival-in-2020.html</url>
+      
+        <content type="html"><![CDATA[<p>2020年（本来寓意挺好的，2020爱你爱你……）的春节，原以为会跟以往春节那样，结果是大大出乎意料，原本可以大团聚的日子（串门、聚会等），现在却因为新型冠状病毒肺炎的出现，一切都变了，变得被要求在家呆着，没事少出门，更没提聚会、拜年等，而且今年流行的已不在是红包，而是口罩，谁要是可以拿出一堆的口罩来，那他一定很……。</p><a id="more"></a><p><img src="https://cdn.lancn.cn/wp-content/uploads/2020/01/1580367834-Jietu20200130-150041.jpg#mirages-width=833&mirages-height=922&mirages-cdn-type=1" alt="请输入图片描述"></p><p>疫情是越来越严重，我大浙江的颜色也越来越深了，全国也变成了彩色，深颜色的区域也越来越多了，现在人们看到颜色浅的地方估计都很开心吧（东部地区是不用想了，想颜色变浅还得再过段时间吧），这场突来其来的疫情，也把武汉这个名称推到了风口上，可以说谈其色变，各地也都把从这个地方归来或经过的人盯的紧紧的。就连春节假期也因此延期了（从小到大这还是头一回碰到，可却也没太多的喜悦感），大街上随处可见的冷清，原本一位难求的停车位，现在也可以随便停了（喜欢停哪就停哪），其它诸如饭店、水果店开门的也很少，小区、村庄等也开始进行管控（减少出入口，必经出入口也有人员巡查、测温等），所有的种种都让这2020年的春节过得有点不爽、无奈……</p><p><img src="https://cdn.lancn.cn/wp-content/uploads/2020/01/1580367830-Jietu20200130-150222.jpg#mirages-width=779&mirages-height=639&mirages-cdn-type=1" alt="请输入图片描述"></p><p>我大浙江目前确诊的也有428例了（还好我不在温州），好在治愈也有4例了，随着假期结束返程的开始，这些数字都还会发生变化，衷心希望这场疫情能够早日结束，早日恢复大伙自觉的生活。<br>加油！武汉。<br>加油！中国。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 我的地盘 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 随笔 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>“范”闲整个黑苹果</title>
+      <link href="/post/fan-leisure-the-whole-black-apple.html"/>
+      <url>/post/fan-leisure-the-whole-black-apple.html</url>
+      
+        <content type="html"><![CDATA[<p>“范”闲最近比较出名，当然我其实并不闲（真的吗？）这不赶上周末有点闲，要不给俺家台式机也整个黑苹果吃吃（平安果最近卖的这么贵的，穷人就整个黑的吃吃吧），家里的台机配置也不高（I5 +H61+12G），日常整个Win10啥的是够用了，谁叫俺不打游戏呢（显卡是N卡730），看到黑果小兵有做好的系统（远景的号登录不上了，其它的付费的地也懒的整），就下个试试吧</p><a id="more"></a><p><img src="https://cdn.lancn.cn/wp-content/uploads/2019/12/CLOVER.png#mirages-width=1920&mirages-height=1080&mirages-cdn-type=1" alt="请输入图片描述"></p><p>用的是四叶草的引导，主题也是定制的（挺漂亮的），因为机型有点早了怕太新了跑不动就下个Mojave吧，下载地址：<a href="https://blog.daliansky.net/macOS-Mojave-10.14.6-18G87-Release-version-with-Clover-5033-original-image.html" target="_blank" rel="noopener">https://blog.daliansky.net/macOS-Mojave-10.14.6-18G87-Release-version-with-Clover-5033-original-image.html</a>   ，具体的使用上面写的很详细我就不在啰嗦了，有些碰到问题的地方我说说（怕以后时间长了自己记不得还能翻翻）：</p><ul><li><p>双系统安装的话（比如Win10+Mac），记得要将硬盘改为GPT，MBR格式是不行的，已经是MBR格式的可以用Win10自带的命令转换，转换好之后将BIOS里的引导方式改为<code>UEFI only</code>（不同板子显示不一样，差不多），另外还需要新建个200M以上的分区，作为黑苹果的EFI存放盘（没有这个分区，黑苹果里的磁盘工具抹盘会失败）。</p></li><li><p>用做好的黑苹果U盘引导安装，抹盘后安装可能会提示<code>安装macOS 应用程序副本已损坏，不能用来安装macOS</code>，可以点击  <code></code> 实用工具-终端 <code>，输入命令：</code> date 0201010116 <code>，回车后关闭</code> 终端 `，可继续安装进程；另外安装过程中全程断开网络。</p></li></ul><ul><li><p>经过几次重启后就能进黑苹果了，这时还是通过U盘引导的，想直接从硬盘上引导黑苹果，还得将U盘中的EFI文件拷到之前分的那个200M以上的EFI分区，用PE就可以解决，将U盘中的EFI分区中的所有文件拷贝到硬盘上那个分好的EFI分区中，重启后就可以直接硬盘引导了。</p><ul><li>我这个机型用【黑果小兵】macOS Mojave 10.14.6 18G87 正式版 with Clover 5050原版镜像 装好之后，除了声卡没声音外，其它的诸如显卡、网卡都驱好了，我的声卡是ALC887的，网上可以找到相关的EFI文件，可是很多都要账号登录后方可下载，逛了很久，最后在B站上找到了解决方案：<a href="https://www.bilibili.com/video/av22593342?from=search&amp;seid=11745333475432574617" target="_blank" rel="noopener">黑苹果声卡驱动教程 alc887</a> （有具体的操作视频），声卡驱动 ：<a href="https://github.com/vit9696/AppleALC/releases" target="_blank" rel="noopener">https://github.com/vit9696/AppleALC/releases</a>   ID查找 ：<a href="https://github.com/vit9696/AppleALC/wiki/Supported-codecs" target="_blank" rel="noopener">https://github.com/vit9696/AppleALC/wiki/Supported-codecs</a>  ，我是用<code>11</code>修改ID后重启就有声音了。</li></ul></li></ul><p>目前测试一段时间，没啥问题，上网看视频、听歌、Office、聊聊天都是很Nice的，当然完美谈不上，至少基本使用没问题（苹果的输入法倒是没有Windows的好用，五笔更是，装了个搜狗的凑合凑合先吧），其它的等有空再瞧瞧，对于现在很少开电脑的我来说，黑苹果应该是够用了，实在要用Windows啥的，不是还有笔记本嘛（我的黑苹果能用的很久？天知道）。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 我的地盘 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 苹果 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>最近的事@5</title>
+      <link href="/post/recent-events-5-1.html"/>
+      <url>/post/recent-events-5-1.html</url>
+      
+        <content type="html"><![CDATA[<p>打开博客发现最近一次更新竟然是3个月前（现在都这么懒了吗？不敢想象呀），我是不是该上来啰嗦一下，发一发牢骚了233。</p><a id="more"></a><p><img src="https://cdn.lancn.cn/wp-content/uploads/2019/12/2019len.jpg#mirages-width=400&mirages-height=270&mirages-cdn-type=1" alt="请输入图片描述"></p><p>外面是越来越冷了，早上起不来，晚上睡的晚，如此反复恶性循环，难道这就是冬天，这就是天冷了该有的表现，估计是吧，反正我是这么一回事。人越来越惰性，越来越……啥也不想，就想那么躺着，哪怕只是多躺几秒钟，这算是懒癌晚期的表现吧233。以前回家必开两样东西：电视和电脑，现在回家还是必开两样：电视和手机，以前没事老爱上博客唠叨唠叨，现在就爱拿手机刷刷头条，打打小游戏，人确实是变了（难怪我以前经常逛的博客现在要么少更新了，要么干脆打不开了，莫非大家都是晚期了…………），好在我这域名当时注册了十年，空间也还没到期，感谢当年鹅场送了我2K的优惠券，要不然我也可能打不开了，哈哈 。</p><p>现在电脑开的少其实也是有原因的，以前寡人一个，回家了没事自然是电脑一开，然后一直开到睡觉，现在不一样了，不是寡人了，虽然来点啥事，都可以把开电脑这事扔到脑后，用电脑该干的活基本上班时也差不多了，回到家再开电脑又不玩游戏感觉就没啥用了，看电影啥的现在不是可以手机或投屏嘛，也比坐在电脑前看着爽呀，那不是可以躺着看嘛233。</p><p>啰了半天，感觉跟标题越说越不沾边，哪是什么最近的事，这纯粹就是瞎扯蛋嘛……。感觉最近也没发生啥好说的，生活平淡、日复一日的过着，似乎一切都是这么早已安排好的，就如程序一般按部就班在运行着。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 我的地盘 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 随笔 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>iPhone快速开启或关闭VoiceOver（旁白）</title>
+      <link href="/post/iphone-quick-turn-voiceover-on-or-off.html"/>
+      <url>/post/iphone-quick-turn-voiceover-on-or-off.html</url>
+      
+        <content type="html"><![CDATA[<p>iPhone的VoiceOver（现在叫旁白）对视力等障碍的朋友们还是非常好用的，但要是正常人不小心开启了，就会发现想关闭那不是一般的麻烦（都有想砸手机的冲突）。为了关闭这功能会去尝试登录–设置–辅助–旁白–关闭，看着流程不复杂，可实际操作起来那真是一个爽233。</p><a id="more"></a><p><img src="https://cdn.lancn.cn/wp-content/uploads/2019/09/zsj.jpeg#mirages-width=339&mirages-height=254&mirages-cdn-type=1" alt="请输入图片描述"></p><p>其实想要快速开启或关闭VoiceOver（旁白）功能，还是蛮简单的（知道时感觉就这是这么简单，不知道时我也折腾了许久），不啰嗦了，赶紧放出大招：</p><h4 id="快速按手机右侧的关机键三次即可开启或关闭VoiceOver（旁白）"><a href="#快速按手机右侧的关机键三次即可开启或关闭VoiceOver（旁白）" class="headerlink" title="快速按手机右侧的关机键三次即可开启或关闭VoiceOver（旁白）"></a>快速按手机右侧的关机键三次即可开启或关闭VoiceOver（旁白）</h4><p>iphoneX以上没有Home键的是这么操作的，有Home键的我试了没用，可能是我手上的6SP太古老（ios12）了吧，按Home键或开关键都没反应，不去深究了，反正俺也不用这功能（够懒吧）</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 我的地盘 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> iphone </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>懒懒的9102年</title>
+      <link href="/post/the-lazy-year-of-9102.html"/>
+      <url>/post/the-lazy-year-of-9102.html</url>
+      
+        <content type="html"><![CDATA[<p>发觉9102年是真的懒，而且还是非一般的懒，这不小小博客上次更新还是在一月份（我去…………），什么理由都不能像我这么懒的没药治了…………。木的治咯，，木的治咯，，咋活呀！</p><a id="more"></a><p><img src="https://cdn.uu126.cn/wp-content/uploads/2019/08/3310300122.jpeg?imageView2/1/w/1024/h/613" alt="请输入图片描述"></p><p>趁着大中午的休息时间，赶紧水上一贴，算是对慵懒的这段时间来一个小小的自我批评吧，大多的自我总结就不写了（怕是也写不出啥，懒成习惯了……），今后抽抽身还是要来水一下，谁叫这是俺的小据点呢（说不是or say no的可以走了），俺的地盘俺们一定要做主的（真是废柴呀……）</p><p>先来说说博客吧，懒的没药的人又把Ghost换成Typecho了，不是Ghost不好，也不是Typecho有多好（神马话233），只是这两者相比Wordpress还是要好一点点的，Wordpress俺是前台快了后台慢，作为小小小博客还是功能富余了点，所以经俺们懒懒的决定还是Typecho吧（之前也用过一段时间的，稍微熟悉那么一丢丢），主题目前用的是之前买的，非常不错值得推荐的一款主题。</p><p>感觉写着写着发现有点困了，还是趴会吧，下午还要干活呢，先水到此，下次再水吧…………………………（懒癌是越来越严重了…………）。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 我的地盘 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 随笔 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>最近的事@4</title>
+      <link href="/post/recent-events-4.html"/>
+      <url>/post/recent-events-4.html</url>
+      
+        <content type="html"><![CDATA[<p>一晃都已经9102年了（网上看到很多都把2019写成这样，我这算是跟风吧?），上一次更博还是2018年11月份，这间隔的不是一点半点呀，难怪<a href="https://sunxyu.cn/" target="_blank" rel="noopener">小宇</a>童鞋都来叫阵了（我看他就是闲的?几乎天天更新，反观我…………）。最近发生了很多事（一贯的套路用词……），那就慢慢说来吧。</p><a id="more"></a><p><img src="https://cdn.uu126.cn/201901/2019newyear01.jpg" alt="请输入图片描述"></p><p>先从12月初说吧，一次交通意外让我这人生头一回栽了个大跟头，经过发现一个“真理”——这皮包铁（两轮小电驴）真的是斗不过铁包皮（小四轮）呀，万幸的是没有碰上（简要说一下大概：那天刚过红绿灯，看见前面路口一辆小车要拐弯，车停了一下让我本能的觉得这是在让我过去，在我没有任何减速的情况下，小车猛的一个转变进来，由于距离太近导致情急中紧急制动，或许是因为刚下过雨不久，或许是因为那段路面太差，小电驴测滑摔倒，造成从脸到手、膝盖多处擦伤，嘴上还缝了线，膝盖更是受伤严重，什么髌骨骨折、半月板、韧带损伤，牙齿碎裂等等住了将近半个月的院，要不是因为后面的一件事，估计要住上至少一个月），小车司机在当天垫付了600块后就再也“没钱”了（估计是考虑到保险的事吧），人生还是头一回遭此大劫，可谓是损失惨重呀（因为门牙等碎裂，害我现在说话都不敢张大口了?）</p><p>12月中旬，人生最大的事来了——结婚，同龄人当中我算是蛮晚的吧，由于月初的事故，导致婚前很多事都是媳妇在筹办（在此好好感谢一下），一大堆的事真是辛苦她了，可以非常负责任的说在这次婚礼中，我算是最闲的当事人了?。或许也正因为如此吧，老天爷也想奖赏一下媳妇，我们婚礼那几天都是好天气，中间还出过太阳（要知道这前后不是阴天就是下雨，很多朋友都在说我们日子挑的好）。我唯一为这次婚礼做的贡献就是提前出院（拿掉了右腿上的石膏，佩带上狗东上买的支架，贴上老丈人特地采来的神奇膏药贴），然后一拐一拐的陪着媳妇拍了外景和婚礼，当然了我这点贡献跟媳妇的付出那根本就是九牛一毛（没办法，谁叫俺运气好，以后要好好表现，立贴为证啊）</p><p><img src="https://cdn.uu126.cn/201901/2019newyear02.png" alt="请输入图片描述"></p><p>还是因为月初的事故，这不开始休起病假了，每天人是爽了，就是这个月发钱的时候会发现少的可怜，据说病假工资是……（等发了就清楚了，反正可以肯定的是：很少），想在网上找点活干干，至今无果呀（是不是要去学个程序、敲个代码啥的，考虑考虑）。估计最多休到年后肯定休不下去了，再休下去，我要…………</p><p>现在想想有些事是可以长篇小论一下的，比如：婚礼，可想想如今的网络，想想还是简写一下吧，其实前段时间写过博文的，只是没有发表出来，也是考虑到一些因素后来给删了，至于这次又为什么要写出来，想想如今的网络…………，简写一番留个印也好。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 我的地盘 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 随笔 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>IOS 高版本保资料降级(未关验证)</title>
+      <link href="/post/data-degradation-of-ios-higher-version-verification-not-turned-off.html"/>
+      <url>/post/data-degradation-of-ios-higher-version-verification-not-turned-off.html</url>
+      
+        <content type="html"><![CDATA[<p>用iPhone的朋友都知道，IOS（iPhone手机的灵魂）更新还是蛮快的，不管是修补漏洞也好，还是增加新功能也罢，给我的感觉就是完胜安卓系统，至少同年代的机型，iPhone可以用的更流畅些，而且只要你肯刷，新版本的系统始终都是可以轻松得到（除非跨越太大会限制版本更新，但相比安卓新系统的普及率来讲，IOS的新牒普及率已经高出很多了）。</p><a id="more"></a><p>在日常使用中还是会碰到例如：新版本不适应了，费电等原因需要降级（IOS只能降级到未关闭验证的系统版本，这点相比安卓有点打脸了，这也算是封闭式系统的特性吧），一般正常的操作，苹果家的iTunes是不允许高版本的备份恢复到低版本的系统中，估计是怕出现问题或者是有意为之等原因，好在各路大神给出了解决方案，本人也亲身体验了iPhone6S Plus由IOS12.1降级到12.0.1，同时将12.1的备份恢复到12.0.1，中间出现了点点小插曲，不过最终还是完美搞定，下面就来啰嗦一下：</p><ul><li><p>将手机连接iTunes，并备份当前iPhone 12.1资料，这里据有些大神说不设置密码会好一点，反正我是没设置（比较听话型）</p></li><li><p>备份好之后开始刷机（备份比较费时间，建议备份的途中就可以下载固件，目前能降的也只有12.0.1），手机进入DFU模式（在确保与电脑连接好、iTunes也打开的情况下，将手机关闭后再开机，屏幕上显示苹果图标时按住Home键，大概10秒左右屏幕再次黑掉，这时松开开关键、继续按住Home键，再等大概10秒，iTunes会提示处于恢复模式的iPhone（大概这个意思吧，原话忘了），这时松开手机按住键盘上的Shift键找到固件刷入</p></li><li><p>开始最关键的步骤，修改备份资料，先找到备份目录（选最新的那个），一般默认目录为：<br><code>C:\Users\电脑用户名\AppData\Roaming\Apple Computer\MobileSync\Backup</code></p></li></ul><p><img src="https://cdn.uu126.cn/201811/iosjiangji_01.png" alt="请输入图片描述"></p><ul><li>打开备份文件夹.找到 Info.plist 用记事本/写字板（推荐使用plist Editor Pro）打开。先搜索<code>Build Version</code>修改为<code>16A404</code>（我的是这个，具体看你下载的固件名：<code>iPhone_5.5_12.0.1_16A404_Restore</code>版本号12.0.1后面就是<code>Build Version</code></li></ul><p><img src="https://cdn.uu126.cn/201811/iosjiangji_buildversion.png" alt="请输入图片描述"></p><p>接着修改<code>Product Version</code>，将其修改为：<code>12.0.1</code></p><p><img src="https://cdn.uu126.cn/201811/iosjiangji_productversion.png" alt="请输入图片描述"></p><p>两处修改完成之后保存一下，等iPhone进入系统就可以在iTunes中恢复了。说说我这边碰到的事，点击恢复一切正常，手机重启后卡在白屏幕界面上好长时间，我以为是挂了，就直接重启了，好在重启后一会就进入系统了，可能是我耐心不够好吧233，待手机进入系统后就是软件的恢复安装，过程还是需要点时间的，不过这些等待还是值得的，毕竟相比不能恢复备份来讲还是可以忽略不计的。目前手机使用正常，耗电相比12或12.1也没什么大的感觉，可能我原来就是一天一充吧（换过第三方大容量电池了）。</p><h4 id="聊点题外话"><a href="#聊点题外话" class="headerlink" title="聊点题外话"></a>聊点题外话</h4><p>顺便记录一下刷ipcc（运营商文件）的过程，虽然电信在大浙江已经开始VOLTE的测试了，本人也申请开通了（我是微信关注浙江电信，找人工服务开通的，发短信指令好多回一次没成功过），但一直没地试，加上手上的6SP是12版本，目前好像刷ipcc也不能实现，但还是想更新一下。12.0.1的带的是<code>中国电信33.0</code>，在论坛上已经有34.1了，本着试验精神果断的刷上了（昨晚刷的，体验了一天也没啥感觉233），顺附上网上移来的教程，昨晚刷的过程中也遇到了，就当给自己记录一下吧：</p><ul><li><p>安装iTunes，最好是最新版。苹果官网的链接：<a href="http://www.apple.com/cn/itunes/download/" target="_blank" rel="noopener">http://www.apple.com/cn/itunes/download/</a>如果你32位win系统，就装32位iTunes；64位win系统装64位iTunes；Mac系统自己带了iTunes。</p></li><li><p>需要允许你的iTunes可以加载ipcc文件。<br>本操作在当前电脑只需执行一次就够了，之后一直有效。重新安装或升级iTunes可能需要再来一遍。下面的命令执行完毕后，不会有任何提示。反而出错的话会有提示，一般是iTunes路径不对。</p></li></ul><p>windows32位的用户：首先请打开命令提示符。然后完整复制下方代码（含引号），回车执行。<br><code>&quot;%ProgramFiles%\iTunes\iTunes.exe&quot; /setPrefInt carrier-testing 1</code></p><p>如果提示错误，请换下面一种代码执行。之前iTunes安装到非C盘的话，自己改盘符。</p><p><code>&quot;C:\Program Files\iTunes\iTunes.exe&quot; /setPrefInt carrier-testing 1</code></p><p>windows 64位的用户：<br>首先请打开命令提示符。然后完整复制下方代码（含引号），回车执行。如果之前iTunes安装到非C盘的话，自己改盘符<br><code>&quot;C:\Program Files\iTunes\iTunes.exe&quot; /setPrefInt carrier-testing 1</code></p><p>如果提示错误，请换下面一种代码执行。如果之前iTunes安装到非C盘的话，自己改盘符。</p><p><code>&quot;C:\Program Files (x86)\iTunes\iTunes.exe&quot; /setPrefInt carrier-testing 1</code></p><p>MacOS用户：请打开<code>Terminal</code>终端。然后完整复制下方代码，回车执行。</p><p><code>defaults write com.apple.itunes carrier-testing -bool true</code></p><p>如果不行，请换下面一种代码执行。</p><p><code>defaults write com.apple.iTunes carrier-testing -bool YES</code></p><p>第三步：刷入IPCC<br>先打开itunes，连上你的iPhone或者iPad。选择好当前已经连接的设备。<br>然后按住shift键的同时，用鼠标选择“更新”。如图。（Mac用户的话，则需要按住Option键的同时，用鼠标选择“更新”）</p><p><img src="https://cdn.uu126.cn/201811/iosjiangji_03.png" alt="请输入图片描述"></p><p>然后会出现一个对话框，可以右下角选择文件类型为ipcc，如图。(Mac系统不需要手动选文件类型为ipcc）,如果没有ipcc可以选择，说明刚才第2步操作有误。请重复第2步。之后选好路径和要刷的ipcc，点击确认就行了。<p><img src="https://cdn.uu126.cn/201811/iosjiangji_04.png" alt="请输入图片描述"></p><p>后面两张图片有点老了（5S的机型，不过现在也差不多的，将就着看吧），附上中国电信34.1的ipcc文件官方下载地址：</p><p><a href="https://updates.cdn-apple.com/2018/carrierbundles/041-00618-20181030-36B3100E-D989-11E8-9C49-1F9D2C4EE937/ChinaTelecom_USIM_cn_iPhone.ipcc" target="_blank" rel="noopener">https://updates.cdn-apple.com/2018/carrierbundles/041-00618-20181030-36B3100E-D989-11E8-9C49-1F9D2C4EE937/ChinaTelecom_USIM_cn_iPhone.ipcc</a></p><p>没事想折腾一下的亲，可以放马去试了，我决不拦着?</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 我的地盘 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> iphone </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>2018年的第一场雪</title>
       <link href="/post/3001.html"/>
       <url>/post/3001.html</url>

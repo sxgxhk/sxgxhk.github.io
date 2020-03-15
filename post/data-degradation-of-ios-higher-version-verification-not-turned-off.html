@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html>
+<head hexo-theme='https://volantis.js.org/#blog'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- 页面元数据 -->
+  
+    <title>IOS 高版本保资料降级(未关验证) - Feng&#39;blog</title>
+  
+    <meta name="keywords" content="iphone">
+  
+  
+    <meta name="description" content="用iPhone的朋友都知道，IOS（iPhone手机的灵魂）更新还是蛮快的，不管是修补漏洞也好，还是增加新功能也罢，给我的感觉就是完胜安卓系统，至少同年代的机型，iPhone可以用的更流畅些，而且只要你肯刷，新版本的系统始终都是可以轻松得到（除非跨越太大会限制版本更新，但相比安卓新系统的普及率来讲，IOS的新牒普...">
+  
+
+  <!-- feed -->
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css">
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
+
+  
+
+  
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
+  
+
+  <!-- import link -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/style.css">
+
+  
+
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+
+  
+  
+</head>
+
+<body>
+  
+  <div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
+</div>
+<header class="l_header shadow blur">
+
+  <div class='wrapper'>
+    <div class='nav-sub container--flex'>
+      <a class="logo flat-box"></a>
+      <ul class='switcher h-list'>
+        <li><a class="s-comment flat-btn fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a class="s-toc flat-btn fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main container container--flex">
+      
+        
+        <a class="logo flat-box" target="_self" href='/'>
+          
+          
+          
+          
+            FENG <b><sup style='color:#3AA757'>blog</sup></b>
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='h-list'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  
+                    <i class='fas fa-rss fa-fw'></i>
+                  
+                  首页
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  
+                    <i class='fas fa-archive fa-fw'></i>
+                  
+                  归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/links/
+                  
+                  
+                  
+                    id="links"
+                  >
+                  
+                    <i class='fas fa-link fa-fw'></i>
+                  
+                  友链
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/ly/
+                  
+                  
+                  
+                    id="ly"
+                  >
+                  
+                    <i class='fas fa-info-circle fa-fw'></i>
+                  
+                  留言
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  
+                    <i class='fas fa-info-circle fa-fw'></i>
+                  
+                  关于
+                </a>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      
+        <div class="m_search">
+          <form name="searchform" class="form u-search-form">
+            <i class="icon fas fa-search fa-fw"></i>
+            <input type="text" class="input u-search-input" placeholder="搜索" />
+          </form>
+        </div>
+      
+
+			<ul class='switcher h-list'>
+				
+					<li><a class="s-search flat-btn fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li><a class="s-menu flat-btn fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+<ul class="menu-phone navigation white-box">
+  
+  
+    <li>
+      <a class="flat-box" href=/
+        
+        
+        
+          id="home"
+        >
+        
+          <i class='fas fa-rss fa-fw'></i>
+        
+        首页
+      </a>
+    </li>
+  
+    <li>
+      <a class="flat-box" href=/archives/
+        
+        
+        
+          id="archives"
+        >
+        
+          <i class='fas fa-archive fa-fw'></i>
+        
+        归档
+      </a>
+    </li>
+  
+    <li>
+      <a class="flat-box" href=/links/
+        
+        
+        
+          id="links"
+        >
+        
+          <i class='fas fa-link fa-fw'></i>
+        
+        友链
+      </a>
+    </li>
+  
+    <li>
+      <a class="flat-box" href=/ly/
+        
+        
+        
+          id="ly"
+        >
+        
+          <i class='fas fa-info-circle fa-fw'></i>
+        
+        留言
+      </a>
+    </li>
+  
+    <li>
+      <a class="flat-box" href=/about/
+        
+        
+        
+          id="about"
+        >
+        
+          <i class='fas fa-info-circle fa-fw'></i>
+        
+        关于
+      </a>
+    </li>
+  
+</ul>
+<script>setLoadingBarProgress(40);</script>
+
+
+
+  <div class="l_body nocover">
+    <div class='body-wrapper'>
+      
+
+<div class='l_main'>
+  
+
+  
+    <article id="post" class="post white-box shadow article-type-post" itemscope itemprop="blogPost">
+      
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  
+    <h1 class="title">
+      <a href="/post/data-degradation-of-ios-higher-version-verification-not-turned-off.html">
+        IOS 高版本保资料降级(未关验证)
+      </a>
+    </h1>
+  
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+<div class='new-meta-item author'>
+  <a href="https://uu126.cn" rel="nofollow">
+    <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png">
+    <p>Feng</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class='new-meta-item category'>
+    <a href='/categories/%E6%88%91%E7%9A%84%E5%9C%B0%E7%9B%98/' rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>我的地盘</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-edit" aria-hidden="true"></i>
+    <p>发布于：Nov 21, 2018</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+          
+          <p>用iPhone的朋友都知道，IOS（iPhone手机的灵魂）更新还是蛮快的，不管是修补漏洞也好，还是增加新功能也罢，给我的感觉就是完胜安卓系统，至少同年代的机型，iPhone可以用的更流畅些，而且只要你肯刷，新版本的系统始终都是可以轻松得到（除非跨越太大会限制版本更新，但相比安卓新系统的普及率来讲，IOS的新牒普及率已经高出很多了）。</p>
+<a id="more"></a>
+
+
+<p>在日常使用中还是会碰到例如：新版本不适应了，费电等原因需要降级（IOS只能降级到未关闭验证的系统版本，这点相比安卓有点打脸了，这也算是封闭式系统的特性吧），一般正常的操作，苹果家的iTunes是不允许高版本的备份恢复到低版本的系统中，估计是怕出现问题或者是有意为之等原因，好在各路大神给出了解决方案，本人也亲身体验了iPhone6S Plus由IOS12.1降级到12.0.1，同时将12.1的备份恢复到12.0.1，中间出现了点点小插曲，不过最终还是完美搞定，下面就来啰嗦一下：</p>
+<ul>
+<li><p>将手机连接iTunes，并备份当前iPhone 12.1资料，这里据有些大神说不设置密码会好一点，反正我是没设置（比较听话型）</p>
+</li>
+<li><p>备份好之后开始刷机（备份比较费时间，建议备份的途中就可以下载固件，目前能降的也只有12.0.1），手机进入DFU模式（在确保与电脑连接好、iTunes也打开的情况下，将手机关闭后再开机，屏幕上显示苹果图标时按住Home键，大概10秒左右屏幕再次黑掉，这时松开开关键、继续按住Home键，再等大概10秒，iTunes会提示处于恢复模式的iPhone（大概这个意思吧，原话忘了），这时松开手机按住键盘上的Shift键找到固件刷入</p>
+</li>
+<li><p>开始最关键的步骤，修改备份资料，先找到备份目录（选最新的那个），一般默认目录为：<br><code>C:\Users\电脑用户名\AppData\Roaming\Apple Computer\MobileSync\Backup</code></p>
+</li>
+</ul>
+<p><img src="https://cdn.uu126.cn/201811/iosjiangji_01.png" alt="请输入图片描述"></p>
+<ul>
+<li>打开备份文件夹.找到 Info.plist 用记事本/写字板（推荐使用plist Editor Pro）打开。先搜索<code>Build Version</code>修改为<code>16A404</code>（我的是这个，具体看你下载的固件名：<code>iPhone_5.5_12.0.1_16A404_Restore</code>版本号12.0.1后面就是<code>Build Version</code></li>
+</ul>
+<p><img src="https://cdn.uu126.cn/201811/iosjiangji_buildversion.png" alt="请输入图片描述"></p>
+<p>接着修改<code>Product Version</code>，将其修改为：<code>12.0.1</code></p>
+<p><img src="https://cdn.uu126.cn/201811/iosjiangji_productversion.png" alt="请输入图片描述"></p>
+<p>两处修改完成之后保存一下，等iPhone进入系统就可以在iTunes中恢复了。说说我这边碰到的事，点击恢复一切正常，手机重启后卡在白屏幕界面上好长时间，我以为是挂了，就直接重启了，好在重启后一会就进入系统了，可能是我耐心不够好吧233，待手机进入系统后就是软件的恢复安装，过程还是需要点时间的，不过这些等待还是值得的，毕竟相比不能恢复备份来讲还是可以忽略不计的。目前手机使用正常，耗电相比12或12.1也没什么大的感觉，可能我原来就是一天一充吧（换过第三方大容量电池了）。</p>
+<h4 id="聊点题外话"><a href="#聊点题外话" class="headerlink" title="聊点题外话"></a>聊点题外话</h4><p>顺便记录一下刷ipcc（运营商文件）的过程，虽然电信在大浙江已经开始VOLTE的测试了，本人也申请开通了（我是微信关注浙江电信，找人工服务开通的，发短信指令好多回一次没成功过），但一直没地试，加上手上的6SP是12版本，目前好像刷ipcc也不能实现，但还是想更新一下。12.0.1的带的是<code>中国电信33.0</code>，在论坛上已经有34.1了，本着试验精神果断的刷上了（昨晚刷的，体验了一天也没啥感觉233），顺附上网上移来的教程，昨晚刷的过程中也遇到了，就当给自己记录一下吧：</p>
+<ul>
+<li><p>安装iTunes，最好是最新版。苹果官网的链接：<a href="http://www.apple.com/cn/itunes/download/" target="_blank" rel="noopener">http://www.apple.com/cn/itunes/download/</a>如果你32位win系统，就装32位iTunes；64位win系统装64位iTunes；Mac系统自己带了iTunes。</p>
+</li>
+<li><p>需要允许你的iTunes可以加载ipcc文件。<br>本操作在当前电脑只需执行一次就够了，之后一直有效。重新安装或升级iTunes可能需要再来一遍。下面的命令执行完毕后，不会有任何提示。反而出错的话会有提示，一般是iTunes路径不对。</p>
+</li>
+</ul>
+<p>windows32位的用户：首先请打开命令提示符。然后完整复制下方代码（含引号），回车执行。<br><code>&quot;%ProgramFiles%\iTunes\iTunes.exe&quot; /setPrefInt carrier-testing 1</code></p>
+<p>如果提示错误，请换下面一种代码执行。之前iTunes安装到非C盘的话，自己改盘符。</p>
+<p><code>&quot;C:\Program Files\iTunes\iTunes.exe&quot; /setPrefInt carrier-testing 1</code></p>
+<p>windows 64位的用户：<br>首先请打开命令提示符。然后完整复制下方代码（含引号），回车执行。如果之前iTunes安装到非C盘的话，自己改盘符<br><code>&quot;C:\Program Files\iTunes\iTunes.exe&quot; /setPrefInt carrier-testing 1</code></p>
+<p>如果提示错误，请换下面一种代码执行。如果之前iTunes安装到非C盘的话，自己改盘符。</p>
+<p><code>&quot;C:\Program Files (x86)\iTunes\iTunes.exe&quot; /setPrefInt carrier-testing 1</code></p>
+<p>MacOS用户：请打开<code>Terminal</code>终端。然后完整复制下方代码，回车执行。</p>
+<p><code>defaults write com.apple.itunes carrier-testing -bool true</code></p>
+<p>如果不行，请换下面一种代码执行。</p>
+<p><code>defaults write com.apple.iTunes carrier-testing -bool YES</code></p>
+<p>第三步：刷入IPCC<br>先打开itunes，连上你的iPhone或者iPad。选择好当前已经连接的设备。<br>然后按住shift键的同时，用鼠标选择“更新”。如图。（Mac用户的话，则需要按住Option键的同时，用鼠标选择“更新”）</p>
+<p><img src="https://cdn.uu126.cn/201811/iosjiangji_03.png" alt="请输入图片描述"></p>
+<p>然后会出现一个对话框，可以右下角选择文件类型为ipcc，如图。(Mac系统不需要手动选文件类型为ipcc）,如果没有ipcc可以选择，说明刚才第2步操作有误。请重复第2步。之后选好路径和要刷的ipcc，点击确认就行了。
+
+<p><img src="https://cdn.uu126.cn/201811/iosjiangji_04.png" alt="请输入图片描述"></p>
+<p>后面两张图片有点老了（5S的机型，不过现在也差不多的，将就着看吧），附上中国电信34.1的ipcc文件官方下载地址：</p>
+<p><a href="https://updates.cdn-apple.com/2018/carrierbundles/041-00618-20181030-36B3100E-D989-11E8-9C49-1F9D2C4EE937/ChinaTelecom_USIM_cn_iPhone.ipcc" target="_blank" rel="noopener">https://updates.cdn-apple.com/2018/carrierbundles/041-00618-20181030-36B3100E-D989-11E8-9C49-1F9D2C4EE937/ChinaTelecom_USIM_cn_iPhone.ipcc</a></p>
+<p>没事想折腾一下的亲，可以放马去试了，我决不拦着?</p>
+
+          
+            <br>
+            
+  
+    
+    
+
+<section class="widget copyright  desktop mobile">
+  <div class='content'>
+    
+      <blockquote>
+        
+          
+            <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+          
+        
+          
+            <p>本文永久链接是：<a href=https://uu126.cn/post/data-degradation-of-ios-higher-version-verification-not-turned-off.html>https://uu126.cn/post/data-degradation-of-ios-higher-version-verification-not-turned-off.html</a></p>
+          
+        
+      </blockquote>
+    
+  </div>
+</section>
+
+  
+
+  
+    
+    
+
+<section class="widget qrcode  desktop mobile">
+  
+
+  <div class='content article-entry'>
+    
+      
+        <fancybox><img src='http://www.uu126.cn/images/wechatpay.png'
+        
+          height='64px'
+        ></fancybox>
+      
+    
+      
+        <fancybox><img src='http://www.uu126.cn/images/alipay.png'
+        
+          height='64px'
+        ></fancybox>
+      
+    
+  </div>
+</section>
+
+  
+
+
+          
+        </div>
+        
+          
+
+
+  <section class='meta' id="footer-meta">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-03-15T10:21:08+08:00">
+  <a class='notlink'>
+    <i class="fas fa-save" aria-hidden="true"></i>
+    <p>更新于：Mar 15, 2020</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/iphone/" rel="nofollow"><i class="fas fa-hashtag" aria-hidden="true"></i><p>iphone</p></a></div>
+
+
+        
+      
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://uu126.cn/post/data-degradation-of-ios-higher-version-verification-not-turned-off.html&title=IOS 高版本保资料降级(未关验证) - Feng'blog&summary=用iPhone的朋友都知道，IOS（iPhone手机的灵魂）更新还是蛮快的，不管是修补漏洞也好，还是增加新功能也罢，给我的感觉就是完胜安卓系统，至少同年代的机型，iPhone可以用的更流畅些，而且只要你肯刷，新版本的系统始终都是可以轻松得到（除非跨越太大会限制版本更新，但相比安卓新系统的普及率来讲，IOS的新牒普及率已经高出很多了）。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer"
+          
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://uu126.cn/post/data-degradation-of-ios-higher-version-verification-not-turned-off.html&title=IOS 高版本保资料降级(未关验证) - Feng'blog&summary=用iPhone的朋友都知道，IOS（iPhone手机的灵魂）更新还是蛮快的，不管是修补漏洞也好，还是增加新功能也罢，给我的感觉就是完胜安卓系统，至少同年代的机型，iPhone可以用的更流畅些，而且只要你肯刷，新版本的系统始终都是可以轻松得到（除非跨越太大会限制版本更新，但相比安卓新系统的普及率来讲，IOS的新牒普及率已经高出很多了）。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://service.weibo.com/share/share.php?url=https://uu126.cn/post/data-degradation-of-ios-higher-version-verification-not-turned-off.html&title=IOS 高版本保资料降级(未关验证) - Feng'blog&summary=用iPhone的朋友都知道，IOS（iPhone手机的灵魂）更新还是蛮快的，不管是修补漏洞也好，还是增加新功能也罢，给我的感觉就是完胜安卓系统，至少同年代的机型，iPhone可以用的更流畅些，而且只要你肯刷，新版本的系统始终都是可以轻松得到（除非跨越太大会限制版本更新，但相比安卓新系统的普及率来讲，IOS的新牒普及率已经高出很多了）。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/weibo.png">
+          
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </section>
+
+
+        
+        
+          <div class="prev-next">
+            
+              <a class='prev' href='/post/recent-events-4.html'>
+                <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>最近的事@4</p>
+                <p class='content'>一晃都已经9102年了（网上看到很多都把2019写成这样，我这算是跟风吧?），上一次更博还是2018年11月份，这间隔的不是一点半点呀，难怪小宇童鞋都来叫阵了（我看他就是闲的?几乎天天更新，反观...</p>
+              </a>
+            
+            
+              <a class='next' href='/post/3001.html'>
+                <p class='title'>2018年的第一场雪<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+                <p class='content'>早上起来突然发现窗外都是白白的一片——下雪了！昨晚临睡前还瞟了一眼天气预报说今天是雨夹雪呀，再说了上次报中雪、暴雪结果也只是留下那淡淡的一点白（头皮屑似的），今天竟然……，简直太意外了，这才是下...</p>
+              </a>
+            
+          </div>
+        
+      </section>
+    </article>
+  
+
+  
+    <!-- 显示推荐文章和评论 -->
+
+
+
+  <article class="post white-box comments shadow">
+    <section class="article typo">
+      <p ct><i class='fas fa-comments'></i> 评论</p>
+      
+      
+      
+      
+      
+        <section id="comments">
+          <div id="valine_container" class="valine_thread">
+            <i class="fas fa-spinner fa-spin fa-fw"></i>
+          </div>
+        </section>
+      
+    </section>
+  </article>
+
+
+  
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+
+  <script>
+    window.subData = {
+      title: 'IOS 高版本保资料降级(未关验证)',
+      tools: true
+    }
+  </script>
+
+
+</div>
+<aside class='l_side'>
+  
+  
+
+  
+    
+    
+
+
+  <section class="widget toc-wrapper shadow desktop mobile">
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#聊点题外话"><span class="toc-text">聊点题外话</span></a></li></ol>
+    </div>
+  </section>
+
+
+  
+
+
+</aside>
+
+
+  
+  <footer class="clearfix ">
+    <br><br>
+    
+      
+        
+      
+    
+      
+        <br>
+        <div class="social-wrapper">
+          
+            
+              <a href="/atom.xml"
+                class="social fas fa-rss flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="mailto:jslfp@foxmail.com"
+                class="social fas fa-envelope flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="https://github.com/sxgxhk"
+                class="social fab fa-github flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="https://music.163.com/#/user/home?id=63035382"
+                class="social fas fa-headphones-alt flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+        </div>
+     
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        <div class='copyright'>
+        <p><a href="https://uu126.cn">Copyright © 2017-2020 Feng</a></p>
+<!--腾讯云--->Hosted by <a href="https://pages.coding.me" target="_blank" rel="noopener" style="font-weight: bold">Coding Pages</a> + 
+<a href="https://cloud.tencent.com/redirect.php?redirect=1005&cps_key=4e78216aea817227ff0c96d93a00fd4b" target="_blank" rel="nofollow"><!--<img src="https://uu126.cn/wp-content/uploads/2016/10/hwclouds-logo.png" style="margin-bottom:-3px">-->腾讯云 + </a><a href="https://console.upyun.com/register/?invite=S1JeTquHL" target="_blank" rel="nofollow"><span class="with-love"><img src="https://cdn.lancn.cn/images/upyun.png" style="width:40px;" alt="又拍云存储"></span></a>
+<br>
+<!--备案---> <a target="_blank"  href="http://www.beian.miit.gov.cn">浙ICP备11026647号-3</a><span class="post-meta-divider"> | </span><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33088102001325"><span class="with-love"><img src="https://cdn.uu126.cn/icon-police.png" style="width:14px;"></span> 浙公网安备33088102001325号</a>
+        </div>
+      
+    
+  </footer>
+
+<script>setLoadingBarProgress(80);</script>
+
+
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+  </div>
+  
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4/dist/jquery.min.js"></script>
+
+
+  <script>
+    
+    var SEARCH_SERVICE = "hexo" || "hexo";
+    var ROOT = "/" || "/";
+    if (!ROOT.endsWith('/')) ROOT += '/';
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+
+  <script type="text/javascript">
+    $(function() {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+
+
+
+  
+  
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script>
+
+    <script type="text/javascript">
+      $(function(){
+        var imgs=["https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/BBC19066-E176-47C2-9D22-48C81EE5DF6B.jpeg"];
+        if ('true' == 'true') {
+          function shuffle(arr){
+            /*From countercurrent-time*/
+            var n = arr.length;
+            while(n--) {
+              var index = Math.floor(Math.random() * n);
+              var temp = arr[index];
+              arr[index] = arr[n];
+              arr[n] = temp;
+            }
+          }
+          shuffle(imgs);
+        }
+        if ('.cover') {
+          $('.cover').backstretch(
+            imgs,
+          {
+            duration: "20000",
+            fade: "1500"
+          });
+        } else {
+          $.backstretch(
+            imgs,
+          {
+            duration: "20000",
+            fade: "1500"
+          });
+        }
+      });
+    </script>
+  
+
+
+
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js" async></script>
+
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js" async></script>
+
+  
+
+
+
+
+
+
+
+
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2.0/js/valine.js"></script>
+
+  
+  <script>
+  var GUEST_INFO = ['nick','mail','link'];
+  var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var notify = 'true' == true;
+  var verify = 'true' == true;
+  var valine = new Valine();
+  valine.init({
+    el: '#valine_container',
+    notify: notify,
+    verify: verify,
+    guest_info: guest_info,
+    
+    appId: "5sMkTX4FLjetFnfbOhaDTCDJ-9Nh9j0Va",
+    appKey: "25KXCqIqAN142RQn4fBrsI87",
+    placeholder: "快来评论吧~",
+    pageSize:'10',
+    avatar:'mp',
+    lang:'zh-cn',
+    visitor: 'false',
+    highlight:'true'
+  })
+  </script>
+
+
+
+  
+<script src="/js/app.js"></script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2.1/js/search.js"></script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2/js/comment_typing.js"></script>
+
+
+
+<!-- 复制 -->
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copyed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('fa-copy');
+        $icon.addClass('fa-clipboard-check');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPYED';
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('fa-copy');
+        $icon.addClass('fa-exclamation-triangle');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+
+
+
+
+<!-- fancybox -->
+
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  let LAZY_LOAD_IMAGE = "";
+  $(".article-entry").find("fancybox").find("img").each(function () {
+      var element = document.createElement("a");
+      $(element).attr("data-fancybox", "gallery");
+      $(element).attr("href", $(this).attr("src"));
+      /* 图片采用懒加载处理时,
+       * 一般图片标签内会有个属性名来存放图片的真实地址，比如 data-original,
+       * 那么此处将原本的属性名src替换为对应属性名data-original,
+       * 修改如下
+       */
+       if (LAZY_LOAD_IMAGE) {
+         $(element).attr("href", $(this).attr("data-original"));
+       }
+      $(this).wrap(element);
+  });
+</script>
+
+
+
+
+
+
+  <script>setLoadingBarProgress(100);</script>
+</body>
+</html>
