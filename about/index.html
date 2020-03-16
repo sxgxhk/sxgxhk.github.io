@@ -16,7 +16,7 @@
 
   <!-- 页面元数据 -->
   
-    <title>关于本站 - Feng&#39;blog</title>
+    <title>关于 - Feng&#39;blog</title>
   
   
 
@@ -66,18 +66,48 @@
 
 <body>
   
-  <div id="loading-bar-wrapper">
+  <div class="cover-wrapper">
+    
+      <cover class='cover page half'>
+        <div class='cover-body'>
+  <div class='a'>
+    
+    
+      <p class="title ">Feng's Blog</p>
+    
+    
+      <p class="subtitle ">一个爱折腾的家伙</p>
+    
+  </div>
+  <div class='b'>
+    
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <input type="text" class="input u-search-input" placeholder="" />
+          <i class="icon fas fa-search fa-fw"></i>
+        </form>
+      </div>
+    
+    <div class='menu navigation'>
+      <ul class='h-list'>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+      </cover>
+    
+    <div id="loading-bar-wrapper">
   <div id="loading-bar"></div>
 </div>
-<header class="l_header shadow blur">
+<header class="l_header no_sidebar shadow blur">
 
   <div class='wrapper'>
     <div class='nav-sub container--flex'>
       <a class="logo flat-box"></a>
       <ul class='switcher h-list'>
         <li><a class="s-comment flat-btn fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
-        
-          <li><a class="s-toc flat-btn fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
         
       </ul>
     </div>
@@ -291,17 +321,18 @@
 </ul>
 <script>setLoadingBarProgress(40);</script>
 
+  </div>
 
 
-  <div class="l_body nocover">
+  <div class="l_body">
     <div class='body-wrapper'>
       
 
-<div class='l_main'>
+<div class='l_main no_sidebar'>
   
 
   
-    <article id="about" class="post white-box shadow article-type-about" itemscope itemprop="blogPost">
+    <article id="page" class="post white-box shadow article-type-page" itemscope itemprop="blogPost">
       
 
 
@@ -310,55 +341,9 @@
     
     <div class="meta" id="header-meta">
       
-        
-  
-    <h1 class="title">
-      <a href="/about/index.html">
-        关于本站
-      </a>
-    </h1>
-  
-
-
-      
       <div class='new-meta-box'>
         
-          
-        
-          
-            
-<div class='new-meta-item author'>
-  <a href="https://uu126.cn" rel="nofollow">
-    <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png">
-    <p>Feng</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-
-          
-        
-          
-            <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-edit" aria-hidden="true"></i>
-    <p>发布于：Mar 15, 2020</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-
-          
-        
       </div>
-      
-        <hr>
       
     </div>
   </section>
@@ -395,6 +380,17 @@
 
           
         </div>
+        
+          
+
+
+  <section class='meta' id="footer-meta">
+    <div class='new-meta-box'>
+      
+    </div>
+  </section>
+
+
         
         
       </section>
@@ -437,30 +433,6 @@
 </div>
 <aside class='l_side'>
   
-  
-
-  
-    
-    
-
-
-  <section class="widget toc-wrapper shadow desktop mobile">
-    
-  <header>
-    
-      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
-    
-  </header>
-
-
-    <div class='content'>
-      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#博客简介"><span class="toc-text">博客简介</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#关于博主"><span class="toc-text">关于博主</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#博客进程"><span class="toc-text">博客进程</span></a></li></ol>
-    </div>
-  </section>
-
-
-  
-
 
 </aside>
 
@@ -656,7 +628,7 @@
     
     appId: "5sMkTX4FLjetFnfbOhaDTCDJ-9Nh9j0Va",
     appKey: "25KXCqIqAN142RQn4fBrsI87",
-    placeholder: "快来评论吧~",
+    placeholder: "有什么想对我说的呢？",
     pageSize:'10',
     avatar:'mp',
     lang:'zh-cn',
