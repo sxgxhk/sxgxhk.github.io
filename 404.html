@@ -16,7 +16,7 @@
 
   <!-- 页面元数据 -->
   
-    <title>404 Not Found - Feng&#39;blog</title>
+    <title>404 - Feng&#39;blog</title>
   
   
 
@@ -69,13 +69,15 @@
   <div id="loading-bar-wrapper">
   <div id="loading-bar"></div>
 </div>
-<header class="l_header no_sidebar shadow blur">
+<header class="l_header shadow blur">
 
   <div class='wrapper'>
     <div class='nav-sub container--flex'>
       <a class="logo flat-box"></a>
       <ul class='switcher h-list'>
         <li><a class="s-comment flat-btn fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a class="s-toc flat-btn fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
         
       </ul>
     </div>
@@ -295,11 +297,11 @@
     <div class='body-wrapper'>
       
 
-<div class='l_main no_sidebar'>
+<div class='l_main'>
   
 
   
-    <article id="page" class="post white-box shadow article-type-page" itemscope itemprop="blogPost">
+    <article id="404" class="post white-box shadow article-type-404" itemscope itemprop="blogPost">
       
 
 
@@ -308,9 +310,55 @@
     
     <div class="meta" id="header-meta">
       
+        
+  
+    <h1 class="title">
+      <a href="/404.html">
+        404
+      </a>
+    </h1>
+  
+
+
+      
       <div class='new-meta-box'>
         
+          
+        
+          
+            
+<div class='new-meta-item author'>
+  <a href="https://uu126.cn" rel="nofollow">
+    <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png">
+    <p>Feng</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-edit" aria-hidden="true"></i>
+    <p>发布于：Oct 13, 2019</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
       </div>
+      
+        <hr>
       
     </div>
   </section>
@@ -319,25 +367,9 @@
       <section class="article typo">
         <div class="article-entry" itemprop="articleBody">
           
-          <center>
-<p huge>404</p>
-
-<p><b>很抱歉，您访问的页面不存在</b></p>
-<p>可能是输入地址有误或该地址已被删除</p>
-</center>
+          
           
         </div>
-        
-          
-
-
-  <section class='meta' id="footer-meta">
-    <div class='new-meta-box'>
-      
-    </div>
-  </section>
-
-
         
         
       </section>
@@ -349,7 +381,22 @@
 
 
 
-  
+  <article class="post white-box comments shadow">
+    <section class="article typo">
+      <p ct><i class='fas fa-comments'></i> 评论</p>
+      
+      
+      
+      
+      
+        <section id="comments">
+          <div id="valine_container" class="valine_thread">
+            <i class="fas fa-spinner fa-spin fa-fw"></i>
+          </div>
+        </section>
+      
+    </section>
+  </article>
 
 
   
@@ -365,6 +412,16 @@
 </div>
 <aside class='l_side'>
   
+  
+
+  
+    
+    
+
+
+
+  
+
 
 </aside>
 
@@ -538,6 +595,36 @@
 
 
 
+
+  
+    
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2.0/js/valine.js"></script>
+
+  
+  <script>
+  var GUEST_INFO = ['nick','mail','link'];
+  var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var notify = 'true' == true;
+  var verify = 'true' == true;
+  var valine = new Valine();
+  valine.init({
+    el: '#valine_container',
+    notify: notify,
+    verify: verify,
+    guest_info: guest_info,
+    
+    appId: "5sMkTX4FLjetFnfbOhaDTCDJ-9Nh9j0Va",
+    appKey: "25KXCqIqAN142RQn4fBrsI87",
+    placeholder: "快来评论吧~",
+    pageSize:'10',
+    avatar:'mp',
+    lang:'zh-cn',
+    visitor: 'false',
+    highlight:'true'
+  })
+  </script>
 
 
 
