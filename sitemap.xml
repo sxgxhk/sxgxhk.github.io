@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://uu126.cn/post/typecho-blog-comments-display-useragent-ua.html</loc>
+    
+    <lastmod>2020-04-04T16:02:48.716Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://uu126.cn/404.html</loc>
     
     <lastmod>2020-04-03T15:02:31.679Z</lastmod>
@@ -124,13 +131,6 @@
     <loc>https://uu126.cn/post/add-copy-button-for-code-block-of-typecho.html</loc>
     
     <lastmod>2020-03-14T04:21:28.386Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://uu126.cn/post/typecho-blog-comments-display-useragent-ua.html</loc>
-    
-    <lastmod>2020-03-14T04:20:12.597Z</lastmod>
     
   </url>
   
