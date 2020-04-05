@@ -64,6 +64,17 @@
 
   
   
+    <!-- ba -->
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?94d859214f61c61e74207e8502faa4ab";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+  
 </head>
 
 <body>
@@ -1477,7 +1488,27 @@
 <!--腾讯云--->Hosted by <a href="https://pages.coding.me" target="_blank" rel="noopener" style="font-weight: bold">Coding Pages</a> + 
 <a href="https://cloud.tencent.com/redirect.php?redirect=1005&cps_key=4e78216aea817227ff0c96d93a00fd4b" target="_blank" rel="nofollow"><!--<img src="https://uu126.cn/wp-content/uploads/2016/10/hwclouds-logo.png" style="margin-bottom:-3px">-->腾讯云 + </a><a href="https://console.upyun.com/register/?invite=S1JeTquHL" target="_blank" rel="nofollow"><span class="with-love"><img src="https://cdn.lancn.cn/images/upyun.png" style="width:40px;" alt="又拍云存储"></span></a>
 <br>
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("03/07/2014 10:38:00");//在此处修改你的建站时间，格式：月/日/年 时:分:秒
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+    } 
+setInterval("createtime()",250);
+</script>
+<br>
 <!--备案---> <a target="_blank"  href="http://www.beian.miit.gov.cn">浙ICP备11026647号-3</a><span class="post-meta-divider"> | </span><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33088102001325"><span class="with-love"><img src="https://cdn.uu126.cn/icon-police.png" style="width:14px;"></span> 浙公网安备33088102001325号</a>
+
+
         </div>
       
     
