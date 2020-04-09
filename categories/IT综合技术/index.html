@@ -1,1694 +1,624 @@
 <!DOCTYPE html>
-<html>
-<head hexo-theme='https://volantis.js.org/#blog'>
-  <meta charset="utf-8">
-  <!-- SEO相关 -->
-  
+
+
+<html lang="zh-Hans" >
+
+
+<head>
+  <meta charset="utf-8" />
     
-      <meta name="robots" content="noindex,follow">
-    
+  <meta name="description" content="一个爱折腾的家伙" />
   
-  <!-- 渲染优化 -->
-  <meta name="renderer" content="webkit">
-  <meta name="force-rendering" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-  <meta name="HandheldFriendly" content="True" >
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-  <!-- 页面元数据 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>
+    IT综合技术 |  Feng&#39;blog
+  </title>
+  <meta name="generator" content="hexo-theme-yilia-plus">
   
-    <title>Category: IT综合技术 - Feng&#39;blog</title>
+  <link rel="shortcut icon" href="/favicon.ico" />
   
   
-
-  <!-- feed -->
-  
-
-  <!-- import meta -->
-  
-
-  <!-- link -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css">
-  
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+<link rel="stylesheet" href="/dist/main.css">
 
   
-  
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
+<link rel="stylesheet" href="/css/custom.css">
 
+  
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+  
   
 
   
+<script>
+var _hmt = _hmt || [];
+(function() {
+	var hm = document.createElement("script");
+	hm.src = "https://hm.baidu.com/hm.js?94d859214f61c61e74207e8502faa4ab";
+	var s = document.getElementsByTagName("script")[0]; 
+	s.parentNode.insertBefore(hm, s);
+})();
+</script>
 
-  
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
-  
 
-  <!-- import link -->
-  
-
-  
-    
-<link rel="stylesheet" href="/css/style.css">
-
-  
-
-  <script>
-    function setLoadingBarProgress(num) {
-      document.getElementById('loading-bar').style.width=num+"%";
-    }
-  </script>
-
-  
-  
-    <!-- ba -->
-    <script>
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?94d859214f61c61e74207e8502faa4ab";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-    </script>
-  
+<link rel="alternate" href="/atom.xml" title="Feng'blog" type="application/atom+xml">
 </head>
 
+</html>
+
 <body>
+  <div id="app">
+    <main class="content on">
+      <section class="outer">
+  <article class="articles">
+    
+    
+    <h1 class="page-type-title">IT综合技术</h1>
+    
+    
   
-  <div id="loading-bar-wrapper">
-  <div id="loading-bar"></div>
-</div>
-<header class="l_header shadow blur">
-
-  <div class='wrapper'>
-    <div class='nav-sub container--flex'>
-      <a class="logo flat-box"></a>
-      <ul class='switcher h-list'>
-        <li><a class="s-comment flat-btn fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
-        
-          <li><a class="s-toc flat-btn fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
-        
-      </ul>
+  
+  
+  
+  
+  
+  <div class="archives-wrap">
+    <div class="archive-year-wrap">
+      <a href="/archives/2016" class="archive-year">2016</a>
     </div>
-		<div class="nav-main container container--flex">
+    <div class="archives">
       
-        
-        <a class="logo flat-box" target="_self" href='/'>
-          
-          
-          
-            Feng's Blog
-          
-          
-        </a>
-      
+      <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/post/2374.html" class="archive-article-date">
+  <time datetime="2016-11-28T15:54:00.000Z" itemprop="datePublished">11/28</time>
+</a>
+       
+<h2 itemprop="name">
+  <a class="archive-article-title" href="/post/2374.html"
+    >多了一个COM口引起的问题</a> 
+</h2>
+ 
 
-			<div class='menu navigation'>
-				<ul class='h-list'>
-          
-          
-          
-            
-            
-              <li>
-                <a class="flat-box" href=/
-                  
-                  
-                  
-                    id="home"
-                  >
-                  
-                    <i class='fas fa-rss fa-fw'></i>
-                  
-                  首页
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="flat-box" href=/archives/
-                  
-                  
-                  
-                    id="archives"
-                  >
-                  
-                    <i class='fas fa-archive fa-fw'></i>
-                  
-                  归档
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="flat-box" href=/links/
-                  
-                  
-                  
-                    id="links"
-                  >
-                  
-                    <i class='fas fa-link fa-fw'></i>
-                  
-                  友链
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="flat-box" href=/ly/
-                  
-                  
-                  
-                    id="ly"
-                  >
-                  
-                    <i class='fas fa-info-circle fa-fw'></i>
-                  
-                  留言
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="flat-box" href=/about/
-                  
-                  
-                  
-                    id="about"
-                  >
-                  
-                    <i class='fas fa-info-circle fa-fw'></i>
-                  
-                  关于
-                </a>
-                
-              </li>
-            
-          
-          
-				</ul>
-			</div>
-
+    </header>
+    
       
-        <div class="m_search">
-          <form name="searchform" class="form u-search-form">
-            <i class="icon fas fa-search fa-fw"></i>
-            <input type="text" class="input u-search-input" placeholder="搜索" />
-          </form>
-        </div>
-      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/IT%E7%BB%BC%E5%90%88%E6%8A%80%E6%9C%AF/">IT综合技术</a>
+  </div>
 
-			<ul class='switcher h-list'>
-				
-					<li><a class="s-search flat-btn fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
-				
-				<li><a class="s-menu flat-btn fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a></li>
-			</ul>
-		</div>
-	</div>
-</header>
-<ul class="menu-phone navigation white-box">
+    
+    
+  </div>
+</article>
+      
   
   
-    <li>
-      <a class="flat-box" href=/
+      <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/post/2361.html" class="archive-article-date">
+  <time datetime="2016-11-22T08:41:00.000Z" itemprop="datePublished">11/22</time>
+</a>
+       
+<h2 itemprop="name">
+  <a class="archive-article-title" href="/post/2361.html"
+    >word2007功能区消失或隐藏的处理方法</a> 
+</h2>
+ 
+
+    </header>
+    
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/IT%E7%BB%BC%E5%90%88%E6%8A%80%E6%9C%AF/">IT综合技术</a>
+  </div>
+
+    
+    
+  </div>
+</article>
+      
+  
+  
+      <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/post/2355.html" class="archive-article-date">
+  <time datetime="2016-11-17T02:27:00.000Z" itemprop="datePublished">11/17</time>
+</a>
+       
+<h2 itemprop="name">
+  <a class="archive-article-title" href="/post/2355.html"
+    >华硕X205TA引导不了的解决办法</a> 
+</h2>
+ 
+
+    </header>
+    
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/IT%E7%BB%BC%E5%90%88%E6%8A%80%E6%9C%AF/">IT综合技术</a>
+  </div>
+
+    
+    
+  </div>
+</article>
+      
+  
+  
+      <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/post/2354.html" class="archive-article-date">
+  <time datetime="2016-11-14T02:04:00.000Z" itemprop="datePublished">11/14</time>
+</a>
+       
+<h2 itemprop="name">
+  <a class="archive-article-title" href="/post/2354.html"
+    >搜狗输入法皮肤错误引起的输入问题</a> 
+</h2>
+ 
+
+    </header>
+    
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/IT%E7%BB%BC%E5%90%88%E6%8A%80%E6%9C%AF/">IT综合技术</a>
+  </div>
+
+    
+    
+  </div>
+</article>
+      
+  
+  
+      <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/post/2325.html" class="archive-article-date">
+  <time datetime="2016-11-05T11:46:00.000Z" itemprop="datePublished">11/05</time>
+</a>
+       
+<h2 itemprop="name">
+  <a class="archive-article-title" href="/post/2325.html"
+    >Quite Imposing plus 4.0g专业的PDF拼版插件安装及使用</a> 
+</h2>
+ 
+
+    </header>
+    
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/IT%E7%BB%BC%E5%90%88%E6%8A%80%E6%9C%AF/">IT综合技术</a>
+  </div>
+
+    
+    
+  </div>
+</article>
+      
+  
+  
+      <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/post/2304.html" class="archive-article-date">
+  <time datetime="2016-10-29T10:00:00.000Z" itemprop="datePublished">10/29</time>
+</a>
+       
+<h2 itemprop="name">
+  <a class="archive-article-title" href="/post/2304.html"
+    >一个老显示器引起的点不亮故障</a> 
+</h2>
+ 
+
+    </header>
+    
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/IT%E7%BB%BC%E5%90%88%E6%8A%80%E6%9C%AF/">IT综合技术</a>
+  </div>
+
+    
+    
+  </div>
+</article>
+      
+  
+  
+      <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/post/2265.html" class="archive-article-date">
+  <time datetime="2016-10-22T15:13:00.000Z" itemprop="datePublished">10/22</time>
+</a>
+       
+<h2 itemprop="name">
+  <a class="archive-article-title" href="/post/2265.html"
+    >看我是如何快速检修电脑的，只讨论我~不喜勿喷</a> 
+</h2>
+ 
+
+    </header>
+    
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/IT%E7%BB%BC%E5%90%88%E6%8A%80%E6%9C%AF/">IT综合技术</a>
+  </div>
+
+    
+    
+  </div>
+</article>
+      
+  
+  
+      <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/post/2258.html" class="archive-article-date">
+  <time datetime="2016-10-22T15:07:00.000Z" itemprop="datePublished">10/22</time>
+</a>
+       
+<h2 itemprop="name">
+  <a class="archive-article-title" href="/post/2258.html"
+    >蓝屏代码0X0000007E 、iusb3xhc.sys解决方法</a> 
+</h2>
+ 
+
+    </header>
+    
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/IT%E7%BB%BC%E5%90%88%E6%8A%80%E6%9C%AF/">IT综合技术</a>
+  </div>
+
+    
+    
+  </div>
+</article>
+      
+  
+  
+      <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/post/2212.html" class="archive-article-date">
+  <time datetime="2016-10-07T12:59:00.000Z" itemprop="datePublished">10/07</time>
+</a>
+       
+<h2 itemprop="name">
+  <a class="archive-article-title" href="/post/2212.html"
+    >关于网线能测通但上不了网</a> 
+</h2>
+ 
+
+    </header>
+    
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/IT%E7%BB%BC%E5%90%88%E6%8A%80%E6%9C%AF/">IT综合技术</a>
+  </div>
+
+    
+    
+  </div>
+</article>
+      
+  
+  
+      <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/post/2206.html" class="archive-article-date">
+  <time datetime="2016-09-12T13:24:00.000Z" itemprop="datePublished">09/12</time>
+</a>
+       
+<h2 itemprop="name">
+  <a class="archive-article-title" href="/post/2206.html"
+    >安装装系统重启开机屏幕出现J的处理方法</a> 
+</h2>
+ 
+
+    </header>
+    
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/IT%E7%BB%BC%E5%90%88%E6%8A%80%E6%9C%AF/">IT综合技术</a>
+  </div>
+
+    
+    
+  </div>
+</article>
+      
+      
+    </div>
+  </div>
+  
+  
+
+  
+  <nav class="page-nav">
+    
+    <span class="page-number current">1</span><a class="page-number" href="/categories/IT%E7%BB%BC%E5%90%88%E6%8A%80%E6%9C%AF/page/2/">2</a><a class="page-number" href="/categories/IT%E7%BB%BC%E5%90%88%E6%8A%80%E6%9C%AF/page/3/">3</a><a class="extend next" rel="next" href="/categories/IT%E7%BB%BC%E5%90%88%E6%8A%80%E6%9C%AF/page/2/">下一页</a>
+  </nav>
+  
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul class="list-inline">
+      <li>
+        &copy;
+        2014-2020
+        Feng
+      </li>
+      <li>
+        
+        Powered by
         
         
+        <a href="https://hexo.io" target="_blank">Hexo</a> Theme <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
         
-          id="home"
-        >
+      </li>
+    </ul>
+    <ul class="list-inline">
+     <li>
+        <!--腾讯云--->Hosted by <a href="https://pages.coding.me" target="_blank" rel="noopener" style="font-weight: bold">Coding Pages</a> + <a href="https://cloud.tencent.com/redirect.php?redirect=1005&cps_key=4e78216aea817227ff0c96d93a00fd4b" target="_blank" rel="nofollow"><!--<img src="https://uu126.cn/wp-content/uploads/2016/10/hwclouds-logo.png" style="margin-bottom:-3px">-->腾讯云 + </a><a href="https://console.upyun.com/register/?invite=S1JeTquHL" target="_blank" rel="nofollow"><span class="with-love"><img src="https://cdn.lancn.cn/images/upyun.png" style="width:40px;" alt="又拍云存储"></span></a>
+      </li>
+      <li>
         
-          <i class='fas fa-rss fa-fw'></i>
-        
-        首页
-      </a>
+      </li>
+      <li>
+        <!-- cnzz统计 -->
+        <!--备案---> <a target="_blank"  href="http://www.beian.miit.gov.cn">浙ICP备11026647号-3</a><span class="post-meta-divider"> | </span><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33088102001325"><span class="with-love"><img src="https://cdn.uu126.cn/icon-police.png" style="width:14px;"></span> 浙公网安备33088102001325号</a>
+      </li>
+    </ul>
+  </div>
+</footer>
+      <div class="float_btns">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/myavatar.png" alt="Feng&#39;blog"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
     </li>
-  
-    <li>
-      <a class="flat-box" href=/archives/
-        
-        
-        
-          id="archives"
-        >
-        
-          <i class='fas fa-archive fa-fw'></i>
-        
-        归档
-      </a>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
     </li>
-  
-    <li>
-      <a class="flat-box" href=/links/
-        
-        
-        
-          id="links"
-        >
-        
-          <i class='fas fa-link fa-fw'></i>
-        
-        友链
-      </a>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
     </li>
-  
-    <li>
-      <a class="flat-box" href=/ly/
-        
-        
-        
-          id="ly"
-        >
-        
-          <i class='fas fa-info-circle fa-fw'></i>
-        
-        留言
-      </a>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
     </li>
-  
-    <li>
-      <a class="flat-box" href=/about/
-        
-        
-        
-          id="about"
-        >
-        
-          <i class='fas fa-info-circle fa-fw'></i>
-        
-        关于
-      </a>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/links">友链</a>
     </li>
-  
-</ul>
-<script>setLoadingBarProgress(40);</script>
-
-
-
-  <div class="l_body nocover">
-    <div class='body-wrapper'>
-      
-
-
-<div class='l_main'>
-  
     
-      
-  <section class="post-list ">
+    <li class="nav-item">
+      <a class="nav-item-link" href="/ly">留言</a>
+    </li>
     
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">关于</a>
+    </li>
     
-    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
       
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow reveal ">
-  
-
-
-  <section class='meta'>
-    
-    
-    <div class="meta" id="header-meta">
+      <a class="nav-item-link nav-item-search"  title="Suche">
+        <i class="ri-search-line"></i>
+      </a>
       
-        
-  <h2 class="title">
-    <a href="/post/2374.html">
-      多了一个COM口引起的问题
-    </a>
-  </h2>
-
-
       
-      <div class='new-meta-box'>
-        
-          
-        
-          
-            
-<div class='new-meta-item author'>
-  <a href="https://uu126.cn" rel="nofollow">
-    <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png">
-    <p>Feng</p>
-  </a>
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
 </div>
-
-          
-        
-          
-            
-  
-  <div class='new-meta-item category'>
-    <a href='/categories/IT%E7%BB%BC%E5%90%88%E6%8A%80%E6%9C%AF/' rel="nofollow">
-      <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>IT综合技术</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-edit" aria-hidden="true"></i>
-    <p>发布于：Nov 28, 2016</p>
-  </a>
 </div>
-
-          
-        
-          
-            
-
-          
-        
-          
-            
-
-          
-        
-      </div>
-      
-        <hr>
-      
-    </div>
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <p>朋友单位里要装一台全自动生化分化仪（大家伙），电脑也是新配，并且Ghost装好了Win7 X86系统，但是生化分析仪软件始终连接不上，接手看了一下，电脑驱动也都是装好了，问了一下驱动也是正常安装，并不是万能驱动的，考虑到Ghost系统的不确定性（毕竟不是自己集成的，即不知道系统有没有做过精简、优化等），想想还是先重装一个原版的Win7吧（以前也碰到过Ghost系统引起的问题），那就动手吧。安装过程并不顺利，原因是电脑配置比较新，是B150M的主板，在PE里能够使用USB的键盘或鼠标，可一当在安装界面时就傻眼了，一个也用不了！没办法，只能到处去找PS/2接口的键盘和鼠标，找了半天也只找到一个键盘，将就用吧（虽然慢一点），经过“艰难”的安装过程，终于把系统装好，打好主板和USB3.0驱动后，USB鼠标或键盘就可以使用了。一切就绪后，开始安装生化分析仪软件，结果登录后还是连接不上机器，郁闷！</p>
-      
-        
-          <div class="button readmore">
-            <a href="/post/2374.html">
-              Read More <i class="fas fa-chevron-right"></i>
-            </a>
-          </div>
-        
-      
-    </div>
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow reveal ">
-  
-
-
-  <section class='meta'>
-    
-    
-    <div class="meta" id="header-meta">
-      
-        
-  <h2 class="title">
-    <a href="/post/2361.html">
-      word2007功能区消失或隐藏的处理方法
-    </a>
-  </h2>
-
-
-      
-      <div class='new-meta-box'>
-        
-          
-        
-          
-            
-<div class='new-meta-item author'>
-  <a href="https://uu126.cn" rel="nofollow">
-    <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png">
-    <p>Feng</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  
-  <div class='new-meta-item category'>
-    <a href='/categories/IT%E7%BB%BC%E5%90%88%E6%8A%80%E6%9C%AF/' rel="nofollow">
-      <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>IT综合技术</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-edit" aria-hidden="true"></i>
-    <p>发布于：Nov 22, 2016</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-
-          
-        
-          
-            
-
-          
-        
-      </div>
-      
-        <hr>
-      
-    </div>
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <p><img src="https://cdn.uu126.cn/usr/uploads/2016/11/69591356.png" alt="word200701.png"><br>朋友反映自己的Word出问题，功能区看不见了，但是鼠标移过去又能显示的，赶紧上手处理，在视图右侧的空白处点击右键，出来的框点击一个功能区最小化（一般就是这外勾选了才会导致问题出现的）
-      
-        
-          <div class="button readmore">
-            <a href="/post/2361.html">
-              Read More <i class="fas fa-chevron-right"></i>
-            </a>
-          </div>
-        
-      
-    </div>
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow reveal ">
-  
-
-
-  <section class='meta'>
-    
-    
-    <div class="meta" id="header-meta">
-      
-        
-  <h2 class="title">
-    <a href="/post/2355.html">
-      华硕X205TA引导不了的解决办法
-    </a>
-  </h2>
-
-
-      
-      <div class='new-meta-box'>
-        
-          
-        
-          
-            
-<div class='new-meta-item author'>
-  <a href="https://uu126.cn" rel="nofollow">
-    <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png">
-    <p>Feng</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  
-  <div class='new-meta-item category'>
-    <a href='/categories/IT%E7%BB%BC%E5%90%88%E6%8A%80%E6%9C%AF/' rel="nofollow">
-      <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>IT综合技术</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-edit" aria-hidden="true"></i>
-    <p>发布于：Nov 17, 2016</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-
-          
-        
-          
-            
-
-          
-        
-      </div>
-      
-        <hr>
-      
-    </div>
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <p><img src="https://cdn.uu126.cn/usr/uploads/2016/11/3336990593.png" alt="x205ta01.png">昨天接手一台华为X205TA的本本，说是系统坏了，具体为：系统无法引导，也无法恢复（因为原厂带的是Win8后来升Win10时空间不够，就把恢复盘也给征用了（没办法，这本本总共硬盘空间才32G），看来也就只能重装了，本以为很简单的，结果自己兜里的两个U盘都引导不了（具体特征为：按ESC键，选择U盘引导后闪了一下就又回到启动选择界面，再点U盘引导就直接跳到硬盘引导了。没办法只好求救于度娘，按照上面说的去修改BIOS设置，结果还是一样无法引导，接着又去网上下载那些所谓可以使用的U盘PE，结果是下一下个扔一个，什么老毛桃、大白菜、通用PE、U深度、电脑店等，来来回回的折腾了几个小时都无济于事，那心里的郁闷呀………………。
-      
-        
-          <div class="button readmore">
-            <a href="/post/2355.html">
-              Read More <i class="fas fa-chevron-right"></i>
-            </a>
-          </div>
-        
-      
-    </div>
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow reveal ">
-  
-
-
-  <section class='meta'>
-    
-    
-    <div class="meta" id="header-meta">
-      
-        
-  <h2 class="title">
-    <a href="/post/2354.html">
-      搜狗输入法皮肤错误引起的输入问题
-    </a>
-  </h2>
-
-
-      
-      <div class='new-meta-box'>
-        
-          
-        
-          
-            
-<div class='new-meta-item author'>
-  <a href="https://uu126.cn" rel="nofollow">
-    <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png">
-    <p>Feng</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  
-  <div class='new-meta-item category'>
-    <a href='/categories/IT%E7%BB%BC%E5%90%88%E6%8A%80%E6%9C%AF/' rel="nofollow">
-      <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>IT综合技术</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-edit" aria-hidden="true"></i>
-    <p>发布于：Nov 14, 2016</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-
-          
-        
-          
-            
-
-          
-        
-      </div>
-      
-        <hr>
-      
-    </div>
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <p><img src="https://cdn.uu126.cn/usr/uploads/2016/11/3763756363.jpg" alt="14425544402371_former.jpg"><br>搜狗输入法，估计大家都不陌生，国内拼音输入法的大佬，几乎是电脑的标配软件了。也是因为搜狗的云输入出现，之前的很多本地输入法现在基本上很少了，就如：智能ABC、紫光拼音等，平心而论搜狗输入法的确是挺好用的，而且现在各种功能不要太多：DIY皮肤、手写输入、表情输入等，但是再好的东西有时也会有抽风的时候。今天一朋友说他的搜狗输入法不能说连拼了，只能一个字一个字的输入，两个字有时也输不了，就连平常常打的字现在简拼（字音的首字母）也打不出来了，过去看了一下，发现输入法皮肤不是默认的，不过换的也挺好的，可是就是字打不了，点设置等也没反应，重新更新安装后也还是一样，无奈之下将皮肤换回到默认后，竟然可以正常输入了，再长的词组也可以输了，常打的字当然也可以。好吧，问题解决，收工。
-      
-        
-          <div class="button readmore">
-            <a href="/post/2354.html">
-              Read More <i class="fas fa-chevron-right"></i>
-            </a>
-          </div>
-        
-      
-    </div>
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow reveal ">
-  
-
-
-  <section class='meta'>
-    
-    
-    <div class="meta" id="header-meta">
-      
-        
-  <h2 class="title">
-    <a href="/post/2325.html">
-      Quite Imposing plus 4.0g专业的PDF拼版插件安装及使用
-    </a>
-  </h2>
-
-
-      
-      <div class='new-meta-box'>
-        
-          
-        
-          
-            
-<div class='new-meta-item author'>
-  <a href="https://uu126.cn" rel="nofollow">
-    <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png">
-    <p>Feng</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  
-  <div class='new-meta-item category'>
-    <a href='/categories/IT%E7%BB%BC%E5%90%88%E6%8A%80%E6%9C%AF/' rel="nofollow">
-      <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>IT综合技术</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-edit" aria-hidden="true"></i>
-    <p>发布于：Nov 5, 2016</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-
-          
-        
-          
-            
-
-          
-        
-      </div>
-      
-        <hr>
-      
-    </div>
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <p>大家都知道Adobe Acrobat 9 Pro安装好之后还需要安装很多增效工具以达到使用需求，下面就来啰嗦一下安装及配置Quite Imposing plus 4.0g（简称QID4.0），从头开始吧：右键点击桌面上Adobe Acrobat 9 Pro的图标，弹出的菜单点击属性，然后再点击打开文件位置<img src="https://cdn.uu126.cn/usr/uploads/2016/11/2972725973.png" alt="Acrobat01.png"></p>
-<p>找到插件目录plug_ins<img src="https://cdn.uu126.cn/usr/uploads/2016/11/3372322226.png" alt="Acrobat02.png"></p>
-      
-        
-          <div class="button readmore">
-            <a href="/post/2325.html">
-              Read More <i class="fas fa-chevron-right"></i>
-            </a>
-          </div>
-        
-      
-    </div>
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow reveal ">
-  
-
-
-  <section class='meta'>
-    
-    
-    <div class="meta" id="header-meta">
-      
-        
-  <h2 class="title">
-    <a href="/post/2304.html">
-      一个老显示器引起的点不亮故障
-    </a>
-  </h2>
-
-
-      
-      <div class='new-meta-box'>
-        
-          
-        
-          
-            
-<div class='new-meta-item author'>
-  <a href="https://uu126.cn" rel="nofollow">
-    <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png">
-    <p>Feng</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  
-  <div class='new-meta-item category'>
-    <a href='/categories/IT%E7%BB%BC%E5%90%88%E6%8A%80%E6%9C%AF/' rel="nofollow">
-      <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>IT综合技术</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-edit" aria-hidden="true"></i>
-    <p>发布于：Oct 29, 2016</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-
-          
-        
-          
-            
-
-          
-        
-      </div>
-      
-        <hr>
-      
-    </div>
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <img class="aligncenter size-full wp-image-2305" src="https://uu126.cn/wp-content/uploads/2016/10/fcbb4c1f6d943da4f4da5298b5687004.jpg" alt="fcbb4c1f6d943da4f4da5298b5687004" width="800" height="600" />
-
-<p>看到这图片，一般修电脑的都很习惯，哪个店里不都是几台老显示器（没把CRT搬上来就已经算是很好了），老的LCD显示器，大部分情况使用都是没问题，可是就有这么例外的：</p>
-<pre class="pure-highlightjs"><code class="null">客户组装一台电脑:ASUS B85/I5-4590/8G/七彩虹960/240G固态/航嘉WD500。
-      
-        
-          <div class="button readmore">
-            <a href="/post/2304.html">
-              Read More <i class="fas fa-chevron-right"></i>
-            </a>
-          </div>
-        
-      
-    </div>
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow reveal ">
-  
-
-
-  <section class='meta'>
-    
-    
-    <div class="meta" id="header-meta">
-      
-        
-  <h2 class="title">
-    <a href="/post/2265.html">
-      看我是如何快速检修电脑的，只讨论我~不喜勿喷
-    </a>
-  </h2>
-
-
-      
-      <div class='new-meta-box'>
-        
-          
-        
-          
-            
-<div class='new-meta-item author'>
-  <a href="https://uu126.cn" rel="nofollow">
-    <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png">
-    <p>Feng</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  
-  <div class='new-meta-item category'>
-    <a href='/categories/IT%E7%BB%BC%E5%90%88%E6%8A%80%E6%9C%AF/' rel="nofollow">
-      <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>IT综合技术</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-edit" aria-hidden="true"></i>
-    <p>发布于：Oct 22, 2016</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-
-          
-        
-          
-            
-
-          
-        
-      </div>
-      
-        <hr>
-      
-    </div>
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <p> <img src="https://cdn.uu126.cn/wp-content/uploads/2016/10/5a00ec641123eef9a4fcf5ede79fc406.jpg" alt="请输入图片描述"></p>
-<p><strong>修电脑首先得找到问题，排除问题，</strong><strong>不盲目拔插内存之类的，</strong><strong>我主要是找问题，我不会硬件维修。。也不懂诊断卡~</strong></p>
-<p>一：电脑主机故障：开机黑屏</p>
-<p>1：开机，看键盘灯亮不亮，按Numlock键按了后灯有反应就是显卡或视频线或者显示器故障。。</p>
-      
-        
-          <div class="button readmore">
-            <a href="/post/2265.html">
-              Read More <i class="fas fa-chevron-right"></i>
-            </a>
-          </div>
-        
-      
-    </div>
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow reveal ">
-  
-
-
-  <section class='meta'>
-    
-    
-    <div class="meta" id="header-meta">
-      
-        
-  <h2 class="title">
-    <a href="/post/2258.html">
-      蓝屏代码0X0000007E 、iusb3xhc.sys解决方法
-    </a>
-  </h2>
-
-
-      
-      <div class='new-meta-box'>
-        
-          
-        
-          
-            
-<div class='new-meta-item author'>
-  <a href="https://uu126.cn" rel="nofollow">
-    <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png">
-    <p>Feng</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  
-  <div class='new-meta-item category'>
-    <a href='/categories/IT%E7%BB%BC%E5%90%88%E6%8A%80%E6%9C%AF/' rel="nofollow">
-      <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>IT综合技术</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-edit" aria-hidden="true"></i>
-    <p>发布于：Oct 22, 2016</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-
-          
-        
-          
-            
-
-          
-        
-      </div>
-      
-        <hr>
-      
-    </div>
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <p><img src="https://cdn.uu126.cn/wp-content/uploads/2016/10/20161019210437.jpg" alt="请输入图片描述"><br> 今天遇到一客户电脑蓝屏，代码是0X0000007E，技术信息，iusb3xhc.sys。起初一看，代码倒是很熟，只是后面的iusb3xhc.sys，不确实故障点在哪里。后来我仔细揣摩，这个首先是驱动和电脑不兼容引起的，凡是以sys结尾的绝大多数都是驱动和系统不兼容，或者软件和系统不兼容。其次，iusb3xhc看起来很眼熟，好像在哪见过。分析一下，就是USB 3.0 的XHCL模式。这时候，我按F8进安全模式，进不了，也蓝屏，代码一样。凭经验，我想，不能进安全模式，BIOS的设置有没有问题？</p>
-<p> <img src="https://cdn.uu126.cn/wp-content/uploads/2016/10/20161019210552.jpg" alt="请输入图片描述"></p>
-      
-        
-          <div class="button readmore">
-            <a href="/post/2258.html">
-              Read More <i class="fas fa-chevron-right"></i>
-            </a>
-          </div>
-        
-      
-    </div>
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow reveal ">
-  
-
-
-  <section class='meta'>
-    
-    
-    <div class="meta" id="header-meta">
-      
-        
-  <h2 class="title">
-    <a href="/post/2212.html">
-      关于网线能测通但上不了网
-    </a>
-  </h2>
-
-
-      
-      <div class='new-meta-box'>
-        
-          
-        
-          
-            
-<div class='new-meta-item author'>
-  <a href="https://uu126.cn" rel="nofollow">
-    <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png">
-    <p>Feng</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  
-  <div class='new-meta-item category'>
-    <a href='/categories/IT%E7%BB%BC%E5%90%88%E6%8A%80%E6%9C%AF/' rel="nofollow">
-      <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>IT综合技术</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-edit" aria-hidden="true"></i>
-    <p>发布于：Oct 7, 2016</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-
-          
-        
-          
-            
-
-          
-        
-      </div>
-      
-        <hr>
-      
-    </div>
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <p><img src="https://cdn.uu126.cn/wp-content/uploads/2016/10/CgQI01UCUouAJY64AAOvVBLcfWQ89800.jpg" alt="请输入图片描述"></p>
-<p>环境：交换设备在地下室，需要上网的地方是一楼某办公室。地下室交换设备上网线太多太凌乱，不好确定是哪个网线直连这个办公室的。</p>
-      
-        
-          <div class="button readmore">
-            <a href="/post/2212.html">
-              Read More <i class="fas fa-chevron-right"></i>
-            </a>
-          </div>
-        
-      
-    </div>
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow reveal ">
-  
-
-
-  <section class='meta'>
-    
-    
-    <div class="meta" id="header-meta">
-      
-        
-  <h2 class="title">
-    <a href="/post/2206.html">
-      安装装系统重启开机屏幕出现J的处理方法
-    </a>
-  </h2>
-
-
-      
-      <div class='new-meta-box'>
-        
-          
-        
-          
-            
-<div class='new-meta-item author'>
-  <a href="https://uu126.cn" rel="nofollow">
-    <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png">
-    <p>Feng</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  
-  <div class='new-meta-item category'>
-    <a href='/categories/IT%E7%BB%BC%E5%90%88%E6%8A%80%E6%9C%AF/' rel="nofollow">
-      <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>IT综合技术</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-edit" aria-hidden="true"></i>
-    <p>发布于：Sep 12, 2016</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-
-          
-        
-          
-            
-
-          
-        
-      </div>
-      
-        <hr>
-      
-    </div>
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <p>其实这问题并不是新出来的，只是最近又碰到了，一台电脑在PE里分好区后Ghost安装Win7，重启后屏幕一会就出现黑屏且第一行显示一个“J”，如图：</p>
-<p><img src="http://cdn.uu126.cn/wp-content/uploads/2016/09/dc54564e9258d109297199a5d758ccbf6c814d12.jpg" alt="请输入图片描述"> </p>
-<p>这问题解决也不难，病因也简单，自从现在固态硬盘越来越普及以后，Diskgenius（几乎每个PE都带的硬盘分区软件）也为了方便大家使用固态硬盘，所以在默认分区时，都默选了4K对齐，这对固态来说是个好事，但对普通硬盘来说就容易出问题了（容易出问题，比如屏幕显示一个J），既然病因知道了，那就好解决了。</p>
-      
-        
-          <div class="button readmore">
-            <a href="/post/2206.html">
-              Read More <i class="fas fa-chevron-right"></i>
-            </a>
-          </div>
-        
-      
-    </div>
-  </section>
-</article>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-      <br>
-      <div class="prev-next">
-        
-        <p class="current">
-          1 / 3
-        </p>
-        
-          <a class="next" rel="next" href="/categories/IT%E7%BB%BC%E5%90%88%E6%8A%80%E6%9C%AF/page/2/">
-            <section class="post next white-box shadow">
-              &nbsp;Next&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i>
-            </section>
-          </a>
-        
-      </div>
-    
-    <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
-    
-    
-
-  
-
-
-    
-  
-
-</div>
-<aside class='l_side'>
-  
-  
-    
-    
-  
-
-  <section class="widget category shadow desktop">
-    
-  <header>
-    
-      <a href='/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/IT%E7%BB%BC%E5%90%88%E6%8A%80%E6%9C%AF/" href="/categories/IT%E7%BB%BC%E5%90%88%E6%8A%80%E6%9C%AF/"
-            id="categoriesITE7BBBCE59088E68A80E69CAF"
-            ><div class='name'>IT综合技术</div><div class='badge'>(29)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%88%91%E7%9A%84%E5%9C%B0%E7%9B%98/" href="/categories/%E6%88%91%E7%9A%84%E5%9C%B0%E7%9B%98/"
-            id="categoriesE68891E79A84E59CB0E79B98"
-            ><div class='name'>我的地盘</div><div class='badge'>(44)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/" href="/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/"
-            id="categoriesE68A80E69CAFE7B1BB"
-            ><div class='name'>技术类</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%99%BA%E8%83%BD%E7%BB%88%E7%AB%AF/" href="/categories/%E6%99%BA%E8%83%BD%E7%BB%88%E7%AB%AF/"
-            id="categoriesE699BAE883BDE7BB88E7ABAF"
-            ><div class='name'>智能终端</div><div class='badge'>(11)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/" href="/categories/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/"
-            id="categoriesE7BD91E7AB99E5BBBAE8AEBE"
-            ><div class='name'>网站建设</div><div class='badge'>(63)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop">
-    
-  <header>
-    
-      <a href='/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/Ghost/" style="font-size: 19.56px; color: #737373">Ghost</a> <a href="/tags/Hexo/" style="font-size: 15.11px; color: #919191">Hexo</a> <a href="/tags/Lnmp/" style="font-size: 14px; color: #999">Lnmp</a> <a href="/tags/Oneinstack/" style="font-size: 14px; color: #999">Oneinstack</a> <a href="/tags/Typecho/" style="font-size: 14px; color: #999">Typecho</a> <a href="/tags/WordPress/" style="font-size: 19.56px; color: #737373">WordPress</a> <a href="/tags/godaddy/" style="font-size: 15.11px; color: #919191">godaddy</a> <a href="/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/tags/iphone/" style="font-size: 20.67px; color: #6c6c6c">iphone</a> <a href="/tags/lnmp/" style="font-size: 14px; color: #999">lnmp</a> <a href="/tags/nokia/" style="font-size: 14px; color: #999">nokia</a> <a href="/tags/phpmyadmin/" style="font-size: 14px; color: #999">phpmyadmin</a> <a href="/tags/ssh/" style="font-size: 14px; color: #999">ssh</a> <a href="/tags/typecho/" style="font-size: 21.78px; color: #646464">typecho</a> <a href="/tags/vps/" style="font-size: 15.11px; color: #919191">vps</a> <a href="/tags/vultr/" style="font-size: 18.44px; color: #7b7b7b">vultr</a> <a href="/tags/windows/" style="font-size: 14px; color: #999">windows</a> <a href="/tags/word/" style="font-size: 14px; color: #999">word</a> <a href="/tags/%E5%8D%8E%E4%B8%BA%E4%BA%91/" style="font-size: 17.33px; color: #828282">华为云</a> <a href="/tags/%E6%89%8B%E6%9C%BA/" style="font-size: 14px; color: #999">手机</a> <a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 14px; color: #999">技术</a> <a href="/tags/%E6%9C%BA%E6%A2%B0%E9%94%AE%E7%9B%98/" style="font-size: 14px; color: #999">机械键盘</a> <a href="/tags/%E6%B4%BB%E5%8A%A8/" style="font-size: 14px; color: #999">活动</a> <a href="/tags/%E7%8E%A9%E5%AE%A2%E4%BA%91/" style="font-size: 14px; color: #999">玩客云</a> <a href="/tags/%E7%BB%B4%E4%BF%AE/" style="font-size: 24px; color: #555">维修</a> <a href="/tags/%E7%BD%91%E7%AB%99/" style="font-size: 16.22px; color: #8a8a8a">网站</a> <a href="/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/" style="font-size: 14px; color: #999">腾讯云</a> <a href="/tags/%E8%8B%B9%E6%9E%9C/" style="font-size: 14px; color: #999">苹果</a> <a href="/tags/%E9%98%BF%E9%87%8C%E4%BA%91/" style="font-size: 17.33px; color: #828282">阿里云</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 22.89px; color: #5d5d5d">随笔</a>
-    </div>
-  </section>
-
-
-  
-
-  
-
-
-</aside>
-
-
-  
-  <footer class="clearfix ">
-    <br><br>
-    
-      
-        
-      
-    
-      
-        <br>
-        <div class="social-wrapper">
-          
-            
-              <a href="/atom.xml"
-                class="social fas fa-rss flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer">
-              </a>
-            
-          
-            
-              <a href="mailto:jslfp@foxmail.com"
-                class="social fas fa-envelope flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer">
-              </a>
-            
-          
-            
-              <a href="https://github.com/sxgxhk"
-                class="social fab fa-github flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer">
-              </a>
-            
-          
-            
-              <a href="https://music.163.com/#/user/home?id=63035382"
-                class="social fas fa-headphones-alt flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer">
-              </a>
-            
-          
-        </div>
-     
-    
-      
-        
-      
-    
-      
-        
-      
-    
-      
-        <div class='copyright'>
-        <p><a href="https://uu126.cn">Copyright © 2017-2020 Feng</a></p>
-<!--腾讯云--->Hosted by <a href="https://pages.coding.me" target="_blank" rel="noopener" style="font-weight: bold">Coding Pages</a> + 
-<a href="https://cloud.tencent.com/redirect.php?redirect=1005&cps_key=4e78216aea817227ff0c96d93a00fd4b" target="_blank" rel="nofollow"><!--<img src="https://uu126.cn/wp-content/uploads/2016/10/hwclouds-logo.png" style="margin-bottom:-3px">-->腾讯云 + </a><a href="https://console.upyun.com/register/?invite=S1JeTquHL" target="_blank" rel="nofollow"><span class="with-love"><img src="https://cdn.lancn.cn/images/upyun.png" style="width:40px;" alt="又拍云存储"></span></a>
-<br>
-<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
-<script>
-    var now = new Date(); 
-    function createtime() { 
-        var grt= new Date("03/07/2014 10:38:00");//在此处修改你的建站时间，格式：月/日/年 时:分:秒
-        now.setTime(now.getTime()+250); 
-        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
-        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
-        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
-        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
-        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
-        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
-        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
-        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-    } 
-setInterval("createtime()",250);
-</script>
-<br>
-<!--备案---> <a target="_blank"  href="http://www.beian.miit.gov.cn">浙ICP备11026647号-3</a><span class="post-meta-divider"> | </span><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33088102001325"><span class="with-love"><img src="https://cdn.uu126.cn/icon-police.png" style="width:14px;"></span> 浙公网安备33088102001325号</a>
-
-
-        </div>
-      
-    
-  </footer>
-
-<script>setLoadingBarProgress(80);</script>
-
-
-      <script>setLoadingBarProgress(60);</script>
-    </div>
-    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
-  </div>
-  
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.4/dist/jquery.min.js"></script>
-
-
-  <script>
-    
-    var SEARCH_SERVICE = "hexo" || "hexo";
-    var ROOT = "/" || "/";
-    if (!ROOT.endsWith('/')) ROOT += '/';
-  </script>
-
-
-  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
-
-
-
-  
-<script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
-
-  <script type="text/javascript">
-    $(function() {
-      Waves.attach('.flat-btn', ['waves-button']);
-      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
-      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
-      Waves.attach('.flat-box', ['waves-block']);
-      Waves.attach('.float-box', ['waves-block', 'waves-float']);
-      Waves.attach('.waves-image');
-      Waves.init();
-    });
-  </script>
-
-
-  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
-
-
-
-  
-  
-  
-    
-<script src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script>
-
-    <script type="text/javascript">
-      $(function(){
-        var imgs=["https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/BBC19066-E176-47C2-9D22-48C81EE5DF6B.jpeg"];
-        if ('true' == 'true') {
-          function shuffle(arr){
-            /*From countercurrent-time*/
-            var n = arr.length;
-            while(n--) {
-              var index = Math.floor(Math.random() * n);
-              var temp = arr[index];
-              arr[index] = arr[n];
-              arr[n] = temp;
-            }
-          }
-          shuffle(imgs);
-        }
-        if ('.cover') {
-          $('.cover').backstretch(
-            imgs,
-          {
-            duration: "20000",
-            fade: "1500"
-          });
-        } else {
-          $.backstretch(
-            imgs,
-          {
-            duration: "20000",
-            fade: "1500"
-          });
-        }
-      });
+    </aside>
+    <script>
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        document.querySelector('.content').classList.remove('on');
+        document.querySelector('.sidebar').classList.remove('on');
+      }
     </script>
-  
+    <div id="mask"></div>
 
-
-
-  
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
     
-<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js" async></script>
-
-  
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.png">
+      <span class="reward-type">支付宝</span>
+    </div>
     
-<script src="https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js" async></script>
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.png">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-2.0.3.min.js"></script>
 
-  
 
-
-
-
-
-
-
-
-
-
-  
-<script src="/js/app.js"></script>
+<script src="/js/lazyload.min.js"></script>
 
 
 
-  
-<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2.1/js/search.js"></script>
 
 
 
-  
-<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2/js/comment_typing.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
 
 
 
-<!-- 复制 -->
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
-  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
 <script>
-  !function (e, t, a) {
-    var initCopyCode = function(){
-      var copyHtml = '';
-      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
-      copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
-      copyHtml += '</button>';
-      $(".highlight .code pre").before(copyHtml);
-      var clipboard = new ClipboardJS('.btn-copy', {
-        target: function(trigger) {
-          return trigger.nextElementSibling;
-        }
-      });
-      clipboard.on('success', function(e) {
-        let $btn = $(e.trigger);
-        $btn.addClass('copyed');
-        let $icon = $($btn.find('i'));
-        $icon.removeClass('fa-copy');
-        $icon.addClass('fa-clipboard-check');
-        let $span = $($btn.find('span'));
-        $span[0].innerText = 'COPYED';
-      });
-      clipboard.on('error', function(e) {
-        e.clearSelection();
-        let $btn = $(e.trigger);
-        $btn.addClass('copy-failed');
-        let $icon = $($btn.find('i'));
-        $icon.removeClass('fa-copy');
-        $icon.addClass('fa-exclamation-triangle');
-        let $span = $($btn.find('span'));
-        $span[0].innerText = 'COPY FAILED';
-      });
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
     }
-    initCopyCode();
-  }(window, document);
-</script>
-
-
-
-
-<!-- fancybox -->
-
-  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-<script>
-  let LAZY_LOAD_IMAGE = "";
-  $(".article-entry").find("fancybox").find("img").each(function () {
-      var element = document.createElement("a");
-      $(element).attr("data-fancybox", "gallery");
-      $(element).attr("href", $(this).attr("src"));
-      /* 图片采用懒加载处理时,
-       * 一般图片标签内会有个属性名来存放图片的真实地址，比如 data-original,
-       * 那么此处将原本的属性名src替换为对应属性名data-original,
-       * 修改如下
-       */
-       if (LAZY_LOAD_IMAGE) {
-         $(element).attr("href", $(this).attr("data-original"));
-       }
-      $(this).wrap(element);
-  });
+    viewer_init()
 </script>
 
 
 
 
 
+<script type="text/javascript" src="https://js.users.51.la/20544303.js"></script>
 
-  <script>setLoadingBarProgress(100);</script>
+  
+<script src="/js/clickLove.js"></script>
+
+
+
+    
+  </div>
 </body>
+
 </html>

@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://uu126.cn/ly/index.html</loc>
+    
+    <lastmod>2020-04-09T15:37:24.569Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://uu126.cn/links/index.html</loc>
+    
+    <lastmod>2020-04-09T15:24:02.675Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://uu126.cn/tags/index.html</loc>
+    
+    <lastmod>2020-04-09T15:15:23.792Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://uu126.cn/categories/index.html</loc>
+    
+    <lastmod>2020-04-09T15:15:02.949Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://uu126.cn/post/typecho-blog-comments-display-useragent-ua.html</loc>
     
     <lastmod>2020-04-04T16:02:48.716Z</lastmod>
@@ -12,20 +40,6 @@
     <loc>https://uu126.cn/404.html</loc>
     
     <lastmod>2020-04-03T15:02:31.679Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://uu126.cn/tags/index.html</loc>
-    
-    <lastmod>2020-04-03T15:00:21.140Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://uu126.cn/categories/index.html</loc>
-    
-    <lastmod>2020-04-03T14:59:52.858Z</lastmod>
     
   </url>
   
@@ -58,7 +72,7 @@
   </url>
   
   <url>
-    <loc>https://uu126.cn/links/index.html</loc>
+    <loc>https://uu126.cn/links/index%20-%20%E5%89%AF%E6%9C%AC.html</loc>
     
     <lastmod>2020-03-16T13:16:40.073Z</lastmod>
     
@@ -1076,13 +1090,6 @@
     <loc>https://uu126.cn/post/2411.html</loc>
     
     <lastmod>2017-01-31T13:35:28.127Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://uu126.cn/ly/index.html</loc>
-    
-    <lastmod>2017-01-26T04:29:09.081Z</lastmod>
     
   </url>
   

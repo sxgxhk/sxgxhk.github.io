@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Feng&#39;blog</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://uu126.cn/"/>
+  <updated>2020-03-18T14:53:01.168Z</updated>
+  <id>https://uu126.cn/</id>
+  
+  <author>
+    <name>Feng</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>小米MIX 2s花了49元撸了电池和屏幕</title>
+    <link href="https://uu126.cn/post/Xiaomi%20mix%202S%20spent%2049%20yuan%20on%20batteries%20and%20screens.html"/>
+    <id>https://uu126.cn/post/Xiaomi%20mix%202S%20spent%2049%20yuan%20on%20batteries%20and%20screens.html</id>
+    <published>2020-03-18T14:52:00.000Z</published>
+    <updated>2020-03-18T14:53:01.168Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本人手中的小米MIX 2s是年前淘来的，用的也挺不错，只是碍于电池容量小用的时间就短，所以一天两充是免不了，看了一下电池寿命，估计也就在88%左右（升级到MIUI开发版，可以直接在拨号界面输入&lt;code&gt;*#*#6485#*#*&lt;/code&gt;查看）&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="我的地盘" scheme="https://uu126.cn/categories/%E6%88%91%E7%9A%84%E5%9C%B0%E7%9B%98/"/>
+    
+    
+      <category term="手机" scheme="https://uu126.cn/tags/%E6%89%8B%E6%9C%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo一键部署到阿里云OSS</title>
+    <link href="https://uu126.cn/post/one-click-deployment-of-hexo-to-alibaba-cloud-oss.html"/>
+    <id>https://uu126.cn/post/one-click-deployment-of-hexo-to-alibaba-cloud-oss.html</id>
+    <published>2020-03-18T13:17:00.000Z</published>
+    <updated>2020-03-18T13:58:14.998Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;鉴于最近github从中国大陆访问网速较慢，而且现在国内阿里云oss、腾讯云对象储存等的开始支持将静态网站部署在上面，而且访问速度还可以，加上最近本博主又开始在折腾Hexo了，Hexo的好处是可以生成静态文件，这样就可以多个地方同时在线，比如Github、Coding、OSS等，目前本站已经部署在前面说的那个地方，今天顺便把阿里云的OSS也上了吧。另外像腾讯云的COS上部署也差不多，改天也可以再尝试一下。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="网站建设" scheme="https://uu126.cn/categories/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/"/>
+    
+    
+      <category term="Hexo" scheme="https://uu126.cn/tags/Hexo/"/>
+    
+      <category term="网站" scheme="https://uu126.cn/tags/%E7%BD%91%E7%AB%99/"/>
+    
+      <category term="阿里云" scheme="https://uu126.cn/tags/%E9%98%BF%E9%87%8C%E4%BA%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Typecho 博客评论显示 UserAgent (UA)</title>
+    <link href="https://uu126.cn/post/typecho-blog-comments-display-useragent-ua.html"/>
+    <id>https://uu126.cn/post/typecho-blog-comments-display-useragent-ua.html</id>
+    <published>2020-03-03T12:50:00.000Z</published>
+    <updated>2020-04-04T16:02:48.716Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本篇文章纯搬运 &lt;a href=&quot;https://www.zrahh.com/archives/298.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;左岸大佬&lt;/a&gt; 的教程，之所以搬运也是为了记录下过程，也便于以后时间长了还能再参考着折腾（没办法，文章写不出来多少，折腾这些东西无用的却是十分的来劲）废话不多说，赶紧码字+拷贝记录下来。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="网站建设" scheme="https://uu126.cn/categories/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/"/>
+    
+    
+      <category term="typecho" scheme="https://uu126.cn/tags/typecho/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>为 Typecho的代码块添加Copy按钮</title>
+    <link href="https://uu126.cn/post/add-copy-button-for-code-block-of-typecho.html"/>
+    <id>https://uu126.cn/post/add-copy-button-for-code-block-of-typecho.html</id>
+    <published>2020-03-03T04:50:00.000Z</published>
+    <updated>2020-03-14T04:21:28.386Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;由于目前我用的是&lt;code&gt;Mirages&lt;/code&gt;主题，所以接下来的步骤也按这个主题来，当然主题不同，也只是改的地方不一样而已，相信这都不是事，要是真有事了欢迎留言哈。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="网站建设" scheme="https://uu126.cn/categories/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/"/>
+    
+    
+      <category term="typecho" scheme="https://uu126.cn/tags/typecho/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>复苏的2020</title>
+    <link href="https://uu126.cn/post/2020-of-recovery.html"/>
+    <id>https://uu126.cn/post/2020-of-recovery.html</id>
+    <published>2020-02-20T13:57:00.000Z</published>
+    <updated>2020-03-14T14:04:57.584Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;用“复苏”来形容2020年的开工复产，应该不为过吧。因为新冠病毒疫情的影响，导致节后该开工的无法开工，该上学的还在等待，给社会造成了多大影响可想而知（虽然俺从初八就开始上班了），好在疫情得到了控制（确诊病例、治愈人数等都在住好的方面发展），很多地方也开始开工复产，当然相应的防护措施还是有的，&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="我的地盘" scheme="https://uu126.cn/categories/%E6%88%91%E7%9A%84%E5%9C%B0%E7%9B%98/"/>
+    
+    
+      <category term="随笔" scheme="https://uu126.cn/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>最近的事@6</title>
+    <link href="https://uu126.cn/post/recent-6.html"/>
+    <id>https://uu126.cn/post/recent-6.html</id>
+    <published>2020-02-08T01:49:33.000Z</published>
+    <updated>2020-03-15T01:51:27.361Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近因为新型冠状病毒肺炎带来的影响，能宅在家的基本都宅在家了，像我这种不能宅家要上班的没办法了，加上大衢州的管控措施越来越严格，譬如进出小区都要出入证（不论人或车），进出小区或单位都要量体温（戴口罩那都是必须的事），虽然麻烦但看着最近几天没有新增确诊，管控措施还是非常有用的。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="我的地盘" scheme="https://uu126.cn/categories/%E6%88%91%E7%9A%84%E5%9C%B0%E7%9B%98/"/>
+    
+    
+      <category term="随笔" scheme="https://uu126.cn/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2020年的春节</title>
+    <link href="https://uu126.cn/post/spring-festival-in-2020.html"/>
+    <id>https://uu126.cn/post/spring-festival-in-2020.html</id>
+    <published>2020-01-30T07:21:00.000Z</published>
+    <updated>2020-03-15T02:14:08.453Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;2020年（本来寓意挺好的，2020爱你爱你……）的春节，原以为会跟以往春节那样，结果是大大出乎意料，原本可以大团聚的日子（串门、聚会等），现在却因为新型冠状病毒肺炎的出现，一切都变了，变得被要求在家呆着，没事少出门，更没提聚会、拜年等，而且今年流行的已不在是红包，而是口罩，谁要是可以拿出一堆的口罩来，那他一定很……。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="我的地盘" scheme="https://uu126.cn/categories/%E6%88%91%E7%9A%84%E5%9C%B0%E7%9B%98/"/>
+    
+    
+      <category term="随笔" scheme="https://uu126.cn/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>“范”闲整个黑苹果</title>
+    <link href="https://uu126.cn/post/fan-leisure-the-whole-black-apple.html"/>
+    <id>https://uu126.cn/post/fan-leisure-the-whole-black-apple.html</id>
+    <published>2019-12-28T13:55:00.000Z</published>
+    <updated>2020-03-15T02:15:31.789Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;“范”闲最近比较出名，当然我其实并不闲（真的吗？）这不赶上周末有点闲，要不给俺家台式机也整个黑苹果吃吃（平安果最近卖的这么贵的，穷人就整个黑的吃吃吧），家里的台机配置也不高（I5 +H61+12G），日常整个Win10啥的是够用了，谁叫俺不打游戏呢（显卡是N卡730），看到黑果小兵有做好的系统（远景的号登录不上了，其它的付费的地也懒的整），就下个试试吧&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="我的地盘" scheme="https://uu126.cn/categories/%E6%88%91%E7%9A%84%E5%9C%B0%E7%9B%98/"/>
+    
+    
+      <category term="苹果" scheme="https://uu126.cn/tags/%E8%8B%B9%E6%9E%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>最近的事@5</title>
+    <link href="https://uu126.cn/post/recent-events-5-1.html"/>
+    <id>https://uu126.cn/post/recent-events-5-1.html</id>
+    <published>2019-12-08T01:58:00.000Z</published>
+    <updated>2020-03-15T02:16:45.598Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;打开博客发现最近一次更新竟然是3个月前（现在都这么懒了吗？不敢想象呀），我是不是该上来啰嗦一下，发一发牢骚了233。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="我的地盘" scheme="https://uu126.cn/categories/%E6%88%91%E7%9A%84%E5%9C%B0%E7%9B%98/"/>
+    
+    
+      <category term="随笔" scheme="https://uu126.cn/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>iPhone快速开启或关闭VoiceOver（旁白）</title>
+    <link href="https://uu126.cn/post/iphone-quick-turn-voiceover-on-or-off.html"/>
+    <id>https://uu126.cn/post/iphone-quick-turn-voiceover-on-or-off.html</id>
+    <published>2019-09-03T11:31:00.000Z</published>
+    <updated>2020-03-15T02:17:58.152Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;iPhone的VoiceOver（现在叫旁白）对视力等障碍的朋友们还是非常好用的，但要是正常人不小心开启了，就会发现想关闭那不是一般的麻烦（都有想砸手机的冲突）。为了关闭这功能会去尝试登录–设置–辅助–旁白–关闭，看着流程不复杂，可实际操作起来那真是一个爽233。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="我的地盘" scheme="https://uu126.cn/categories/%E6%88%91%E7%9A%84%E5%9C%B0%E7%9B%98/"/>
+    
+    
+      <category term="iphone" scheme="https://uu126.cn/tags/iphone/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>懒懒的9102年</title>
+    <link href="https://uu126.cn/post/the-lazy-year-of-9102.html"/>
+    <id>https://uu126.cn/post/the-lazy-year-of-9102.html</id>
+    <published>2019-08-08T04:42:00.000Z</published>
+    <updated>2020-03-15T02:19:23.181Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;发觉9102年是真的懒，而且还是非一般的懒，这不小小博客上次更新还是在一月份（我去…………），什么理由都不能像我这么懒的没药治了…………。木的治咯，，木的治咯，，咋活呀！&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="我的地盘" scheme="https://uu126.cn/categories/%E6%88%91%E7%9A%84%E5%9C%B0%E7%9B%98/"/>
+    
+    
+      <category term="随笔" scheme="https://uu126.cn/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>最近的事@4</title>
+    <link href="https://uu126.cn/post/recent-events-4.html"/>
+    <id>https://uu126.cn/post/recent-events-4.html</id>
+    <published>2019-01-08T13:41:00.000Z</published>
+    <updated>2020-03-15T02:20:16.497Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;一晃都已经9102年了（网上看到很多都把2019写成这样，我这算是跟风吧?），上一次更博还是2018年11月份，这间隔的不是一点半点呀，难怪&lt;a href=&quot;https://sunxyu.cn/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;小宇&lt;/a&gt;童鞋都来叫阵了（我看他就是闲的?几乎天天更新，反观我…………）。最近发生了很多事（一贯的套路用词……），那就慢慢说来吧。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="我的地盘" scheme="https://uu126.cn/categories/%E6%88%91%E7%9A%84%E5%9C%B0%E7%9B%98/"/>
+    
+    
+      <category term="随笔" scheme="https://uu126.cn/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IOS 高版本保资料降级(未关验证)</title>
+    <link href="https://uu126.cn/post/data-degradation-of-ios-higher-version-verification-not-turned-off.html"/>
+    <id>https://uu126.cn/post/data-degradation-of-ios-higher-version-verification-not-turned-off.html</id>
+    <published>2018-11-21T11:35:00.000Z</published>
+    <updated>2020-03-15T02:21:08.859Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;用iPhone的朋友都知道，IOS（iPhone手机的灵魂）更新还是蛮快的，不管是修补漏洞也好，还是增加新功能也罢，给我的感觉就是完胜安卓系统，至少同年代的机型，iPhone可以用的更流畅些，而且只要你肯刷，新版本的系统始终都是可以轻松得到（除非跨越太大会限制版本更新，但相比安卓新系统的普及率来讲，IOS的新牒普及率已经高出很多了）。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="我的地盘" scheme="https://uu126.cn/categories/%E6%88%91%E7%9A%84%E5%9C%B0%E7%9B%98/"/>
+    
+    
+      <category term="iphone" scheme="https://uu126.cn/tags/iphone/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2018年的第一场雪</title>
+    <link href="https://uu126.cn/post/3001.html"/>
+    <id>https://uu126.cn/post/3001.html</id>
+    <published>2018-01-31T03:25:00.000Z</published>
+    <updated>2018-01-31T03:30:47.402Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;早上起来突然发现窗外都是白白的一片——下雪了！昨晚临睡前还瞟了一眼天气预报说今天是雨夹雪呀，再说了上次报中雪、暴雪结果也只是留下那淡淡的一点白（头皮屑似的），今天竟然……，简直太意外了，这才是下雪该有的本色嘛，2018年的第一场雪非今天莫属了233。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="我的地盘" scheme="https://uu126.cn/categories/%E6%88%91%E7%9A%84%E5%9C%B0%E7%9B%98/"/>
+    
+    
+      <category term="随笔" scheme="https://uu126.cn/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Win10提示威胁服务已经停止,立即重启的解决方法</title>
+    <link href="https://uu126.cn/post/2529.html"/>
+    <id>https://uu126.cn/post/2529.html</id>
+    <published>2018-01-15T13:23:00.000Z</published>
+    <updated>2018-01-23T13:36:57.529Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;昨天手动将win10升级到1709，内部版本为16299.125。自带的杀毒软件Windows defender安全中心提示威胁服务已经停止,立即重启。病毒防护也无法启用，如图所示，点击立即重新启动，显示“发生未知错误。”。虽然平常整个电脑管家啥的，但就稳定性还是系统自带的好，加上微软这几年的不断努力，系统自带的杀毒软件也越来越完善了，虽然这些年没有查出什么威胁，只是不能运行，万一哪天遇到了，心里还是怕怕的。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="我的地盘" scheme="https://uu126.cn/categories/%E6%88%91%E7%9A%84%E5%9C%B0%E7%9B%98/"/>
+    
+    
+      <category term="windows" scheme="https://uu126.cn/tags/windows/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>苹果IOS旧版验证意外开启风波</title>
+    <link href="https://uu126.cn/post/2525.html"/>
+    <id>https://uu126.cn/post/2525.html</id>
+    <published>2018-01-11T12:09:00.000Z</published>
+    <updated>2018-01-23T13:35:46.585Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天下午三点半左右收到朋友微信说，苹果开放旧版IOS验证了（意味着系统可以降级了），这可是千载难得的好机会，至少打从我用iPhone来还是头一回遇见，心情不是一般的意外，赶紧上&lt;a href=&quot;https://ipsw.me/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://ipsw.me/&lt;/a&gt;瞧了一眼，一瞧果然开放了验证：&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="智能终端" scheme="https://uu126.cn/categories/%E6%99%BA%E8%83%BD%E7%BB%88%E7%AB%AF/"/>
+    
+    
+      <category term="iphone" scheme="https://uu126.cn/tags/iphone/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>斐讯K2P多拨后负载均衡IP配置 玩客云</title>
+    <link href="https://uu126.cn/post/2522.html"/>
+    <id>https://uu126.cn/post/2522.html</id>
+    <published>2018-01-08T14:18:00.000Z</published>
+    <updated>2018-01-23T13:56:05.987Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;相信最近蛮多人都在折迅雷家的玩客云，虽然每天挖到的链克（以前叫玩客币）越来越少，母鸡（玩客云）越来越多，但还是挡不住众人的兴致，越来越多的“矿民”不断涌入，这其中当然就有我弱弱的身影（个位数的母鸡数量，只能这么称呼自己了）。大约是在12月份初“入道”的吧，那时挂在家里200M的电信宽带一拖二（这里不得不说一下电信宽带，下载速度还尚可，可这上行速度就小的可怜，也就十多兆吧），开始每天还有4个多链克，到现在就只有3个多了，还是多拨的情况下（现在一拖三），随着养鸡人的不断涌入，以后可能还得少下去……。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="我的地盘" scheme="https://uu126.cn/categories/%E6%88%91%E7%9A%84%E5%9C%B0%E7%9B%98/"/>
+    
+    
+      <category term="玩客云" scheme="https://uu126.cn/tags/%E7%8E%A9%E5%AE%A2%E4%BA%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于最近的微信小程序——跳一跳游戏</title>
+    <link href="https://uu126.cn/post/2511.html"/>
+    <id>https://uu126.cn/post/2511.html</id>
+    <published>2018-01-03T08:04:00.000Z</published>
+    <updated>2018-01-23T13:50:34.714Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;自从上次微信更新以后，新出来的《跳一跳》就跟着火起来了~ ，微信小程序的游戏大家觉得还不错~，由于游戏有周排行榜，可以挑战好友，互动性还不错。挺受大家的青睐！下面分享一些技巧，以及市面上的辅助。&lt;/p&gt;
+&lt;p&gt;和谐游戏，拒绝外挂！！！&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="我的地盘" scheme="https://uu126.cn/categories/%E6%88%91%E7%9A%84%E5%9C%B0%E7%9B%98/"/>
+    
+    
+      <category term="随笔" scheme="https://uu126.cn/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2018，我来了</title>
+    <link href="https://uu126.cn/post/2508.html"/>
+    <id>https://uu126.cn/post/2508.html</id>
+    <published>2018-01-01T15:06:00.000Z</published>
+    <updated>2018-01-23T13:31:39.627Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;2017已经越走越远了，过去的一年，博客经历了很多，从Typecho到Hexo再又到Ghost，现在“好像”又回到了起点（Typecho），更博也从一个月几篇到几月一篇再到现在……，年纪大了却越变越“懒”（生活琐事越来越多或许也算是个理由吧），折腾的心气也是逐渐下降（在期待下一个燃烧点吧233）。这一年不仅博客程序反复变迁，就连托管主机也在变化着，从最早的阿里云到华为云，再到现在的腾讯云，中国的VPS巨头好像都串过门了（玩站以来用过小厂（记不得名字了）、百度BAE、新浪SAE、西部数码、阿里云、华为云、腾讯云等），挺多的吧，国外也用过一两家，如：VULTR，回头看看发现我还是蛮能折腾的，尤其在阿里云，有买有退，这里真的要给阿里云点个赞，希望别把我拉黑哈，保不准小爷哪天又回来了……&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="我的地盘" scheme="https://uu126.cn/categories/%E6%88%91%E7%9A%84%E5%9C%B0%E7%9B%98/"/>
+    
+    
+      <category term="随笔" scheme="https://uu126.cn/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Centos7上搭建Lnmp+Ghost 1.x博客</title>
+    <link href="https://uu126.cn/post/2504.html"/>
+    <id>https://uu126.cn/post/2504.html</id>
+    <published>2017-11-02T13:15:00.000Z</published>
+    <updated>2018-01-23T13:30:44.221Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;上次写过&lt;a href=&quot;https://blog.uu126.cn/debian-8-8da-jian-lnmp-ghost-1-x-jiao-cheng/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;《Debian 8.X搭建Lnmp+ Ghost 1.x 教程》&lt;/a&gt; ，这不将主机从香港搬回到大杭州后，域名又倒腾回之前的uu126.cn（当然加了个前缀blog），加上前不久刚好在&lt;a href=&quot;http://blog.imzhengfei.com/centos-7-an-zhuang-pei-zhi-ghost-1-x/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;海月博客&lt;/a&gt; ，顺手也尝试了一下Centos，结果一切搭建顺利，又可以让我啰嗦一下了。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="网站建设" scheme="https://uu126.cn/categories/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/"/>
+    
+    
+      <category term="Ghost" scheme="https://uu126.cn/tags/Ghost/"/>
+    
+  </entry>
+  
+</feed>

@@ -1,1477 +1,560 @@
 <!DOCTYPE html>
-<html>
-<head hexo-theme='https://volantis.js.org/#blog'>
-  <meta charset="utf-8">
-  <!-- SEO相关 -->
-  
+
+
+<html lang="zh-Hans" >
+
+
+<head>
+  <meta charset="utf-8" />
     
-      <meta name="robots" content="noindex,follow">
-    
+  <meta name="description" content="一个爱折腾的家伙" />
   
-  <!-- 渲染优化 -->
-  <meta name="renderer" content="webkit">
-  <meta name="force-rendering" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-  <meta name="HandheldFriendly" content="True" >
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-  <!-- 页面元数据 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>
+    Tag: WordPress |  Feng&#39;blog
+  </title>
+  <meta name="generator" content="hexo-theme-yilia-plus">
   
-    <title>Tag: WordPress - Feng&#39;blog</title>
+  <link rel="shortcut icon" href="/favicon.ico" />
   
   
-
-  <!-- feed -->
-  
-
-  <!-- import meta -->
-  
-
-  <!-- link -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css">
-  
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+<link rel="stylesheet" href="/dist/main.css">
 
   
-  
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
+<link rel="stylesheet" href="/css/custom.css">
 
+  
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+  
   
 
   
+<script>
+var _hmt = _hmt || [];
+(function() {
+	var hm = document.createElement("script");
+	hm.src = "https://hm.baidu.com/hm.js?94d859214f61c61e74207e8502faa4ab";
+	var s = document.getElementsByTagName("script")[0]; 
+	s.parentNode.insertBefore(hm, s);
+})();
+</script>
 
-  
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
-  
 
-  <!-- import link -->
-  
-
-  
-    
-<link rel="stylesheet" href="/css/style.css">
-
-  
-
-  <script>
-    function setLoadingBarProgress(num) {
-      document.getElementById('loading-bar').style.width=num+"%";
-    }
-  </script>
-
-  
-  
-    <!-- ba -->
-    <script>
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?94d859214f61c61e74207e8502faa4ab";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-    </script>
-  
+<link rel="alternate" href="/atom.xml" title="Feng'blog" type="application/atom+xml">
 </head>
 
+</html>
+
 <body>
+  <div id="app">
+    <main class="content on">
+      <section class="outer">
+  <article class="articles">
+    
+    
+    <h1 class="page-type-title">#&nbspWordPress</h1>
+    
+    
   
-  <div id="loading-bar-wrapper">
-  <div id="loading-bar"></div>
-</div>
-<header class="l_header shadow blur">
-
-  <div class='wrapper'>
-    <div class='nav-sub container--flex'>
-      <a class="logo flat-box"></a>
-      <ul class='switcher h-list'>
-        <li><a class="s-comment flat-btn fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
-        
-          <li><a class="s-toc flat-btn fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
-        
-      </ul>
+  
+  
+  
+  
+  
+  <div class="archives-wrap">
+    <div class="archive-year-wrap">
+      <a href="/archives/2016" class="archive-year">2016</a>
     </div>
-		<div class="nav-main container container--flex">
+    <div class="archives">
       
-        
-        <a class="logo flat-box" target="_self" href='/'>
-          
-          
-          
-            Feng's Blog
-          
-          
-        </a>
-      
+      <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/post/2300.html" class="archive-article-date">
+  <time datetime="2016-10-29T04:53:00.000Z" itemprop="datePublished">10/29</time>
+</a>
+       
+<h2 itemprop="name">
+  <a class="archive-article-title" href="/post/2300.html"
+    >调用WordPress 文章标签[带文章数统计]</a> 
+</h2>
+ 
 
-			<div class='menu navigation'>
-				<ul class='h-list'>
-          
-          
-          
-            
-            
-              <li>
-                <a class="flat-box" href=/
-                  
-                  
-                  
-                    id="home"
-                  >
-                  
-                    <i class='fas fa-rss fa-fw'></i>
-                  
-                  首页
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="flat-box" href=/archives/
-                  
-                  
-                  
-                    id="archives"
-                  >
-                  
-                    <i class='fas fa-archive fa-fw'></i>
-                  
-                  归档
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="flat-box" href=/links/
-                  
-                  
-                  
-                    id="links"
-                  >
-                  
-                    <i class='fas fa-link fa-fw'></i>
-                  
-                  友链
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="flat-box" href=/ly/
-                  
-                  
-                  
-                    id="ly"
-                  >
-                  
-                    <i class='fas fa-info-circle fa-fw'></i>
-                  
-                  留言
-                </a>
-                
-              </li>
-            
-          
-          
-            
-            
-              <li>
-                <a class="flat-box" href=/about/
-                  
-                  
-                  
-                    id="about"
-                  >
-                  
-                    <i class='fas fa-info-circle fa-fw'></i>
-                  
-                  关于
-                </a>
-                
-              </li>
-            
-          
-          
-				</ul>
-			</div>
-
+    </header>
+    
+    
       
-        <div class="m_search">
-          <form name="searchform" class="form u-search-form">
-            <i class="icon fas fa-search fa-fw"></i>
-            <input type="text" class="input u-search-input" placeholder="搜索" />
-          </form>
-        </div>
-      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/WordPress/" rel="tag">WordPress</a></li></ul>
 
-			<ul class='switcher h-list'>
-				
-					<li><a class="s-search flat-btn fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
-				
-				<li><a class="s-menu flat-btn fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a></li>
-			</ul>
-		</div>
-	</div>
-</header>
-<ul class="menu-phone navigation white-box">
+    
+  </div>
+</article>
+      
   
   
-    <li>
-      <a class="flat-box" href=/
+      <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/post/2299.html" class="archive-article-date">
+  <time datetime="2016-10-29T04:48:00.000Z" itemprop="datePublished">10/29</time>
+</a>
+       
+<h2 itemprop="name">
+  <a class="archive-article-title" href="/post/2299.html"
+    >给Wordpress评论者信息栏加入新浪微博账号输入框</a> 
+</h2>
+ 
+
+    </header>
+    
+    
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/WordPress/" rel="tag">WordPress</a></li></ul>
+
+    
+  </div>
+</article>
+      
+  
+  
+      <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/post/2185.html" class="archive-article-date">
+  <time datetime="2016-08-20T11:34:00.000Z" itemprop="datePublished">08/20</time>
+</a>
+       
+<h2 itemprop="name">
+  <a class="archive-article-title" href="/post/2185.html"
+    >WordPress 批量删除所有文章的特色图像</a> 
+</h2>
+ 
+
+    </header>
+    
+    
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/WordPress/" rel="tag">WordPress</a></li></ul>
+
+    
+  </div>
+</article>
+      
+  
+  
+      <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/post/2105.html" class="archive-article-date">
+  <time datetime="2016-07-05T14:08:00.000Z" itemprop="datePublished">07/05</time>
+</a>
+       
+<h2 itemprop="name">
+  <a class="archive-article-title" href="/post/2105.html"
+    >WordPress访客UA信息插件：Show Useragent</a> 
+</h2>
+ 
+
+    </header>
+    
+    
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/WordPress/" rel="tag">WordPress</a></li></ul>
+
+    
+  </div>
+</article>
+      
+  
+  
+      <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/post/2085.html" class="archive-article-date">
+  <time datetime="2016-06-05T12:46:00.000Z" itemprop="datePublished">06/05</time>
+</a>
+       
+<h2 itemprop="name">
+  <a class="archive-article-title" href="/post/2085.html"
+    >升级WordPress出现另一更新正在进行问题解决办法</a> 
+</h2>
+ 
+
+    </header>
+    
+    
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/WordPress/" rel="tag">WordPress</a></li></ul>
+
+    
+  </div>
+</article>
+      
+  
+  
+      <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/post/2013.html" class="archive-article-date">
+  <time datetime="2016-01-25T13:16:00.000Z" itemprop="datePublished">01/25</time>
+</a>
+       
+<h2 itemprop="name">
+  <a class="archive-article-title" href="/post/2013.html"
+    >Lnmp重装后Wordpress前台和后台一片空白的解决办法</a> 
+</h2>
+ 
+
+    </header>
+    
+    
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/WordPress/" rel="tag">WordPress</a></li></ul>
+
+    
+  </div>
+</article>
+      
+  
+  
+      <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/post/1958.html" class="archive-article-date">
+  <time datetime="2016-01-03T08:56:00.000Z" itemprop="datePublished">01/03</time>
+</a>
+       
+<h2 itemprop="name">
+  <a class="archive-article-title" href="/post/1958.html"
+    >syntaxhighlighter语法高亮插件复制按钮不显示无效果的解决方案</a> 
+</h2>
+ 
+
+    </header>
+    
+    
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/WordPress/" rel="tag">WordPress</a></li></ul>
+
+    
+  </div>
+</article>
+      
+  
+  
+  
+  </div>
+  </div>
+  
+  
+  <div class="archives-wrap">
+    <div class="archive-year-wrap">
+      <a href="/archives/2015" class="archive-year">2015</a>
+    </div>
+    <div class="archives">
+      
+      <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/post/1932.html" class="archive-article-date">
+  <time datetime="2015-12-22T06:36:00.000Z" itemprop="datePublished">12/22</time>
+</a>
+       
+<h2 itemprop="name">
+  <a class="archive-article-title" href="/post/1932.html"
+    >Wordpress使用cloudfs4oss挂载OSS</a> 
+</h2>
+ 
+
+    </header>
+    
+    
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/WordPress/" rel="tag">WordPress</a></li></ul>
+
+    
+  </div>
+</article>
+      
+      
+    </div>
+  </div>
+  
+  
+
+  
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul class="list-inline">
+      <li>
+        &copy;
+        2014-2020
+        Feng
+      </li>
+      <li>
+        
+        Powered by
         
         
+        <a href="https://hexo.io" target="_blank">Hexo</a> Theme <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
         
-          id="home"
-        >
+      </li>
+    </ul>
+    <ul class="list-inline">
+     <li>
+        <!--腾讯云--->Hosted by <a href="https://pages.coding.me" target="_blank" rel="noopener" style="font-weight: bold">Coding Pages</a> + <a href="https://cloud.tencent.com/redirect.php?redirect=1005&cps_key=4e78216aea817227ff0c96d93a00fd4b" target="_blank" rel="nofollow"><!--<img src="https://uu126.cn/wp-content/uploads/2016/10/hwclouds-logo.png" style="margin-bottom:-3px">-->腾讯云 + </a><a href="https://console.upyun.com/register/?invite=S1JeTquHL" target="_blank" rel="nofollow"><span class="with-love"><img src="https://cdn.lancn.cn/images/upyun.png" style="width:40px;" alt="又拍云存储"></span></a>
+      </li>
+      <li>
         
-          <i class='fas fa-rss fa-fw'></i>
-        
-        首页
-      </a>
+      </li>
+      <li>
+        <!-- cnzz统计 -->
+        <!--备案---> <a target="_blank"  href="http://www.beian.miit.gov.cn">浙ICP备11026647号-3</a><span class="post-meta-divider"> | </span><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33088102001325"><span class="with-love"><img src="https://cdn.uu126.cn/icon-police.png" style="width:14px;"></span> 浙公网安备33088102001325号</a>
+      </li>
+    </ul>
+  </div>
+</footer>
+      <div class="float_btns">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+      </div>
+    </main>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/myavatar.png" alt="Feng&#39;blog"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
     </li>
-  
-    <li>
-      <a class="flat-box" href=/archives/
-        
-        
-        
-          id="archives"
-        >
-        
-          <i class='fas fa-archive fa-fw'></i>
-        
-        归档
-      </a>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
     </li>
-  
-    <li>
-      <a class="flat-box" href=/links/
-        
-        
-        
-          id="links"
-        >
-        
-          <i class='fas fa-link fa-fw'></i>
-        
-        友链
-      </a>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
     </li>
-  
-    <li>
-      <a class="flat-box" href=/ly/
-        
-        
-        
-          id="ly"
-        >
-        
-          <i class='fas fa-info-circle fa-fw'></i>
-        
-        留言
-      </a>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
     </li>
-  
-    <li>
-      <a class="flat-box" href=/about/
-        
-        
-        
-          id="about"
-        >
-        
-          <i class='fas fa-info-circle fa-fw'></i>
-        
-        关于
-      </a>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/links">友链</a>
     </li>
-  
-</ul>
-<script>setLoadingBarProgress(40);</script>
-
-
-
-  <div class="l_body nocover">
-    <div class='body-wrapper'>
-      
-
-
-<div class='l_main'>
-  
     
-      
-  <section class="post-list ">
+    <li class="nav-item">
+      <a class="nav-item-link" href="/ly">留言</a>
+    </li>
     
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
+    <li class="nav-item">
+      <a class="nav-item-link" href="/about">关于</a>
+    </li>
     
-    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
       
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow reveal ">
-  
-
-
-  <section class='meta'>
-    
-    
-    <div class="meta" id="header-meta">
+      <a class="nav-item-link nav-item-search"  title="Suche">
+        <i class="ri-search-line"></i>
+      </a>
       
-        
-  <h2 class="title">
-    <a href="/post/2300.html">
-      调用WordPress 文章标签[带文章数统计]
-    </a>
-  </h2>
-
-
       
-      <div class='new-meta-box'>
-        
-          
-        
-          
-            
-<div class='new-meta-item author'>
-  <a href="https://uu126.cn" rel="nofollow">
-    <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png">
-    <p>Feng</p>
-  </a>
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
 </div>
-
-          
-        
-          
-            
-  
-  <div class='new-meta-item category'>
-    <a href='/categories/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/' rel="nofollow">
-      <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>网站建设</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-edit" aria-hidden="true"></i>
-    <p>发布于：Oct 29, 2016</p>
-  </a>
 </div>
-
-          
-        
-          
-            
-
-          
-        
-          
-            
-
-          
-        
-      </div>
-      
-        <hr>
-      
-    </div>
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <p>我们都知道<code>the_tags</code>和<code>get_the_tags</code>可以调用文章标签，但也无非就是调用标签，其实每个标签都包含了很多参数，只调用名字和链接有点太浪费了，所以我们在加上一个小小的文章数统计，瞬间变的高大上起来。</p>
-<h3>实现方法</h3>
-下面的代码加到<code>functions.php</code>中:
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">fa_get_the_term_list</span><span class="params">( $id, $taxonomy )</span> </span>&#123;</span><br><span class="line">    $terms = get_the_terms( $id, $taxonomy );</span><br><span class="line">    $term_links = <span class="string">""</span>;</span><br><span class="line">    <span class="keyword">if</span> ( is_wp_error( $terms ) )</span><br><span class="line">        <span class="keyword">return</span> $terms;</span><br><span class="line">    <span class="keyword">if</span> ( <span class="keyword">empty</span>( $terms ) )</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    <span class="keyword">foreach</span> ( $terms <span class="keyword">as</span> $term ) &#123;</span><br><span class="line">        $link = get_term_link( $term, $taxonomy );</span><br><span class="line">        <span class="keyword">if</span> ( is_wp_error( $link ) )</span><br><span class="line">            <span class="keyword">return</span> $link;</span><br><span class="line">        $term_links .= <span class="string">'&amp;lt;a href="'</span> . esc_url( $link ) . <span class="string">'" class="js-loaded post--keyword" data-title="'</span> . $term-&amp;gt;name . <span class="string">'" data-type="'</span>. $taxonomy .<span class="string">'" data-term-id="'</span> . $term-&amp;gt;term_id . <span class="string">'"&amp;gt;'</span> . $term-&amp;gt;name . <span class="string">'&amp;lt;sup&amp;gt;['</span>. $term-&amp;gt;count .<span class="string">']&amp;lt;/sup&amp;gt;&amp;lt;/a&amp;gt;'</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> $term_links;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-        
-          <div class="button readmore">
-            <a href="/post/2300.html">
-              Read More <i class="fas fa-chevron-right"></i>
-            </a>
-          </div>
-        
-      
-    </div>
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow reveal ">
-  
-
-
-  <section class='meta'>
-    
-    
-    <div class="meta" id="header-meta">
-      
-        
-  <h2 class="title">
-    <a href="/post/2299.html">
-      给Wordpress评论者信息栏加入新浪微博账号输入框
-    </a>
-  </h2>
-
-
-      
-      <div class='new-meta-box'>
-        
-          
-        
-          
-            
-<div class='new-meta-item author'>
-  <a href="https://uu126.cn" rel="nofollow">
-    <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png">
-    <p>Feng</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  
-  <div class='new-meta-item category'>
-    <a href='/categories/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/' rel="nofollow">
-      <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>网站建设</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-edit" aria-hidden="true"></i>
-    <p>发布于：Oct 29, 2016</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-
-          
-        
-          
-            
-
-          
-        
-      </div>
-      
-        <hr>
-      
-    </div>
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <p>首先就是无论你采用哪种方法，都要在<code>functions.php</code>中加入如下代码:</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">add_action( <span class="string">'comment_post'</span>,<span class="string">'save_comment_meta_data'</span> );</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">save_comment_meta_data</span><span class="params">( $comment_id )</span> </span>&#123;</span><br><span class="line">    add_comment_meta( $comment_id, <span class="string">'sinawb'</span>, $_POST[<span class="string">'sinawb'</span>] );</span><br><span class="line">    $expire = time() + <span class="number">99999999</span>;</span><br><span class="line">    $domain = ($_SERVER[<span class="string">'HTTP_HOST'</span>] != <span class="string">'localhost'</span>) ? $_SERVER[<span class="string">'HTTP_HOST'</span>] : <span class="keyword">false</span>; <span class="comment">// make cookies work with localhost</span></span><br><span class="line">    setcookie(<span class="string">'bigfa_sinawb'</span>,$_POST[<span class="string">'sinawb'</span>],$expire,<span class="string">'/'</span>,$domain,<span class="keyword">false</span>);</span><br><span class="line">&#125;</span><br><span class="line">add_filter( <span class="string">'get_comment_author_link'</span>,    <span class="string">'attach_twitter_to_author'</span> );</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">attach_twitter_to_author</span><span class="params">( $author )</span> </span>&#123;</span><br><span class="line">    $tw = get_comment_meta( get_comment_ID(), <span class="string">'sinawb'</span>, <span class="keyword">true</span> );</span><br><span class="line">    <span class="keyword">if</span>($tw)</span><br><span class="line">        $author .= <span class="string">" / &amp;lt;a href='http://weibo.com/n/$tw' title='@$tw' target='_blank'&amp;gt;@$tw&amp;lt;/a&amp;gt;"</span>;</span><br><span class="line">    <span class="keyword">return</span> $author;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-        
-          <div class="button readmore">
-            <a href="/post/2299.html">
-              Read More <i class="fas fa-chevron-right"></i>
-            </a>
-          </div>
-        
-      
-    </div>
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow reveal ">
-  
-
-
-  <section class='meta'>
-    
-    
-    <div class="meta" id="header-meta">
-      
-        
-  <h2 class="title">
-    <a href="/post/2185.html">
-      WordPress 批量删除所有文章的特色图像
-    </a>
-  </h2>
-
-
-      
-      <div class='new-meta-box'>
-        
-          
-        
-          
-            
-<div class='new-meta-item author'>
-  <a href="https://uu126.cn" rel="nofollow">
-    <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png">
-    <p>Feng</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  
-  <div class='new-meta-item category'>
-    <a href='/categories/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/' rel="nofollow">
-      <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>网站建设</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-edit" aria-hidden="true"></i>
-    <p>发布于：Aug 20, 2016</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-
-          
-        
-          
-            
-
-          
-        
-      </div>
-      
-        <hr>
-      
-    </div>
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <p>一直用Wordpress做自己的博客站，也算是一路摸索过来吧，Wordpress的功能还是挺赞的，但是文章特色图片一直都没用过，可能是自己不喜欢那种样式吧（心里作怪，哈哈），这不前不久在Wordpress后台安装了一个英文主题，当时就想换个看看也没太大注意，后来换回到自己原来用的主题时，发现所有文章都被自动添加了特色图片，导致俺不喜欢的样式到处都是，怎么办？一个一个删除？工作量太大了，向来都是偷懒的人怎么可能受得了呀，想起了度娘也得到了度娘的真传，就是把以下代码添加到到当前主题的 functions.php里（如果不能在线编辑的话，可以使用WinSCP下载后再编辑，个人建议采用后者），上传覆盖后刷新一下首页，你会发现所有的特色图片都不见了。具体的代码如下：</p>
-      
-        
-          <div class="button readmore">
-            <a href="/post/2185.html">
-              Read More <i class="fas fa-chevron-right"></i>
-            </a>
-          </div>
-        
-      
-    </div>
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow reveal ">
-  
-
-
-  <section class='meta'>
-    
-    
-    <div class="meta" id="header-meta">
-      
-        
-  <h2 class="title">
-    <a href="/post/2105.html">
-      WordPress访客UA信息插件：Show Useragent
-    </a>
-  </h2>
-
-
-      
-      <div class='new-meta-box'>
-        
-          
-        
-          
-            
-<div class='new-meta-item author'>
-  <a href="https://uu126.cn" rel="nofollow">
-    <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png">
-    <p>Feng</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  
-  <div class='new-meta-item category'>
-    <a href='/categories/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/' rel="nofollow">
-      <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>网站建设</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-edit" aria-hidden="true"></i>
-    <p>发布于：Jul 5, 2016</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-
-          
-        
-          
-            
-
-          
-        
-      </div>
-      
-        <hr>
-      
-    </div>
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <p>一直想给自己的博客加个访客UA信息（如下图），可……，不能再拖了，赶紧动手添加吧，网上逛了逛，就选Show Useragent吧，因为本人不是太喜欢插件的形式，所以能代码化就……（其实代码多了也会影响程序的执行率的，多少的问题）。</p>
-      
-        
-          <div class="button readmore">
-            <a href="/post/2105.html">
-              Read More <i class="fas fa-chevron-right"></i>
-            </a>
-          </div>
-        
-      
-    </div>
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow reveal ">
-  
-
-
-  <section class='meta'>
-    
-    
-    <div class="meta" id="header-meta">
-      
-        
-  <h2 class="title">
-    <a href="/post/2085.html">
-      升级WordPress出现另一更新正在进行问题解决办法
-    </a>
-  </h2>
-
-
-      
-      <div class='new-meta-box'>
-        
-          
-        
-          
-            
-<div class='new-meta-item author'>
-  <a href="https://uu126.cn" rel="nofollow">
-    <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png">
-    <p>Feng</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  
-  <div class='new-meta-item category'>
-    <a href='/categories/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/' rel="nofollow">
-      <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>网站建设</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-edit" aria-hidden="true"></i>
-    <p>发布于：Jun 5, 2016</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-
-          
-        
-          
-            
-
-          
-        
-      </div>
-      
-        <hr>
-      
-    </div>
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <p>我相信很多人在使用WordPress程序的时候最为讨厌他们经常的更新和升级，如果你不升级吧万一有安全问题，万一你升级吧可能会出现各种各样的问题。以前在升级WordPress有经常遇到插件不兼容、登入网站首页、后台空白界面的种种问题，所以现在每次看到WP有新版本更新都有点恐惧感。 而通常我们最为喜欢的方式是在登入后台的时候看到有新版本提醒之后直接点击在线升级，包括我也一样这样省心省力。但是这样也是最为容易出现问题的。比如这次又遇到新问题，在升级4.5.2版本的时候（在之前几天也有给公司客户企业网站升级的时候也有多次出现），升级的时候有提示”另一更新正在进行”问题。</p>
-      
-        
-          <div class="button readmore">
-            <a href="/post/2085.html">
-              Read More <i class="fas fa-chevron-right"></i>
-            </a>
-          </div>
-        
-      
-    </div>
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow reveal ">
-  
-
-
-  <section class='meta'>
-    
-    
-    <div class="meta" id="header-meta">
-      
-        
-  <h2 class="title">
-    <a href="/post/2013.html">
-      Lnmp重装后Wordpress前台和后台一片空白的解决办法
-    </a>
-  </h2>
-
-
-      
-      <div class='new-meta-box'>
-        
-          
-        
-          
-            
-<div class='new-meta-item author'>
-  <a href="https://uu126.cn" rel="nofollow">
-    <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png">
-    <p>Feng</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  
-  <div class='new-meta-item category'>
-    <a href='/categories/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/' rel="nofollow">
-      <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>网站建设</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-edit" aria-hidden="true"></i>
-    <p>发布于：Jan 25, 2016</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-
-          
-        
-          
-            
-
-          
-        
-      </div>
-      
-        <hr>
-      
-    </div>
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <p>系统出了一些问题。所以折腾了下。重新安装LNMP环境后，发现wordpress前台和后台一片空白。<br>弄了半天以为是系统升级造成的。网上查了下貌似是wordpress版本和主题的原因。小记一下。</p>
-      
-        
-          <div class="button readmore">
-            <a href="/post/2013.html">
-              Read More <i class="fas fa-chevron-right"></i>
-            </a>
-          </div>
-        
-      
-    </div>
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow reveal ">
-  
-
-
-  <section class='meta'>
-    
-    
-    <div class="meta" id="header-meta">
-      
-        
-  <h2 class="title">
-    <a href="/post/1958.html">
-      syntaxhighlighter语法高亮插件复制按钮不显示无效果的解决方案
-    </a>
-  </h2>
-
-
-      
-      <div class='new-meta-box'>
-        
-          
-        
-          
-            
-<div class='new-meta-item author'>
-  <a href="https://uu126.cn" rel="nofollow">
-    <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png">
-    <p>Feng</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  
-  <div class='new-meta-item category'>
-    <a href='/categories/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/' rel="nofollow">
-      <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>网站建设</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-edit" aria-hidden="true"></i>
-    <p>发布于：Jan 3, 2016</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-
-          
-        
-          
-            
-
-          
-        
-      </div>
-      
-        <hr>
-      
-    </div>
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <p>用了一段时间发现，syntaxhighlighter好用是好用，就是不能复制，上网搜了一下，发现有很多人遇到了这个问题，后来知道是clipboard.swf惹的祸，后台安装好以后，自带的clipboard.swf是个空文件0KB，找到了一个可用的clipboard.swf，替换以后就可以了，简单滴很~~（所以可以先往下看【二、替换文件】如果替换以后还不行，再看【一、修改文件】照着修改）<br>一、找到这个目录<code>/wp-content/plugins/syntaxhighlighter/syntaxhighlighter.php</code>，然后修改文件：</p>
-      
-        
-          <div class="button readmore">
-            <a href="/post/1958.html">
-              Read More <i class="fas fa-chevron-right"></i>
-            </a>
-          </div>
-        
-      
-    </div>
-  </section>
-</article>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box shadow reveal ">
-  
-
-
-  <section class='meta'>
-    
-    
-    <div class="meta" id="header-meta">
-      
-        
-  <h2 class="title">
-    <a href="/post/1932.html">
-      Wordpress使用cloudfs4oss挂载OSS
-    </a>
-  </h2>
-
-
-      
-      <div class='new-meta-box'>
-        
-          
-        
-          
-            
-<div class='new-meta-item author'>
-  <a href="https://uu126.cn" rel="nofollow">
-    <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png">
-    <p>Feng</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  
-  <div class='new-meta-item category'>
-    <a href='/categories/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/' rel="nofollow">
-      <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>网站建设</p>
-    </a>
-  </div>
-
-
-          
-        
-          
-            <div class="new-meta-item date">
-  <a class='notlink'>
-    <i class="fas fa-edit" aria-hidden="true"></i>
-    <p>发布于：Dec 22, 2015</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-
-          
-        
-          
-            
-
-          
-        
-      </div>
-      
-        <hr>
-      
-    </div>
-  </section>
-
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <p>本站一直用的阿里云的ECS，图片也都是存在云磁盘上，依托在七牛免费资源上，感觉速度不是很理想，可能是没有优化好的缘故吧，最近对阿里云的OSS感兴趣了（一直都想用，只不过在价格和使用上有点……），前几天用了OSS插件，用着也挺好，可能是因为我是个非插件控吧，总想找个办法可以不用插件，所以就找到了cloudfs4oss，这是款可以将OSS直接挂载到ECS上，就像一个目录一样方便访问，那就动手吧：</p>
-      
-        
-          <div class="button readmore">
-            <a href="/post/1932.html">
-              Read More <i class="fas fa-chevron-right"></i>
-            </a>
-          </div>
-        
-      
-    </div>
-  </section>
-</article>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-    <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
-    
-    
-
-  
-
-
-    
-  
-</div>
-<aside class='l_side'>
-  
-  
-    
-    
-  
-
-  <section class="widget category shadow desktop">
-    
-  <header>
-    
-      <a href='/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/IT%E7%BB%BC%E5%90%88%E6%8A%80%E6%9C%AF/" href="/categories/IT%E7%BB%BC%E5%90%88%E6%8A%80%E6%9C%AF/"
-            id="categoriesITE7BBBCE59088E68A80E69CAF"
-            ><div class='name'>IT综合技术</div><div class='badge'>(29)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%88%91%E7%9A%84%E5%9C%B0%E7%9B%98/" href="/categories/%E6%88%91%E7%9A%84%E5%9C%B0%E7%9B%98/"
-            id="categoriesE68891E79A84E59CB0E79B98"
-            ><div class='name'>我的地盘</div><div class='badge'>(44)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/" href="/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/"
-            id="categoriesE68A80E69CAFE7B1BB"
-            ><div class='name'>技术类</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%99%BA%E8%83%BD%E7%BB%88%E7%AB%AF/" href="/categories/%E6%99%BA%E8%83%BD%E7%BB%88%E7%AB%AF/"
-            id="categoriesE699BAE883BDE7BB88E7ABAF"
-            ><div class='name'>智能终端</div><div class='badge'>(11)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/" href="/categories/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/"
-            id="categoriesE7BD91E7AB99E5BBBAE8AEBE"
-            ><div class='name'>网站建设</div><div class='badge'>(63)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop">
-    
-  <header>
-    
-      <a href='/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/Ghost/" style="font-size: 19.56px; color: #737373">Ghost</a> <a href="/tags/Hexo/" style="font-size: 15.11px; color: #919191">Hexo</a> <a href="/tags/Lnmp/" style="font-size: 14px; color: #999">Lnmp</a> <a href="/tags/Oneinstack/" style="font-size: 14px; color: #999">Oneinstack</a> <a href="/tags/Typecho/" style="font-size: 14px; color: #999">Typecho</a> <a href="/tags/WordPress/" style="font-size: 19.56px; color: #737373">WordPress</a> <a href="/tags/godaddy/" style="font-size: 15.11px; color: #919191">godaddy</a> <a href="/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/tags/iphone/" style="font-size: 20.67px; color: #6c6c6c">iphone</a> <a href="/tags/lnmp/" style="font-size: 14px; color: #999">lnmp</a> <a href="/tags/nokia/" style="font-size: 14px; color: #999">nokia</a> <a href="/tags/phpmyadmin/" style="font-size: 14px; color: #999">phpmyadmin</a> <a href="/tags/ssh/" style="font-size: 14px; color: #999">ssh</a> <a href="/tags/typecho/" style="font-size: 21.78px; color: #646464">typecho</a> <a href="/tags/vps/" style="font-size: 15.11px; color: #919191">vps</a> <a href="/tags/vultr/" style="font-size: 18.44px; color: #7b7b7b">vultr</a> <a href="/tags/windows/" style="font-size: 14px; color: #999">windows</a> <a href="/tags/word/" style="font-size: 14px; color: #999">word</a> <a href="/tags/%E5%8D%8E%E4%B8%BA%E4%BA%91/" style="font-size: 17.33px; color: #828282">华为云</a> <a href="/tags/%E6%89%8B%E6%9C%BA/" style="font-size: 14px; color: #999">手机</a> <a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 14px; color: #999">技术</a> <a href="/tags/%E6%9C%BA%E6%A2%B0%E9%94%AE%E7%9B%98/" style="font-size: 14px; color: #999">机械键盘</a> <a href="/tags/%E6%B4%BB%E5%8A%A8/" style="font-size: 14px; color: #999">活动</a> <a href="/tags/%E7%8E%A9%E5%AE%A2%E4%BA%91/" style="font-size: 14px; color: #999">玩客云</a> <a href="/tags/%E7%BB%B4%E4%BF%AE/" style="font-size: 24px; color: #555">维修</a> <a href="/tags/%E7%BD%91%E7%AB%99/" style="font-size: 16.22px; color: #8a8a8a">网站</a> <a href="/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/" style="font-size: 14px; color: #999">腾讯云</a> <a href="/tags/%E8%8B%B9%E6%9E%9C/" style="font-size: 14px; color: #999">苹果</a> <a href="/tags/%E9%98%BF%E9%87%8C%E4%BA%91/" style="font-size: 17.33px; color: #828282">阿里云</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 22.89px; color: #5d5d5d">随笔</a>
-    </div>
-  </section>
-
-
-  
-
-  
-
-
-</aside>
-
-
-  
-  <footer class="clearfix ">
-    <br><br>
-    
-      
-        
-      
-    
-      
-        <br>
-        <div class="social-wrapper">
-          
-            
-              <a href="/atom.xml"
-                class="social fas fa-rss flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer">
-              </a>
-            
-          
-            
-              <a href="mailto:jslfp@foxmail.com"
-                class="social fas fa-envelope flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer">
-              </a>
-            
-          
-            
-              <a href="https://github.com/sxgxhk"
-                class="social fab fa-github flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer">
-              </a>
-            
-          
-            
-              <a href="https://music.163.com/#/user/home?id=63035382"
-                class="social fas fa-headphones-alt flat-btn"
-                target="_blank"
-                rel="external nofollow noopener noreferrer">
-              </a>
-            
-          
-        </div>
-     
-    
-      
-        
-      
-    
-      
-        
-      
-    
-      
-        <div class='copyright'>
-        <p><a href="https://uu126.cn">Copyright © 2017-2020 Feng</a></p>
-<!--腾讯云--->Hosted by <a href="https://pages.coding.me" target="_blank" rel="noopener" style="font-weight: bold">Coding Pages</a> + 
-<a href="https://cloud.tencent.com/redirect.php?redirect=1005&cps_key=4e78216aea817227ff0c96d93a00fd4b" target="_blank" rel="nofollow"><!--<img src="https://uu126.cn/wp-content/uploads/2016/10/hwclouds-logo.png" style="margin-bottom:-3px">-->腾讯云 + </a><a href="https://console.upyun.com/register/?invite=S1JeTquHL" target="_blank" rel="nofollow"><span class="with-love"><img src="https://cdn.lancn.cn/images/upyun.png" style="width:40px;" alt="又拍云存储"></span></a>
-<br>
-<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
-<script>
-    var now = new Date(); 
-    function createtime() { 
-        var grt= new Date("03/07/2014 10:38:00");//在此处修改你的建站时间，格式：月/日/年 时:分:秒
-        now.setTime(now.getTime()+250); 
-        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
-        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
-        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
-        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
-        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
-        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
-        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
-        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-    } 
-setInterval("createtime()",250);
-</script>
-<br>
-<!--备案---> <a target="_blank"  href="http://www.beian.miit.gov.cn">浙ICP备11026647号-3</a><span class="post-meta-divider"> | </span><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33088102001325"><span class="with-love"><img src="https://cdn.uu126.cn/icon-police.png" style="width:14px;"></span> 浙公网安备33088102001325号</a>
-
-
-        </div>
-      
-    
-  </footer>
-
-<script>setLoadingBarProgress(80);</script>
-
-
-      <script>setLoadingBarProgress(60);</script>
-    </div>
-    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
-  </div>
-  
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.4/dist/jquery.min.js"></script>
-
-
-  <script>
-    
-    var SEARCH_SERVICE = "hexo" || "hexo";
-    var ROOT = "/" || "/";
-    if (!ROOT.endsWith('/')) ROOT += '/';
-  </script>
-
-
-  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
-
-
-
-  
-<script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
-
-  <script type="text/javascript">
-    $(function() {
-      Waves.attach('.flat-btn', ['waves-button']);
-      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
-      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
-      Waves.attach('.flat-box', ['waves-block']);
-      Waves.attach('.float-box', ['waves-block', 'waves-float']);
-      Waves.attach('.waves-image');
-      Waves.init();
-    });
-  </script>
-
-
-  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
-
-
-
-  
-  
-  
-    
-<script src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script>
-
-    <script type="text/javascript">
-      $(function(){
-        var imgs=["https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/BBC19066-E176-47C2-9D22-48C81EE5DF6B.jpeg"];
-        if ('true' == 'true') {
-          function shuffle(arr){
-            /*From countercurrent-time*/
-            var n = arr.length;
-            while(n--) {
-              var index = Math.floor(Math.random() * n);
-              var temp = arr[index];
-              arr[index] = arr[n];
-              arr[n] = temp;
-            }
-          }
-          shuffle(imgs);
-        }
-        if ('.cover') {
-          $('.cover').backstretch(
-            imgs,
-          {
-            duration: "20000",
-            fade: "1500"
-          });
-        } else {
-          $.backstretch(
-            imgs,
-          {
-            duration: "20000",
-            fade: "1500"
-          });
-        }
-      });
+    </aside>
+    <script>
+      if (window.matchMedia("(max-width: 768px)").matches) {
+        document.querySelector('.content').classList.remove('on');
+        document.querySelector('.sidebar').classList.remove('on');
+      }
     </script>
-  
+    <div id="mask"></div>
 
-
-
-  
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
     
-<script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js" async></script>
-
-  
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.png">
+      <span class="reward-type">支付宝</span>
+    </div>
     
-<script src="https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js" async></script>
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.png">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-2.0.3.min.js"></script>
 
-  
 
-
-
-
-
-
-
-
-
-
-  
-<script src="/js/app.js"></script>
+<script src="/js/lazyload.min.js"></script>
 
 
 
-  
-<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2.1/js/search.js"></script>
 
 
 
-  
-<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2/js/comment_typing.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
 
 
 
-<!-- 复制 -->
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
-  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
 <script>
-  !function (e, t, a) {
-    var initCopyCode = function(){
-      var copyHtml = '';
-      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
-      copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
-      copyHtml += '</button>';
-      $(".highlight .code pre").before(copyHtml);
-      var clipboard = new ClipboardJS('.btn-copy', {
-        target: function(trigger) {
-          return trigger.nextElementSibling;
-        }
-      });
-      clipboard.on('success', function(e) {
-        let $btn = $(e.trigger);
-        $btn.addClass('copyed');
-        let $icon = $($btn.find('i'));
-        $icon.removeClass('fa-copy');
-        $icon.addClass('fa-clipboard-check');
-        let $span = $($btn.find('span'));
-        $span[0].innerText = 'COPYED';
-      });
-      clipboard.on('error', function(e) {
-        e.clearSelection();
-        let $btn = $(e.trigger);
-        $btn.addClass('copy-failed');
-        let $icon = $($btn.find('i'));
-        $icon.removeClass('fa-copy');
-        $icon.addClass('fa-exclamation-triangle');
-        let $span = $($btn.find('span'));
-        $span[0].innerText = 'COPY FAILED';
-      });
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
     }
-    initCopyCode();
-  }(window, document);
-</script>
-
-
-
-
-<!-- fancybox -->
-
-  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-<script>
-  let LAZY_LOAD_IMAGE = "";
-  $(".article-entry").find("fancybox").find("img").each(function () {
-      var element = document.createElement("a");
-      $(element).attr("data-fancybox", "gallery");
-      $(element).attr("href", $(this).attr("src"));
-      /* 图片采用懒加载处理时,
-       * 一般图片标签内会有个属性名来存放图片的真实地址，比如 data-original,
-       * 那么此处将原本的属性名src替换为对应属性名data-original,
-       * 修改如下
-       */
-       if (LAZY_LOAD_IMAGE) {
-         $(element).attr("href", $(this).attr("data-original"));
-       }
-      $(this).wrap(element);
-  });
+    viewer_init()
 </script>
 
 
 
 
 
+<script type="text/javascript" src="https://js.users.51.la/20544303.js"></script>
 
-  <script>setLoadingBarProgress(100);</script>
+  
+<script src="/js/clickLove.js"></script>
+
+
+
+    
+  </div>
 </body>
+
 </html>
