@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Feng&#39;blog</title>
-  
-  
+  <icon>https://www.gravatar.com/avatar/8f13b80f8fbef5f471e9a98e1feefb91</icon>
+  <subtitle>只争朝夕，不负韶华</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://uu126.cn/"/>
@@ -11,7 +11,7 @@
   
   <author>
     <name>Feng</name>
-    
+    <email>jslfp@qq.com</email>
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
