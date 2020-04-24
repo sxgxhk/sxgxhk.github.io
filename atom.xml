@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://uu126.cn/"/>
-  <updated>2020-03-18T14:53:01.168Z</updated>
+  <updated>2020-04-24T15:48:38.995Z</updated>
   <id>https://uu126.cn/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>黑群晖之猫盘折腾记</title>
+    <link href="https://uu126.cn/post/the-cats-plate-in-the-dark.html"/>
+    <id>https://uu126.cn/post/the-cats-plate-in-the-dark.html</id>
+    <published>2020-04-10T12:50:00.000Z</published>
+    <updated>2020-04-24T15:48:38.995Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;想我在IT界混了也算有段时间了吧（适当时候要自吹一下），想想当年对什么新鲜事物都充满了好奇感，可现在呢，嗅觉越来越弱化了，以致于NAS（Network Attached Storage：网络附属存储）虽听过，但却从未真正接触过，惭愧吧……。而提到NAS就不得不说群晖，虽早几年就知道这世上有黑白群晖一说（官方出厂的俗称白群晖，自己捣鼓的就是黑群晖），但苦于白群晖的价格，再加上懒癌，黑群晖也就没接触过，别笑哈……&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="智能终端" scheme="https://uu126.cn/categories/%E6%99%BA%E8%83%BD%E7%BB%88%E7%AB%AF/"/>
+    
+    
+      <category term="黑群晖" scheme="https://uu126.cn/tags/%E9%BB%91%E7%BE%A4%E6%99%96/"/>
+    
+  </entry>
   
   <entry>
     <title>小米MIX 2s花了49元撸了电池和屏幕</title>
@@ -417,27 +438,6 @@
     
     
       <category term="随笔" scheme="https://uu126.cn/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Centos7上搭建Lnmp+Ghost 1.x博客</title>
-    <link href="https://uu126.cn/post/2504.html"/>
-    <id>https://uu126.cn/post/2504.html</id>
-    <published>2017-11-02T13:15:00.000Z</published>
-    <updated>2018-01-23T13:30:44.221Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;上次写过&lt;a href=&quot;https://blog.uu126.cn/debian-8-8da-jian-lnmp-ghost-1-x-jiao-cheng/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;《Debian 8.X搭建Lnmp+ Ghost 1.x 教程》&lt;/a&gt; ，这不将主机从香港搬回到大杭州后，域名又倒腾回之前的uu126.cn（当然加了个前缀blog），加上前不久刚好在&lt;a href=&quot;http://blog.imzhengfei.com/centos-7-an-zhuang-pei-zhi-ghost-1-x/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;海月博客&lt;/a&gt; ，顺手也尝试了一下Centos，结果一切搭建顺利，又可以让我啰嗦一下了。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="网站建设" scheme="https://uu126.cn/categories/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/"/>
-    
-    
-      <category term="Ghost" scheme="https://uu126.cn/tags/Ghost/"/>
     
   </entry>
   

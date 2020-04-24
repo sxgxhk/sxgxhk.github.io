@@ -83,6 +83,78 @@ var _hmt = _hmt || [];
     
     
     
+    <article id="post-2407" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/post/2407.html"
+    >Typecho无法上传图片或附件的解决办法</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/post/2407.html" class="article-date">
+  <time datetime="2016-12-22T06:31:00.000Z" itemprop="datePublished">2016-12-22</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/">网站建设</a>
+  </div>
+
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <p>之前说了最近比较“懒”，好久没更新博客了，昨天在更新时发现博客出了问题——不能上传图片或附件（这不炸锅了……），今天抽个空得赶紧解决呀！用Winscp对比看过了博客（本站使用的是Typecho）所有目录，感觉也没什么问题呀，随后又找度娘了解了一下，也没找到什么好的答案，都是改权限的事，什么把usr、upload等改成777（读写权限），感觉没必要呀，而且777的权限太大了，个人觉得不安全，一般目录有775的权限就可以了。想来想去，突然想起来前些天把Typecho版本升级了一下，下载了官网的最新版（目前最新版只有Beta版的，正式版还没发布），升级过之后，我倒是测试过博客可以正常访问的，加上后来自己“偷懒”了，没更新博客所以也就没发现不能上传的故障。</p>
+      
+      <a class="article-more-link" href="/post/2407.html">阅读更多...</a>
+      
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Typecho/" rel="tag">Typecho</a></li></ul>
+
+
+    </footer>
+
+  </div>
+
+  
+
+  
+  
+  
+
+  
+
+</article>
+    
     <article id="post-2403" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
@@ -702,78 +774,6 @@ var _hmt = _hmt || [];
       <p>记得在使用Wordpress时，给评论加过UA（访问者信息，如系统、浏览器等），比较简单只需要使用相应的插件即可，随着自己的博客改用Typecho后，原来的这些插件也就用不了，但也不能阻挡我那股折腾的心呀，现在博客使用的是多说的评论系统，网上看了一下教程还是蛮多的，但大部分是针对Wordpress的，虽然都是PHP架构的，还是要亲身体验过才知道好不好用。试了很多位博主的办法都不行（可能是俺功力还不够吧），不过也还是让俺给找到了，并且测试过好用，目前本站已经用上了，需要看效果的可以自己评论一下就可是看到了，好了，开始分享工作：</p>
       
       <a class="article-more-link" href="/post/2372.html">阅读更多...</a>
-      
-      
-      <!-- reward -->
-      
-    </div>
-    
-    
-      <!-- copyright -->
-      
-    <footer class="article-footer">
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/typecho/" rel="tag">typecho</a></li></ul>
-
-
-    </footer>
-
-  </div>
-
-  
-
-  
-  
-  
-
-  
-
-</article>
-    
-    <article id="post-2370" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/post/2370.html"
-    >给Typecho后台添加图片验证</a> 
-</h2>
- 
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="/post/2370.html" class="article-date">
-  <time datetime="2016-11-26T13:15:00.000Z" itemprop="datePublished">2016-11-26</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/">网站建设</a>
-  </div>
-
-      
-      
-      
-    </div>
-    
-
-    
-
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <p>Typecho比之Wordpress的确比较轻巧，使用起来也比较容易上手，唯一的不足就是使用人群少，相对的主题、插件、教程要比Wordpress少，但却丝毫不影响我使用。使用Typecho有段时间了，平常写写小博客那是绰绰有余，就是感觉这后台登录是不是缺了点什么，虽然可以自定义后台路径，可感觉还是得纶它加点什么，哪怕只是那点小验证，那就动手吧。也说一下Typecho，ypecho有很好的路由机制，并且MVC模型模块化做的很好。系统代码在/var/中，包括了：Widget工具，Typecho模型等。开发者二次开发代码在/usr/中，主要放置Theme主题，Plugins插件等。添加验证码不能用插件形式，因此只能直接在源码中更改。在Wordpress的时候俺就用过极验证，东西不错挺好的，但免费版不支持Https，所以只能作罢（心里作用还吧，呵呵），那么就用php生成图片的验证方法。</p>
-      
-      <a class="article-more-link" href="/post/2370.html">阅读更多...</a>
       
       
       <!-- reward -->
