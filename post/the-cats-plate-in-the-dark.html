@@ -118,7 +118,7 @@ var _hmt = _hmt || [];
       <p>想我在IT界混了也算有段时间了吧（适当时候要自吹一下），想想当年对什么新鲜事物都充满了好奇感，可现在呢，嗅觉越来越弱化了，以致于NAS（Network Attached Storage：网络附属存储）虽听过，但却从未真正接触过，惭愧吧……。而提到NAS就不得不说群晖，虽早几年就知道这世上有黑白群晖一说（官方出厂的俗称白群晖，自己捣鼓的就是黑群晖），但苦于白群晖的价格，再加上懒癌，黑群晖也就没接触过，别笑哈……</p>
 <a id="more"></a>
 
-<p><img src="https://1984n.win/usr/uploads/2020/04/590351383.jpg#mirages-width=1920&mirages-height=936&mirages-cdn-type=3" alt="maopan03.jpg"></p>
+<p><img src="https://cdn.lancn.cn/usr/uploads/2020/04/590351383.jpg" alt="maopan03.jpg"></p>
 <p>这不最近看到论坛上又多了一个黑群晖利器——猫盘（又一个矿难产物），起初价格很便宜，但随着各大神的不断努力，让这个矿难产品可以跑起NAS（如：X3P、黑群晖）后，这价格就越来越贵，等到我再入手时都过百了，还好碰到<a href="https://yufanboke.top/" target="_blank" rel="noopener">Yufun</a>同学要转手，赶紧接了过来，价格当然要比某鱼上便宜，他之前刷的是X3P，那我当然要刷个黑群晖体验一下了，网上教程很多，一键工具也很多，这里简单介绍一下（这里以X3P的基础上刷黑群晖，如果是原版猫盘系统建议使用一键工具先刷到X3P）：</p>
 <ul>
 <li>使用phtty工具连接ssh，猫盘x3p的默认用户为：<code>root</code> 密码为：<code>Etech12</code></li>
@@ -126,7 +126,7 @@ var _hmt = _hmt || [];
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -N --no-check-certificate https://raw.githubusercontent.com/Squaregentleman/catdrive-syno/master/install.sh &amp;&amp; chmod +x install.sh &amp;&amp; bash install.sh</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://1984n.win/usr/uploads/2020/04/162449019.png#mirages-width=750&mirages-height=383&mirages-cdn-type=3" alt="maopan01.png"></p>
+<p><img src="https://cdn.lancn.cn/usr/uploads/2020/04/162449019.png" alt="maopan01.png"></p>
 <p>猫盘现在刷机资料非常多，我看到矿渣论坛有人做了整理，直接贴地址备份下。 17以下资料刷机前多看看，可以少踩坑，我是懒得刷直接买了刷好的。</p>
 <p>【<a href="http://bbs.nas66.com/thread-3385-1-1.html?_dsign=a9aa4cb2" target="_blank" rel="noopener">固件汇总</a>】</p>
 <p>【<a href="http://bbs.nas66.com/forum.php?mod=viewthread&tid=3467&_dsign=c9dade51" target="_blank" rel="noopener">应用汇总</a>】</p>
@@ -134,7 +134,7 @@ var _hmt = _hmt || [];
 <ul>
 <li>下载<code>x3p_full.bin</code>到群晖的文件夹<a href="https://cloud.luuns.com/index.php/s/5tmiJLGCFZjHbak" target="_blank" rel="noopener">https://cloud.luuns.com/index.php/s/5tmiJLGCFZjHbak</a>，举例luuns，系统路径就是<code>/volume1/luuns</code></li>
 </ul>
-<p><img src="https://1984n.win/usr/uploads/2020/04/2308901881.png#mirages-width=978&mirages-height=420&mirages-cdn-type=3" alt="maopan04.png"></p>
+<p><img src="https://cdn.lancn.cn/usr/uploads/2020/04/2308901881.png" alt="maopan04.png"></p>
 <ul>
 <li>依旧使用putty工具连接SSH，输入如下命令：</li>
 </ul>
@@ -142,7 +142,7 @@ var _hmt = _hmt || [];
 <p>用ls检查<code>x3p_full.bin</code>是否存在，然后依次复制下面命令，复制一条执行一条</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">dd <span class="keyword">if</span>=<span class="string">"x3p_full.bin"</span> of=/dev/mtdblock0 bs=<span class="number">1</span> skip=<span class="number">0</span> count=$((<span class="number">0xc8000</span>))</span><br><span class="line">dd <span class="keyword">if</span>=<span class="string">"x3p_full.bin"</span> of=/dev/mtdblock1 bs=<span class="number">1</span> skip=$((<span class="number">0x000c8000</span>)) count=$((<span class="number">0x00004000</span>))</span><br><span class="line">dd <span class="keyword">if</span>=<span class="string">"x3p_full.bin"</span> of=/dev/mtdblock2 bs=<span class="number">1</span> skip=$((<span class="number">0x000cc000</span>)) count=$((<span class="number">0x00434000</span>))</span><br><span class="line">dd <span class="keyword">if</span>=<span class="string">"x3p_full.bin"</span> of=/dev/mtdblock3 bs=<span class="number">1</span> skip=$((<span class="number">0x00500000</span>)) count=$((<span class="number">0x00300000</span>))</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://1984n.win/usr/uploads/2020/04/2327475060.png#mirages-width=649&mirages-height=173&mirages-cdn-type=3" alt="maopan05.png"></p>
+<p><img src="https://cdn.lancn.cn/usr/uploads/2020/04/2327475060.png" alt="maopan05.png"></p>
 <p>等到最后一条命令执行完毕后，就可以断电了，然后按住猫盘的 reset 键，接电源。等蓝灯闪烁再放开 reset 键，安静等十分钟左右 路由器出现ip就可以进x3p系统了</p>
 
       
@@ -229,6 +229,15 @@ var _hmt = _hmt || [];
   
   
   <nav class="article-nav">
+    
+      <a href="/post/black-cloud-display-real-cpu-core-information-patch.html" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            黑群晖显示真实CPU核心信息补丁
+          
+        </div>
+      </a>
     
     
       <a href="/post/Xiaomi%20mix%202S%20spent%2049%20yuan%20on%20batteries%20and%20screens.html" class="article-nav-link">
